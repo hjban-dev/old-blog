@@ -1,6 +1,6 @@
 # Site Info
-title: '네주머니의 나만보는 개발로그'
-tagline: '네주머니의 나만보는 개발로그'
+title: '바네주의 나만보는 개발로그'
+tagline: '비전공자 네주머니의 나만보는 개발로그_갤로그'
 description: '프로그래밍을 공부하며 배운점 느낀점을 기록하는 곳입니다.'
 baseurl: ""
 url: https://hjban-dev.github.io
@@ -44,9 +44,9 @@ nav:
     - { TIL (Today I Learned): '/blog/categories/#til' }
     - { 컴퓨터공학 : '/blog/categories/#컴퓨터공학' }
     - { Django: '/blog/categories/#django' }
-    - { python: '/blog/categories/#python' }
-    - { javascript: '/blog/categories/#javascript' }
-    - { nodejs: '/blog/categories/#nodejs' }
+    - { Python: '/blog/categories/#python' }
+    - { Javascript: '/blog/categories/#javascript' }
+    - { Nodejs: '/blog/categories/#nodejs' }
     - { MySQL: '/blog/categories/#MySQL' }
     - { 알고리즘 문제풀이: '/blog/categories/#알고리즘-문제풀이' }
     - { git: '/blog/categories/#git' }
