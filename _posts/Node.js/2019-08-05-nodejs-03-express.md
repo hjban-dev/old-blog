@@ -21,7 +21,9 @@ comments: false
 - `npm install express --save` 입력 후 package.json 에서 확인
 - node_modules 폴더에 파일이 설치되고 완료! 
 
-## 코드작성
+---
+
+### 코드작성
 
 - require() 함수로 설치된 express 모듈 추출
 - 상수 app 으로 웹 서버 생성
@@ -40,7 +42,7 @@ app.listen(3000, function(){
 });
 ```
 
-## 코드실행
+### 코드실행
 - 터미널에서 node app.js 입력하여 파일을 실행
 - 브라우저에 http://localhost:3000 로 접속하여 결과 확인
 
@@ -57,7 +59,7 @@ app.listen(3000, function(){
 
 - get(path, callback [, callback ...]) 메서드는 요청방식 처리 메서드로 다음장에서 더 알아봅시다.
 
-## 코드작성
+### 코드작성
 
 - 아래 코드는 웹 서버 실행을 위해 익숙해져야 함.
 

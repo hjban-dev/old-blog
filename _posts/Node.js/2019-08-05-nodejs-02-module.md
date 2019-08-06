@@ -8,7 +8,7 @@ comments: false
 
 > [생활코딩 Node.js 강의](https://www.inflearn.com/course/nodejs-%EA%B0%95%EC%A2%8C-%EC%83%9D%ED%99%9C%EC%BD%94%EB%94%A9#) 와 KOSMO 노드JS 프로그래밍 수업을 듣고 정리합니다.  
 > Nodejs를 이용해서 간단한 서버 애플리케이션을 만들어 본다.
-
+  
 # 모듈과 NPM - nodejs 모듈
 
 ## 모듈 기초
@@ -16,7 +16,7 @@ comments: false
 - `모듈 = 부품` 한 덩어리
 - 웹서버를 처음부터 끝까지 만드는 것은 어렵고 복잡한 일 / nodejs 에서는 기본적인 웹서버를 만들어 놓고(내부 모듈), 사용자가 쓸 수 있도록 함 
 
-### nodejs의 내부 모듈
+### Nodejs의 내부 모듈
 
 - 내부 모듈은 노드 설치시 기본으로 설치. require() 사용하여 불러올 수 있음
 - 내장 모듈에 대한 정보 -> [nodejs api](http://nodejs.org/api)
