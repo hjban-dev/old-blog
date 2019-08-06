@@ -31,8 +31,8 @@ const http = require('http');
 ```
 
 - http 모듈 사용 설명서 : [nodejs document](https://nodejs.org/dist/latest-v10.x/docs/api/http.html)
-    - http.createServer() 메소드 : http 모듈의 Server객체를 리턴
-    - http.createServer().listen() 메소드
+  - http.createServer() 메소드 : http 모듈의 Server객체를 리턴
+  - http.createServer().listen() 메소드
 
 - `모듈을 사용하기 위해서는 require라는 함수로 호출`한다.
 - nodejs는 기본적으로 앱을 만들기 위한 부품을 기본적으로 제공한다. (ex. http, path, os)

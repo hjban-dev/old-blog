@@ -33,12 +33,12 @@ const express = require('express');
 const app = express();
 
 app.use(function(req, res){
-	res.send('hello Node user!');
+  res.send('hello Node user!');
 });
 
 // 웹 서버 로컬호스트 3000번 포트 실행
 app.listen(3000, function(){
-	console.log('connected 3000 port!');
+  console.log('connected 3000 port!');
 });
 ```
 
@@ -68,16 +68,16 @@ var express = require('express');
 var app = express();
 
 app.get('/',function(req, res){
-	// get 요청 방식으로 접근한 서버 호스트 접속했을 때 실행
-	res.send('hello Node.js user!');
+  // get 요청 방식으로 접근한 서버 호스트 접속했을 때 실행
+  res.send('hello Node.js user!');
 });
 app.get('/login',function(req, res){
-	// get 요청 방식으로 접근한 서버 호스트/login 접속했을 때 실행
-	res.send('<h1>login please. Node.js user!</h1>');
+  // get 요청 방식으로 접근한 서버 호스트/login 접속했을 때 실행
+  res.send('<h1>login please. Node.js user!</h1>');
 });
 
 app.listen(3000, function(){
-	console.log('connected 3000 port!');
+  console.log('connected 3000 port!');
 });
 ```
 - 브라우저에 http://localhost:3000, http://localhost:3000/login 로 접속하여 결과 확인

@@ -23,12 +23,12 @@ comments: false
 ## 실행
 - 폴더 생성 후 js 파일 작성 (ex. nodejs/hello.js)
 
-  ```javascript
-  console.log('hello');
-  ```
+```javascript
+console.log('hello');
+```
 - `터미널 > cd nodejs (js 파일이 들어있는 폴더로 이동) > node hello.js`
 
-  ```
-  $ node hello.js
-  Hello world
-  ```
+```
+$ node hello.js
+Hello world
+```
