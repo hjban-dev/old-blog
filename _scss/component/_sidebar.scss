@@ -35,7 +35,7 @@
   }
 
   @if $theme-color != $default {
-    background-color: #fa508c;
+    background-color: $theme-color;
   } @else {
     background-color: darken($theme-color-dark, 10%);
   }
