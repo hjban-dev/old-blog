@@ -34,7 +34,8 @@
         <br>
         <span class="notice">
 
-        잘못된 내용이 있다면 부담없이 댓글 남겨주세요
+		잘못된 내용이 있다면 부담없이 댓글 남겨주세요
+		이미 쓴 포스트도 새로 알게 된 내용이나 추가하고 싶은 내용을 자주 수정합니다
         </span>
         </p>
       </div>
@@ -54,7 +55,7 @@
       {% assign sub_len = nav[1] | size | minus: 1 %}
       <!-- 사이드바 대분류 -->
       <span class="{% if sub_len > 0 %}foldable{% endif %}">
-        <a class="sidebar-nav-item {% if page.url == nav[1][0] %}active{% endif %}" href="{{ url }}">
+        <a class="sidebar-nav-item {% if page.url == nav[1][0] %}active{% endif %}" href="{{ sub_url }}">
           {{ nav[0] }}
         </a>
 
