@@ -13,11 +13,11 @@ comments: false
 - 크롬V8엔진 기반으로 개발된 자바스크립트(JavaScript)를 이용하여 서버 프로그래밍을 할 수 있도록 해주는 플랫폼
 
 ## 설치
--  [nodejs.org](https://nodejs.org/ko/download/) 에서 파일 다운로드 후 설치
+- [nodejs.org](https://nodejs.org/ko/download/) 에서 파일 다운로드 후 설치
   - node.js의 홀수 버전은 지속적으로 기능을 추가하는 stable 버전
   - 짝수 버전은 안정적이고 지속적인 지원을 약속하는 LTS(Long Time Supports)버전. 짝수 버전 선호
--  또는 npm 을 통하여 설치 (installing Node.js via package manager)
--  설치 후 터미널에서 `node --version` 명령어 통해서 버전 확인
+- 또는 npm 을 통하여 설치 (installing Node.js via package manager)
+- 설치 후 터미널에서 `node --version` 명령어 통해서 버전 확인
   - 터미널 여는법 : 윈도우 + r 키 누르거나 윈도우 검색창에 cmd 검색
 
 ## 실행
