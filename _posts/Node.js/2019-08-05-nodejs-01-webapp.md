@@ -61,9 +61,10 @@ const http = require('http'); // http 내부 모듈 추출
 const hostname = '127.0.0.1'; // 서버 컴퓨터의 ip
 const port = 3000; // 목적 포트. 컴퓨터에는 0 ~ 65535번의 포트(port) 존재
 
+// createServer 명령을 통해 서버 한대를 만든다.
 const server = http.createServer((req, res) => { 
   // 매개 변수로 요청의미의 req, 응답의미의 res
-  // createServer 명령을 통해 서버 한대를 만든다.
+  // 사용자에게 응답한다는 의미의 res에 속성 및 메서드 연결
   res.statusCode = 200; // 통신 성공
   res.setHeader('Content-Type', 'text/plain');
   res.end('Hello World\n');
