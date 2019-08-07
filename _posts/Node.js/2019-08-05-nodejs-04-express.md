@@ -10,6 +10,7 @@ comments: false
 > Express 모듈 설치 후 Express에서 제공하는 미들웨어와 라우터 사용 웹 서버 만들기
 
 # Express 모듈 설치와 사용
+- Express는 자체적인 기능을 갖춘 라우팅 및 미들웨어 웹 프레임워크
 
 ## Express 모듈 정의
 - Node.js만 사용하여 웹 앱을 만드는 것은 어렵고 복잡함
@@ -26,11 +27,11 @@ comments: false
 ### 코드작성
 
 - require() 함수로 설치된 express 모듈 추출
-- 상수 app 으로 웹 서버 생성
+- 상수 app 으로 웹 서버를 시작
 
 ```javascript
 const express = require('express');
-const app = express();
+const app = express(); // express의 인스턴스
 
 app.use(function(req, res){
   res.send('hello Node user!');
