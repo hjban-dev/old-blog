@@ -56,3 +56,19 @@ s.setAttribute('data-timestamp', +new Date());
     {% endfor %}
   </ul>
 </div>
+
+<div class="category">
+  {% for tag in site.categories %}
+    <a class="category-title"><h2 id="{{ tag[0] | slugify }}">{{ tag[0] }}</h2></a>
+    <ul class="tags-expo-posts">
+      {% for post in tag[1] %}
+        <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">
+      <li>
+        {{ post.title }}
+      <small class="post-date">{{ post.date | date_to_string }}</small>
+      </li>
+      </a>
+      {% endfor %}
+    </ul>
+  {% endfor %}
+</div>

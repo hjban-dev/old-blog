@@ -15,8 +15,8 @@ comments: false
 - http 라는 통신 방식은 요청과 응답이 이루어지고 나면 연결이 끊김.
 - 이전에 사용했던 사용자, 브라우저 등의 정보를 지속적으로 유지하기 위해 개발
   - ex) 사용자가 웹 페이지를 방문하면 방문자의 이름을 쿠키에 저장할 수 있습니다.
-  - ㅐㅣㅐ다음에 사용자가 페이지를 방문하면 쿠키는 방문자의 이름을 "기억"합니다.
-- 클라이언트 웹브라우저에 저장하고 같은 주소의 사이트에서만 유효  
+  - 다음에 사용자가 페이지를 방문하면 쿠키는 방문자의 이름을 "기억"합니다.
+- 클라이언트 `웹브라우저`에 저장하고 같은 주소의 사이트에서만 유효  
 
 ## Cookie [적용방법](https://www.npmjs.com/package/cookie-parser)
 - 설치 `npm install cookie-parser --save`
@@ -27,7 +27,7 @@ comments: false
 
 ### cookie 저장하는 방법
 ```javascript
-res.cookie(‘cookie name’, ‘cookie value’, option)
+res.cookie('cookie name', 'ookie value', option)
 ```
 
 ### 컴퓨터가 가지고 있는 cookie 확인 하는 방법
@@ -68,7 +68,7 @@ app.listen(3000, () => {
 #### cookie 세팅 후 정보 활용
 ```javascript
 router.route('/process/showCookie').get(function(req, res) {
-  console.log('/process/showCookie 용청 들어옴 ...');
+  console.log('/process/showCookie 요청 들어옴 ...');
   // end() 문자열을 인자로 사용, send() 객체나 수식을 인자로 사용.
   res.send(req.cookies);
 });
