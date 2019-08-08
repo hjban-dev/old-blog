@@ -2,7 +2,7 @@
 layout: post
 title: MongoDB 설치 및 실행
 category: MongoDB
-tags: [MongoDB]
+tags: [MongoDB], [Nodejs]
 comments: false
 ---
 
