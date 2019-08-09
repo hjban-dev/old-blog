@@ -1,30 +1,34 @@
 ---
 layout: post
-title: Nodejs Session 생성 및 사용
+title: Node.js에서 MongoDB 사용
 category: Nodejs
-tags: [Nodejs]
+tags: [Nodejs, MongoDB]
 comments: false
 ---
 
 > [생활코딩 Node.js 강의](https://www.inflearn.com/course/nodejs-%EA%B0%95%EC%A2%8C-%EC%83%9D%ED%99%9C%EC%BD%94%EB%94%A9#) 와 KOSMO 노드JS 프로그래밍 수업을 듣고 정리합니다.  
-> Session 개념을 세우고 사용하는 법을 알아본다  
+> Node.js에서 MongoDB 사용하는 법을 알아본다  
 
-# Nodejs Session 생성 및 사용
+# Node.js에서 MongoDB 사용
 
-## Session 배경
-- 쿠키보다 더 안전하고 많은 데이터를 저장하는 저장 방식
-- 데이터를 `웹 서버`에 저장 쿠키보다 조금 더 안전  
-
-## Express-Session [적용방법](https://www.npmjs.com/package/express-session)
-- 설치 `npm install express-session --save`
+## Mongojs [적용방법](https://www.npmjs.com/package/mongojs)
+- 설치 `npm install mongojs --save`
   - package.json 에서 설치 확인
-- app.js에 해당 모듈 추가 `expressSession = require('express-session');`
-- express 프로세스 app에 express-session 미들웨어 연결  
-  `app.use(session({ secret , resave , saveUninitialized }))`
-  - secret - 필수항목 이 값으로 세션을 암호화 하여 저장.
-  - resave - 세션을 언제나 저장할 지 정하는 값 false를 권장하지만 필요에 따라 true로 설정
-  - saveUninitialized - 세션이 저장할 내용이 없어도 uninitialized 상태로 미리 저장.  
-  ex) 방문자 추적할 때 사용  
+- app.js에 해당 모듈 추가 `mongojs = require('mongojs')`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### session 저장하는 방법
 ```javascript
