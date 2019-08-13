@@ -1,6 +1,6 @@
 ---
 layout: post
-title: React로 scoreboard(클릭으로 점수 +, - 기능) 예제 만들기
+title: scoreboard(클릭으로 점수 +, - 기능) 예제 만들기
 category: React
 tags: [React]
 comments: false
@@ -8,7 +8,7 @@ comments: false
 > ReactJS 이 정도는 알아야지 - 이효범 교재와 KOSMO React 프로그래밍 수업을 듣고 정리합니다.  
 > [w3school](https://www.w3schools.com) 참고
 
-# React로 scoreboard(클릭으로 점수 +, - 기능) 예제 만들기
+# scoreboard(클릭으로 점수 +, - 기능) 예제 만들기
 
 ## 구성
 - Header 컴포넌트와 Player 컴포넌트로 구성
