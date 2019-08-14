@@ -1,6 +1,6 @@
 ---
 layout: post
-title: scoreboard(클릭으로 점수 +, - 기능) 예제 만들기
+title: scoreboard(클릭으로 점수 +, - 기능) 예제 만들기 1
 category: React
 tags: [React]
 comments: false
@@ -8,12 +8,12 @@ comments: false
 > ReactJS 이 정도는 알아야지 - 이효범 교재와 KOSMO React 프로그래밍 수업을 듣고 정리합니다.  
 > [w3school](https://www.w3schools.com) 참고
 
-# scoreboard(클릭으로 점수 +, - 기능) 예제 만들기
+# scoreboard(클릭으로 점수 +, - 기능) 예제 만들기 1
 
 ## 구성
-- Header 컴포넌트와 Player 컴포넌트로 구성
+1. Header 컴포넌트와 Player 컴포넌트로 구성
   - Header 안에는 title과 플레이어 수로 구성
-  - Player 안에는 선수 이름과 점수로 구성 
+  - Player 안에는 선수 이름과 점수로 구성  
 
 <center>
 <figure>
@@ -23,7 +23,8 @@ comments: false
 </center>
 
 ### Header 컴포넌트
-- function 컴포넌트로 제작
+
+function 컴포넌트로 제작  
 
 ```javascript
 function Header() {
@@ -38,7 +39,7 @@ function Header() {
 ReactDOM.render(<Header />, document.getElementById('root'));
 ```
 
-- ECMAScript6 화살표 함수 사용
+ECMAScript6 화살표 함수 사용  
 
 ```javascript
 const Header = () => (
@@ -53,7 +54,7 @@ ReactDOM.render(<Header />, document.getElementById('root'));
 
 ### Player 컴포넌트
 
-- 이름 부분과 점수 부분 제작
+이름 부분과 점수 부분 제작  
 
 ```javascript
 const Player = () => {
@@ -74,7 +75,7 @@ const Player = () => {
 ReactDOM.render(<Player />, document.getElementById('root'));
 ```
 
-- 점수 부분을 counter 컴포넌트로 분리
+점수 부분을 counter 컴포넌트로 분리  
 
 ```javascript
 const Player = () => {
@@ -102,7 +103,8 @@ ReactDOM.render(<Player />, document.getElementById('root'));
 ```
 
 ### Player 컴포넌트
-- 전체를 감싸는 App 컴포넌트 생성 후 렌더링
+
+전체를 감싸는 App 컴포넌트 생성 후 렌더링  
 
 ```javascript
 const App = () => {
