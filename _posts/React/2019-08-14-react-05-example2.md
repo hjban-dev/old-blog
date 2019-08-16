@@ -122,7 +122,10 @@ const App = (props) => {
       <Header title="My scoreboard" totalPlayers={props.initialPlayers.length} />
       
       {/*2. initialPlayers 새로운 배열을 리턴 */}
-      { props.initialPlayers.map(item => <Player name={item.name} score={item.score} />) }
+      { 
+		props.initialPlayers.map(item => 
+		  <Player name={item.name} score={item.score} />) 
+	  }
     </div>
   );
 }
@@ -149,7 +152,12 @@ const App = (props) => {
       <Header title="My scoreboard" totalPlayers={props.initialPlayers.length} />
       
       {/*Players List*/}
-      { props.initialPlayers.map(item => <Player name={item.name} score={item.score} key={item.id.toString()} />) }
+	  { 
+		props.initialPlayers.map(item => <Player 
+		name={item.name} 
+		score={item.score} 
+		key={item.id.toString()} />) 
+	  }
     </div>
   );
 }
