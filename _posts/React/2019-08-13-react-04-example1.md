@@ -43,8 +43,8 @@ ECMAScript6 화살표 함수 사용
 
 ```javascript
 const Header = () => (
-  <header>
-    <h1>Scoreboard</h1>
+  <header className="header">
+    <h1 className="header">Scoreboard</h1>
     <span className="stats">Players: 1</span>
   </header>
 );
@@ -102,7 +102,7 @@ const Counter = () => {
 ReactDOM.render(<Player />, document.getElementById('root'));
 ```
 
-### Player 컴포넌트
+### App 컴포넌트
 
 전체를 감싸는 App 컴포넌트 생성 후 렌더링  
 
