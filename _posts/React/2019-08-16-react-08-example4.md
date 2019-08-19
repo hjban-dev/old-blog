@@ -17,7 +17,8 @@ incrementScore 함수를 추가하고 JSX에서 클릭 이벤트를 추가한다
 리액트는 명령행 프로그래밍이 아니라 선언형 프로그래밍이다.  
 클릭을 하면 클릭시 실행할 function을 정해둔다.
   
-여기서 주의할 점은 function을 정의해 놓기 때문에 이 function이 객체에 바인딩되지 않고 따로 떨어져 나오게 된다.   그래서 function에 this를 사용하게 되면 this가 객체를 가르키니 않고 글로벌 this가 되어 버리기 때문에 이것을 해결하기 위해서 bind() 문법을 사용하거나 es6에서온 arrow 펑션을 사용한다. arrow 펑션안에 사용된 this는 lexical this가 되기 때문에 bind 없이 사용가능하게 된다.
+여기서 주의할 점은 function을 정의해 놓기 때문에 이 function이 객체에 바인딩되지 않고 따로 떨어져 나오게 된다.  
+그래서 function에 this를 사용하게 되면 this가 객체를 가르키니 않고 글로벌 this가 되어 버리기 때문에 이것을 해결하기 위해서 bind() 문법을 사용하거나 es6에서온 arrow 펑션을 사용한다. arrow 펑션안에 사용된 this는 lexical this가 되기 때문에 bind 없이 사용가능하게 된다.
 
 ### 버튼을 클릭시 score 증가하는 이벤트 생성
 
@@ -59,23 +60,8 @@ incrementScore = () => {
 
 하지만, this에서 에러가 발생한다. 함수가 당장 실행되는게 아니라 클릭시 실행되므로 이 함수가 객체에 바인딩되지 않고 분리가 일어나서 bind가 안된 상태가 되었다.
 
-#### bind 사용하여 this 에러 해결하기
-
-해결하기 위한 첫번째 방법은 명시적으로 bind하는 방법이 있다. 객체인 this를 바인드해서 가르키도록 하는 것이다.
-
-```javascript
-<button className="counter-action increment" onClick={this.incrementScore.bind(this)}> + </button>
-```
-
-혹은 생성자 안에서 아래와 같이 바인딩할 수 있다.
-
-```javascript
-this.incrementScore = this.incrementScore.bind(this);
-```
-
 #### arrow function 사용하여 this 에러 해결하기
 
-두번째는 arrow function을 사용하는 방법이다.  
 arrow function 내에 사용된 this는 lexical this라고 하여 자동적으로 원래 가르키고자하는 scope의 this를 참조하게 된다. 아래와 같이 arrow function을 사용하여 increment 함수표현식을 사용하면된다.  
 
 ```javascript
@@ -99,7 +85,7 @@ decrementScore = () => {
 
 ### state를 prev state로 변경
 
-this.state.score + 1 로 상태를 업데이트하는 것은 비동기적으로 렌더링 된다. 즉, 여러번의 이벤트가 일어나면 이 상태가 순서대로 실행되는것을 보장할 수 없는 불일치성 문제를 일으킬 수 있다. 그래서 일치성을 보장하기 위해서는 이전 상태에 기반하여 상태를 업데이트하여야 한다. setState는 이전상태 값에 기반한 콜백 펑션을 제공해준다.  
+this.state.score + 1 로 상태를 업데이트하는 것은 `비동기적`으로 렌더링 된다. 즉, 여러번의 이벤트가 일어나면 이 상태가 순서대로 실행되는것을 보장할 수 없는 불일치성 문제를 일으킬 수 있다. 그래서 일치성을 보장하기 위해서는 이전 상태에 기반하여 상태를 업데이트하여야 한다. setState는 이전상태 값에 기반한 콜백 펑션을 제공해준다.  
   
 또한 setState에 지정된 state는 merge 된다. 만일 state에 a,b,c,d,e 다섯가지의 상태가 정의되어있다면 setState에 c만 상태를 갱신했다면 a, b, c, d, e 상태에서 c만 merge가 일어나고 나머지 상태는 그대로 있게 된다는 얘기이다.  
 
@@ -152,7 +138,7 @@ players 와 같이 SPA 전체에서 공유되어야 할 필요성이 있는 stat
 
 ### Player 삭제
 
-App 컴포넌트에 삭제 함수를 추가한다. 이전 상태를 기반으로 변경한다. 그리고 Player 컴포넌트에 삭제 함수를 props로 넘긴다. Player 컴포넌트에서 해당 함수가 넘어왔는지 devtools에서 확인한다.
+App 컴포넌트에 삭제 함수 handleRemovePlayer를 추가한다. Player 컴포넌트에 **삭제 함수handleRemovePlayer를 props로 넘긴다**. Player 컴포넌트에서 해당 함수가 넘어왔는지 devtools에서 확인한다.
 
 ```javascript
 handleRemovePlayer = (id) => {
@@ -177,7 +163,7 @@ render() {
 }
 ```
 
-Player 컴포넌트에서는 props 로 넘어온 함수를 이용하여 player를 삭제하는 클릭 이벤트를 추가한다.
+Player 컴포넌트에서는 props 로넘어온 함수를 이용하여 player를 삭제하는 클릭 이벤트를 추가한다.
 
 
 ```javascript
@@ -195,6 +181,4 @@ const Player = (props) => {
 }
 ```
 
-props 로 넘어온 players 는 read only 이므로 수정할 수 없다. 그러므로 players를 소유하고 있는 부모에게 삭제요청을 이벤트로 한다. 데이터의 흐름은 트리의 상단에서부터 아래로 단방향으로 흐르고 자식은 수정요청을 이벤트로 하게 된다.  
-  
-그런데 부모와 자식간의 관계가 바로 아래 자식이 아니라 3단계이상 떨어진 경우라면 어떻게 해야 하나? 3단계 이상 떨어지면 계속 전달을 반복해야 하므로 이것을 해결하기 위해서 redux 등 3rd party 라이브러리를 이용해서 상태관리를 하게 된다.
+props 로 넘어온 players 는 read only 이므로 수정할 수 없다. 그러므로 players를 소유하고 있는 부모에게 삭제요청을 이벤트로 한다. 데이터의 흐름은 트리의 `상단에서부터 아래로 단방향`으로 흐르고 자식은 수정요청을 이벤트로 하게 된다.  
