@@ -37,7 +37,8 @@ req.session.destroy(function(err) {}) // 세션 삭제
 ```
 
 #### session 생성 및 삭제 예제 
-```javscript
+
+```javascript
 var express = require('express');
 var app = express();
 var sessionParser = require('express-session'); // 모듈 추출
