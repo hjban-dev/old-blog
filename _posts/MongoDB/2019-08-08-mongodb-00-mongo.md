@@ -53,11 +53,11 @@ users컬렉션에 있는 모든 문서 객체들 반환
 
 ### 다양한 find() 사용법
 - db.car.find({name:'K7'});  
-  db.car.find({name:'K7'},{_id:false});
-- db.car.find({price:{$gte:2000}}, {_id:false});
-  db.car.find({price:{$gt:2000}},{_id:false});
-- db.car.find({price:{$lte:2000}},{_id:false});
-  db.car.find({price:{$lt:2000}},{_id:false});
+  db.car.find({name:'K7'},{_id:false});  
+- db.car.find({price:{$gte:2000}}, {_id:false});  
+  db.car.find({price:{$gt:2000}},{_id:false});  
+- db.car.find({price:{$lte:2000}},{_id:false});  
+  db.car.find({price:{$lt:2000}},{_id:false});  
 - db.car.find({price:{$gte:2000}}, {_id:false}).count(); - 개수
 - db.car.findOne();
 - db.car.find().sort({name:1});  
