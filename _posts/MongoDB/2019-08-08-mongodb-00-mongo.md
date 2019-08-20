@@ -37,53 +37,50 @@ comments: false
 |:--------|:--------|
 | create table emp(no number(3)) | db.createCollection({"emp"}) |
 
-## MongoDB 사용하기 - 명령어
-- 설치 확인
-  - mongo
-- 데이터베이스 지정 (use 명령어를 사용 하면 DB 자동 생성)
-  - use local
-- 현재 사용중인 db명 출력
-  - db
-- db에 users 컬렉션 만들고 데이터 저장 (save({}) 명령어로 자동 생성 및 저장)
-  - db.users.save({name:'네주', age:25})
-- users컬렉션에 있는 모든 문서 객체들 반환
-  - db.users.find().pretty()
+## MongoDB 사용하기 - 명령어 I
+
+설치 확인
+- mongo
+데이터베이스 지정 (use 명령어를 사용 하면 DB 자동 생성)
+- use local
+현재 사용중인 db명 출력
+- db
+db에 users 컬렉션 만들고 데이터 저장 (save({}) 명령어로 자동 생성 및 저장)
+- db.users.save({name:'네주', age:25})
+users컬렉션에 있는 모든 문서 객체들 반환
+- db.users.find().pretty()
 
 
 ### 다양한 find() 사용법
 - db.car.find({name:'K7'});  
   db.car.find({name:'K7'},{_id:false});
-- db.car.find({price:{$gte:2000}},{_id:false});  
+- db.car.find({price:{$gte:2000}}, {_id:false});
   db.car.find({price:{$gt:2000}},{_id:false});
-- db.car.find({price:{$lte:2000}},{_id:false});  
+- db.car.find({price:{$lte:2000}},{_id:false});
   db.car.find({price:{$lt:2000}},{_id:false});
-- db.car.find({price:{$gte:2000}},{_id:false}).count(); - 개수
+- db.car.find({price:{$gte:2000}}, {_id:false}).count(); - 개수
 - db.car.findOne();
 - db.car.find().sort({name:1});  
   db.car.find().sort({name:-1});
 
-#### 값 수정하기
+### 데이터 수정하기
 - db.car.update({name:'K7'},{$set:{price:1000}},false,false);
   - 첫번째 파라미터 : 검색조건
   - 두번째 파라미터: 변경할 내용
   - 세번째 파라미터: 일치하는 항목 없을 경우 새로 생성 여부
   - 네번째 파라미터: 일치하는 항목이 여러개일 경우 모두 수정할지 여부
 
-#### 도큐먼트(데이터) 제거
+## MongoDB 사용하기 - 명령어 II
+
+도큐먼트(데이터) 제거
 - db.car.remove({price:{$lte:1000}});
-
-#### 새로운 컬렉션 생성(use 명령에 포함 되었다.)
+새로운 컬렉션 생성(use 명령에 포함 되었다.)
 - db.createCollection('newCar');
-
-#### 모든 컬렉션 목록 보기
+모든 컬렉션 목록 보기
 - db.getCollectionNames()
-
-#### 현재 DB에서 컬렉션 제거
+현재 DB에서 컬렉션 제거
 - db.car.drop()
-
-#### 현재 접속 DB 제거
+현재 접속 DB 제거
 - db.dropDatabase()
-
-#### 빠져나오기
+빠져나오기
 - exit
-

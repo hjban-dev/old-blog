@@ -19,7 +19,7 @@ comments: false
 ### Nodejs의 내부 모듈
 
 - 내부 모듈은 노드 설치시 기본으로 설치. require() 사용하여 불러올 수 있음
-- 내장 모듈에 대한 정보 -> [nodejs api](http://nodejs.org/api)
+- 내장 모듈에 대한 정보 > [nodejs api](http://nodejs.org/api)
 
 ---
 
@@ -27,16 +27,16 @@ comments: false
 
 ```javascript
 const http = require('http');
-//위 코드를 사용하는 이유는 사용자가 nodejs에서 제공하는(내부모듈) http라는 모듈(부품)이 필요할 때 require 함수를 통해서 http 모듈을 가져오고 상수에 담는다.
+// 사용자가 nodejs에서 제공하는(내부모듈) http 라는 모듈(부품)이 필요하면 require 함수를 통해서 http 모듈을 가져오고 상수에 담는다.
 ```
 
-- http 모듈 사용 설명서 : [nodejs document](https://nodejs.org/dist/latest-v10.x/docs/api/http.html)
-  - http.createServer() 메소드 : http 모듈의 Server객체를 리턴
-  - http.createServer().listen() 메소드
+http 모듈 사용 설명서 : [nodejs document](https://nodejs.org/dist/latest-v10.x/docs/api/http.html)
+- http.createServer() 메소드 : http 모듈의 Server객체를 리턴
+- http.createServer().listen() 메소드
 
-- `모듈을 사용하기 위해서는 require라는 함수로 호출`한다.
-- nodejs는 기본적으로 앱을 만들기 위한 부품을 기본적으로 제공한다. (ex. http, path, os)
-- 모듈의 사용설명서는 nodejs 사이트의 [document](https://nodejs.org/dist/latest-v6.x/docs/api/)에서 확인 가능하다.
+`모듈을 사용하기 위해서는 require라는 함수로 호출`한다.  
+nodejs는 기본적으로 앱을 만들기 위한 부품을 기본적으로 제공한다. (ex. http, path, os)  
+모듈의 사용설명서는 nodejs 사이트의 [document](https://nodejs.org/dist/latest-v6.x/docs/api/)에서 확인 가능하다.
 
 ## path 모듈 호출 코드
 
@@ -54,7 +54,7 @@ const extname = path.extname(filename); // 확장자명 -> .exe
 console.log(dirname, basename, extname); 
 ```
 
-- http 모듈 사용 설명서 : [nodejs document](https://nodejs.org/dist/latest-v10.x/docs/api/path.html)
+http 모듈 사용 설명서 : [nodejs document](https://nodejs.org/dist/latest-v10.x/docs/api/path.html)
 
 ### 터미널
 
@@ -88,9 +88,9 @@ C:\Users\newDir app.exe .exe
 
 ### npm 초기화
 - cmd 창에 `npm init` 입력
-- 새 npm 패키지 설정 = package.json 파일 생성
-  - package.json은 프로젝트에 대한 표. 해당 프로젝트의 이름, 버전, 사용되는 모듈 등의 정보가 적혀있고, 이 파일 하나로 모듈 의존성 모듈 관리도 진행할 수 있다. 
-  - 어떤 오픈 소스를 다운 받을 때 package.json만 있다면 해당 프로젝트가 사용하는 모듈이 어떤 것인지 알 수 있다.
+- 새 npm 패키지 설정이라는 말은 = package.json 파일 생성
+  - **package.json**은 프로젝트에 대한 표. 해당 프로젝트의 이름, 버전, 사용되는 모듈 등의 정보가 적혀있고, 이 파일 하나로 모듈 의존성 모듈 관리도 진행할 수 있다. 
+  - <u>어떤 오픈 소스를 다운 받을 때 package.json만 있다면 해당 프로젝트가 사용하는 모듈이 어떤 것인지 알 수 있다.</u>
 
 ### npm 에서 외부 모듈 설치
 - cmd 창에 `npm install 모듈명 --save` 입력

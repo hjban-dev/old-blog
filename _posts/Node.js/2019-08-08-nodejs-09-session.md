@@ -12,14 +12,16 @@ comments: false
 # Nodejs Session 생성 및 사용
 
 ## Session 배경
+
 - 쿠키보다 더 안전하고 많은 데이터를 저장하는 저장 방식
-- 데이터를 `웹 서버`에 저장 쿠키보다 조금 더 안전  
+- 데이터를 `웹 서버`에 저장 웹 브라우저는 Session ID만 갖고 있어서 쿠키보다 더 안전  
 
 ## Express-Session [적용방법](https://www.npmjs.com/package/express-session)
+
 - 설치 `npm install express-session --save`
   - package.json 에서 설치 확인
 - app.js에 해당 모듈 추가 `expressSession = require('express-session');`
-- express 프로세스 app에 express-session 미들웨어 연결  
+- express 프로세스 app에 express-session 미들웨어 연결( 외우는게 좋다 )  
   `app.use(session({ secret , resave , saveUninitialized }))`
   - secret - 필수항목 이 값으로 세션을 암호화 하여 저장.
   - resave - 세션을 언제나 저장할 지 정하는 값 false를 권장하지만 필요에 따라 true로 설정
@@ -27,11 +29,13 @@ comments: false
   ex) 방문자 추적할 때 사용  
 
 ### session 저장하는 방법
+
 ```javascript
 req.session.객체명 // 객체 방식 선호
 ```
 
 ### session 삭제하는 방법
+
 ```javascript
 req.session.destroy(function(err) {}) // 세션 삭제
 ```
@@ -46,11 +50,11 @@ var router = express.Router();
 
 var port = process.env.port || 3000; // 삼항 연산자로 포트번호 지정
 
-// express-session 미들웨어 연결
+// express-session 미들웨어 연결 (외울 필요 있음)
 app.use(sessionParser({
-  secret: 'my key',
-  resave: true,
-  saveUninitialized: true
+  secret: 'my key', // 암호화 하여 저장.
+  resave: true, // 언제나 저장할 지 정하는 값
+  saveUninitialized: true // 저장할 내용이 없어도 uninitialized 상태로 미리 저장
 }));
 
 router.route('/confirm').get(function (req, res) {
@@ -65,7 +69,7 @@ router.route('/').get(function (req, res) {
   if(req.session.user){
     console.log(`세션이 이미 존재합니다.`);
   }else{
-	// session 생성
+    // session 생성
     req.session.user = {
       "name" : "neju money",
       "age" : 25,

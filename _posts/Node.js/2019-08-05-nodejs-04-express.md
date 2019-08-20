@@ -26,8 +26,8 @@ comments: false
 
 ### 코드작성
 
-- require() 함수로 설치된 express 모듈 추출
-- 상수 app 으로 웹 서버를 시작
+require() 함수로 설치된 express 모듈 추출  
+상수 app 으로 웹 서버를 시작
 
 ```javascript
 const express = require('express');
@@ -58,11 +58,11 @@ app.listen(3000, function(){
 | app.set(name, value) | 서버 설정 속성 지정. 지정한 속성을 get() 메서드로 확인할 수 있음. |
 | app.get(name) | app.set() 메서드로 서버 설정을 위해 지정했던 속성 확인 |
 
-- get(path, callback [, callback ...]) 메서드는 요청방식 처리 메서드로 다음장에서 더 알아봅시다.
+get(path, callback [, callback ...]) 메서드는 요청방식 처리 메서드로 다음장에서 더 알아봅시다.
 
 ### 코드작성
 
-- 아래 코드는 웹 서버 실행을 위해 익숙해져야 함.
+**아래 코드는 웹 서버 실행을 위해 익숙해져야 함.**
 
 ```javascript
 var express = require('express');
@@ -81,4 +81,4 @@ app.listen(3000, function(){
   console.log('connected 3000 port!');
 });
 ```
-- 브라우저에 http://localhost:3000, http://localhost:3000/login 로 접속하여 결과 확인
+브라우저에 http://localhost:3000, http://localhost:3000/login 로 접속하여 결과 확인

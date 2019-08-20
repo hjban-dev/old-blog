@@ -14,36 +14,38 @@ comments: false
 ## nodejs 서버연결
 
 ### 서버연결을 위한 코드
-- [node.org > about](https://nodejs.org/en/about/) 에서 파일 복사 후 `webserver.js` 생성 후 붙여넣기
-- http 내부 모듈을 불러와서 hostname의 port로 서버 생성 후 연결
 
-  ```javascript
-  const http = require('http');
+[node.org > about](https://nodejs.org/en/about/) 에서 파일 복사 후 `webserver.js` 생성 후 붙여넣기
+http 내부 모듈을 불러와서 hostname의 port로 서버 생성 후 연결 (밑에서 해석)
 
-  const hostname = '127.0.0.1';
-  const port = 3000;
+```javascript
+const http = require('http');
 
-  const server = http.createServer((req, res) => {
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'text/plain');
-    res.end('Hello World\n');
-  });
+const hostname = '127.0.0.1';
+const port = 3000;
 
-  server.listen(port, hostname, () => {
-    console.log(`Server running at http://${hostname}:${port}/`);
-  });
-  ```
+const server = http.createServer((req, res) => {
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/plain');
+  res.end('Hello World\n');
+});
 
-- 터미널에서 `node webserver.js` 실행
-- 서버 종료할 때는 Ctrl + C 
+server.listen(port, hostname, () => {
+  console.log(`Server running at http://${hostname}:${port}/`);
+});
+```
 
-  ```
-  $ node webserver.js
-  Server running at http://127.0.0.1:3000/
-  ```
-- 웹브라우저를 통해 http://127.0.0.1:3000/ (로컬호스트)의 3000번 포트 경로에 접속하면 브라우저에 `hello world` 가 출력
+터미널에서 `node webserver.js` 실행
+서버 종료할 때는 Ctrl + C 
 
-### 의미
+```
+$ node webserver.js
+Server running at http://127.0.0.1:3000/
+```
+
+웹브라우저를 통해 http://127.0.0.1:3000/ (로컬호스트)의 3000번 포트 경로에 접속하면 브라우저에 `hello world` 가 출력
+
+### 내용
 
 - webserver.js 자바스크립트의 코드가 웹 브라우저를 통해서 요청한 내용을 받아서 서버 생성 후 hello world 라는 텍스트를 노출을 명령
 - 우리의 웹브라우저는 화면에 hello world를 출력  
@@ -56,7 +58,7 @@ comments: false
 
 ```javascript
 const http = require('http'); // http 내부 모듈 추출
-  // require()는 javascript 표준 API는 아님. Node.js에서 모듈을 불러오는 특별한 목적을 가진 내장 함수 
+// require()는 javascript 표준 API는 아님. Node.js에서 모듈을 불러오는 특별한 목적을 가진 내장 함수 
 
 const hostname = '127.0.0.1'; // 서버 컴퓨터의 ip
 const port = 3000; // 목적 포트. 컴퓨터에는 0 ~ 65535번의 포트(port) 존재
