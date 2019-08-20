@@ -11,9 +11,9 @@ comments: false
 # scoreboard(클릭으로 점수 +, - 기능) 예제 만들기 1
 
 ## 구성
-1. Header 컴포넌트와 Player 컴포넌트로 구성
-  - Header 안에는 title과 플레이어 수로 구성
-  - Player 안에는 선수 이름과 점수로 구성  
+Header 컴포넌트와 Player 컴포넌트로 구성  
+- Header 안에는 title과 플레이어 수로 구성  
+- Player 안에는 선수 이름과 점수로 구성  
 
 <center>
 <figure>
@@ -39,7 +39,7 @@ function Header() {
 ReactDOM.render(<Header />, document.getElementById('root'));
 ```
 
-ECMAScript6 화살표 함수 사용  
+같은 코드를 ECMAScript6 화살표 함수 사용  
 
 ```javascript
 const Header = () => (

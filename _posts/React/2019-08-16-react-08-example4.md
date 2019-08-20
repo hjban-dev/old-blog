@@ -18,7 +18,7 @@ incrementScore 함수를 추가하고 JSX에서 클릭 이벤트를 추가한다
 클릭을 하면 클릭시 실행할 function을 정해둔다.
   
 여기서 주의할 점은 function을 정의해 놓기 때문에 이 function이 객체에 바인딩되지 않고 따로 떨어져 나오게 된다.  
-그래서 function에 this를 사용하게 되면 this가 객체를 가르키니 않고 글로벌 this가 되어 버리기 때문에 이것을 해결하기 위해서 bind() 문법을 사용하거나 es6에서온 arrow 펑션을 사용한다. arrow 펑션안에 사용된 this는 lexical this가 되기 때문에 bind 없이 사용가능하게 된다.
+그래서 function에 this를 사용하게 되면 <u>this가 객체를 가르키니 않고 글로벌 this</u>가 되어 버리기 때문에 이것을 해결하기 위해서 bind() 문법을 사용하거나 es6에서온 arrow 펑션을 사용한다. arrow 펑션안에 사용된 this는 lexical this가 되기 때문에 bind 없이 사용가능하게 된다.
 
 ### 버튼을 클릭시 score 증가하는 이벤트 생성
 
@@ -45,7 +45,7 @@ class Counter extends React.Component {
 ```
 
 incrementScrore 함수안에는 this.state.score = this.state.score + 1 과 같이 상태를 업데이트를 해서는 안된다.  
-상태를 업데이트할때는 반드시 setState 함수로 업데이트해야 UI가 re-render된다는것을 기억하자.
+상태를 업데이트할때는 반드시 **setState 함수로 업데이트**해야 UI가 re-render된다는것을 기억하자.
 
 ```javascript
 incrementScore = () => {
@@ -87,7 +87,7 @@ decrementScore = () => {
 
 this.state.score + 1 로 상태를 업데이트하는 것은 `비동기적`으로 렌더링 된다. 즉, 여러번의 이벤트가 일어나면 이 상태가 순서대로 실행되는것을 보장할 수 없는 불일치성 문제를 일으킬 수 있다. 그래서 일치성을 보장하기 위해서는 이전 상태에 기반하여 상태를 업데이트하여야 한다. setState는 이전상태 값에 기반한 콜백 펑션을 제공해준다.  
   
-또한 setState에 지정된 state는 merge 된다. 만일 state에 a,b,c,d,e 다섯가지의 상태가 정의되어있다면 setState에 c만 상태를 갱신했다면 a, b, c, d, e 상태에서 c만 merge가 일어나고 나머지 상태는 그대로 있게 된다는 얘기이다.  
+setState에 지정된 state는 merge 된다. 만일 state에 a, b, c, d 여러개의 상태가 정의되어있다면 setState에 c만 상태를 갱신했다면 c만 merge가 일어나고 나머지 상태 a, b, d 는 그대로 있는다.  
 
 ```javascript
 incrementScore = () => {
@@ -105,15 +105,16 @@ decrementScore = () => {
 
 ### Player 상태 관리
 
-player 삭제 로직을 추가하기 위해서는 자식 컴포넌트인 player 컴포넌트가 삭제 요청을 부모에게 보내고 자식이 삭제를 처리해야한다. player 데이터를 최상위 부모인 App 컴포넌트에 위치시켜서 state 컴포넌트로 만들어야 한다.  
+player 삭제 로직을 추가하기 위해서는 자식인 player 컴포넌트가 삭제 요청을 부모에게 보내고 자식이 삭제를 처리해야한다. player 데이터를 최상위 부모인 App 컴포넌트에 위치시켜서 state 컴포넌트로 만들어야 한다.  
   
 App 컴포넌트를 먼저 function 컴포넌트에서 class 컴포넌트로 변경하고 players 라는 state 를 추가한다.
 
 ```javascript
+// 클래스 컴포넌트로 변경
 class App extends React.Component {
   state = {
     players: [
-      {name: 'LDK', id: 1},
+      {name: 'NEJU', id: 1},
       {name: 'HONG', id: 2},
       {name: 'KIM', id: 3},
       {name: 'PARK', id: 4},
@@ -125,7 +126,8 @@ class App extends React.Component {
         <Header title="My scoreboard" totalPlayers={this.state.players.length} />
       
         {/*Players List*/}
-        { this.state.players.map(item => <Player name={item.name} key={item.id.toString()} />) }
+        { this.state.players.map(item => 
+          <Player name={item.name} key={item.id.toString()} />) }
       </div>
     );
   }
@@ -154,8 +156,11 @@ render() {
       <Header title="My scoreboard" totalPlayers={this.state.players.length} />
     
       {/*Players List*/}
-      { this.state.players.map(item => <Player name={item.name}
-        key={item.id.toString()} removePlayer={this.handleRemovePlayer}
+      { this.state.players.map(item => 
+        <Player 
+        name={item.name}
+        key={item.id.toString()} 
+        removePlayer={this.handleRemovePlayer}
         id={item.id} />)
       }
     </div>
@@ -163,7 +168,7 @@ render() {
 }
 ```
 
-Player 컴포넌트에서는 props 로넘어온 함수를 이용하여 player를 삭제하는 클릭 이벤트를 추가한다.
+Player 컴포넌트에서는 props 로 넘어온 함수를 이용하여 player를 삭제하는 클릭 이벤트를 추가한다.
 
 
 ```javascript
@@ -172,7 +177,8 @@ const Player = (props) => {
   return (
     <div className="player">
       <span className="player-name">
-        <button className="remove-player" onClick={() => props.removePlayer(props.id)}>x</button>
+        <button className="remove-player" 
+          onClick={() => props.removePlayer(props.id)}>x</button>
         {props.name}
       </span>
       <Counter />

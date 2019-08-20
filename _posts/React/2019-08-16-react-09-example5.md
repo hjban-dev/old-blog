@@ -53,7 +53,7 @@ class Counter extends React.Component {
     // 1. state를 변경하는 방법
     // this.state.score += 1;
     // this.setState({score: this.state.score + 1});
-    // 2. merge 된다. : 기존 속성으 그대로 유지
+    // 2. merge 된다. : 기존 속성 그대로 유지
     // 3. 비동기로 처리
     this.setState(prevState => ({
       score: prevState.score + delta

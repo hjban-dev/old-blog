@@ -15,7 +15,7 @@ comments: false
 ### App 컴포넌트 재구성
 Header 컴포넌트를 html attribute처럼 설정한다.  
 title은 스트링으로 넘어갈 것이고 totalPlayers는 JSX expression으로 설정했으므로 number 타입으로 넘어간다.
-JSX에서 주석은 자바스크립트와 같으나 {}로 묶어준다 > {/* 주석 내용 */}
+JSX에서 주석은 자바스크립트와 같으나 {}로 묶어준다 - **{/* 주석 내용 */}**
 
 ```javascript
 const App = () => {
@@ -73,18 +73,31 @@ const App = () => {
 }
 ```
 
-Player 컴포넌트에서 name 을 표시하고 score는 Player 컴포넌트에서 처리하는게 아니라 하위 컴포넌트인 Counter 컴포넌트로 다시 넘겨야 한다.  
+Player 컴포넌트를 여러번 쓰는 방법 대신 정보를 가지고 있는 json Array 데이터를 만들자.  
+React는 자바스크립트 언어만 사용해서 반복문 구현 가능  
+
+```javascript
+const players = [
+  {name: 'LDK', score: 30},
+  {name: 'HONG', score: 40},
+  {name: 'KIM', score: 50},
+  {name: 'PARK', score: 60},
+];
+```
+
+**Player 컴포넌트에서 name** 을 표시하고 **score는 하위 컴포넌트인 Counter 컴포넌트**로 다시 넘겨야 한다.  
 
 ```javascript
 const Player = (props) => {
   return (
     <div className="player">
       <span className="player-name">
-		{/* 반복 */}
-		{props.name} 
+        {/* 반복 */}
+        {props.name} 
       </span>
-	  {/* props 전달 */}
-	  <Counter score={props.score} /> 
+      
+      {/* props 전달 */}
+      <Counter score={props.score} /> 
     </div>
   );
 }
@@ -100,19 +113,7 @@ const Counter = (props) => {
 }
 ```
 
-Player 컴포넌트를 여러번 쓰는 방법 대신 정보를 가지고 있는 json Array 데이터를 만들자.  
-React는 자바스크립트 언어만 사용해서 반복문 구현 가능  
-
-```javascript
-const players = [
-  {name: 'LDK', score: 30},
-  {name: 'HONG', score: 40},
-  {name: 'KIM', score: 50},
-  {name: 'PARK', score: 60},
-];
-```
-
-이 json Array를 렌더링할 때 top-level 엘리먼트인 `App`에 `props`로 입력한 후에 다시 App 컴포넌트에서 props로 받은 후에 player에게 전달  
+위의 players json Array를 렌더링할 때 top-level 엘리먼트인 `App`에 `props`로 입력한 후에 다시 App 컴포넌트에서 props로 받은 후에 player에게 전달  
 props 최상단 엘리먼트가 모든 props를 다 가지고 있다가 그걸 자식에게 넘겨주는 형태가 바람직  
 
 ```javascript
@@ -121,23 +122,24 @@ const App = (props) => {
     <div className="scoreboard">
       <Header title="My scoreboard" totalPlayers={props.initialPlayers.length} />
       
-      {/*2. initialPlayers 새로운 배열을 리턴 */}
+      {/* 2. 받아온 initialPlayers props를 새로운 배열을 리턴 후 player에 넘겨줌 */}
       { 
-		props.initialPlayers.map(item => 
-		  <Player name={item.name} score={item.score} />) 
-	  }
+      props.initialPlayers.map(item => 
+        <Player name={item.name} score={item.score} />) 
+      }
     </div>
   );
 }
 
-// 1. initialPlayers 를 JSX 문법 사용히야 {players} 전달
+// 1. {players} 를 initialPlayers로 JSX 문법 사용하여 전달
 ReactDOM.render(<App initialPlayers={players} />, document.getElementById('root'));
 ```
-map은 새로운 배열을 리턴한다.  
-JSX expression은 모두 { } 안에 포함되어져야 한다.  
-실행은 잘되지만 콘솔창을 보면 warning이 발생한다.  
-player Array를 특정한 key로 구분해야 한다.  
-상수 players 객체안에 id값을 추가하여 player 각각 key값을 넣어준다.  
+
+- map은 새로운 배열을 리턴한다.  
+- JSX expression은 모두 { } 안에 포함되어져야 한다.  
+- 실행은 잘되지만 콘솔창을 보면 warning이 발생한다.  
+- player Array를 특정한 key로 구분해야 한다.  
+- 상수 players 객체안에 id값을 추가하여 player 각각 key값을 넣어준다.  
 
 ```javascript
 const players = [
@@ -152,13 +154,15 @@ const App = (props) => {
       <Header title="My scoreboard" totalPlayers={props.initialPlayers.length} />
       
       {/*Players List*/}
-	  { 
-		props.initialPlayers.map(item => <Player 
-		name={item.name} 
-		score={item.score} 
-		key={item.id.toString()} />) 
-	  }
+      { 
+        props.initialPlayers.map(item => 
+        <Player 
+        name={item.name} 
+        score={item.score} 
+        key={item.id.toString()} />) 
+      }
     </div>
   );
 }
+ReactDOM.render(<App initialPlayers={players} />, document.getElementById('root'));
 ```
