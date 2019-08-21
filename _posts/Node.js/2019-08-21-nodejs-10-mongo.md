@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Node.js에서 MongoDB 사용하기 1
+title: Node.js에서 MongoDB 사용하기
 category: Nodejs
 tags: [Nodejs, MongoDB]
 comments: false
@@ -11,14 +11,17 @@ comments: false
 
 # Node.js에서 MongoDB 사용과 메서드
 
-[MongoDB 설치 및 명령어](https://hjban-dev.github.io/mongodb/2019/08/08/mongodb-00-mongo/)
+[MongoDB 설치 및 명령어 포스트](https://hjban-dev.github.io/mongodb/2019/08/08/mongodb-00-mongo/)
 
 ## Mongojs 설치 및 모듈 선언 [npm mongojs 참고](https://www.npmjs.com/package/mongojs)
 
-- 설치 `npm install mongojs --save`  (package.json 에서 설치 확인)
-- app.js에 해당 모듈 추가 **const MongoClient = require('mongodb').MongoClient**
+- 설치 `npm install mongojs --save`
+  (package.json 에서 설치 확인)
+- app.js에 해당 모듈 추가 
+  - **const MongoClient = require('mongodb').MongoClient**
   - MongoClient : MongoDB 데이터베이스에 연결하면서 상호 작용을 처리하는 Nodejs 라이브러리
-- MongoDB 서버에 대한 URL 추가 **const url = 'mongodb://localhost:27017'**  (MongoDB URL의 기본 포트 27017)
+- MongoDB 서버에 대한 URL 추가 
+ -  **const url = 'mongodb://localhost:27017'**  (MongoDB URL의 기본 포트 : 27017)
 
 ```javascript
 const MongoClient = require('mongodb').MongoClient;
@@ -48,9 +51,9 @@ const collection = dbMydb.collection('dogs');
 // dbMydb 데이터베이스에 컬렉션 생성 또는 가져오기
 ```
 
-## collection에 데이터 삽입
+## collection에 데이터 추가
 
-insertOne() 메소드를 사용하여 dogs 콜렉션에 데이터 삽입
+insertOne() 메소드를 사용하여 dogs 콜렉션에 데이터 추가
 
 ```javascript
 collection.insertOne({name: 'Roger'}, (err, result) => {
@@ -70,7 +73,7 @@ collection.insertMany([{name: 'Togo'}, {name: 'Syd'}], (err, result) => {
 ## 컬렉션 데이터 가져오기
 
 find() 메소드를 사용하여 컬렉션에 추가 된 모든 데이터를 가져옵니다.  
-추출한 데이터를 toArray()를 사용하여 배열 형태로 반환(생략 가능)
+추출한 데이터를 toArray()를 사용하여 배열 형태로 반환 
 
 ```javascript
 collection.find().toArray((err, items) => {
@@ -93,8 +96,38 @@ collection.find({name: 'Togo'}).toArray((err, items) => {
 })
 ```
 
+데이터 최상단 하나만 찾기 (toArray() 생략가능)
+
 ```javascript
 collection.findOne({name: 'Togo'}, (err, item) => {
   console.log(item)
 })
+```
+
+## 데이터 업데이트
+
+updateOne() 메서드 사용  
+첫번째 매개변수는 필드 선택, 두번째 매개변수에 조건  
+
+```javascript
+collection.updateOne({name: 'Togo'}, {'$set': {'name': 'Togo2'}}, (err, item) => {
+  console.log(item)
+})
+```
+
+## 데이터 삭제
+
+udeleteOne() 메서드 사용  
+첫번째 매개변수는 필드 선택  
+
+```javascript
+collection.deleteOne({name: 'Togo'}, (err, item) => {
+  console.log(item)
+})
+```
+
+## 연결 종료
+
+```javascript
+client.close()
 ```

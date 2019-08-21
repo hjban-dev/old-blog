@@ -70,17 +70,18 @@ comments: false
 ## MongoDB 사용하기 - 명령어 I
 
 - 설치 확인  
-mongo  
+**mongo**  
 - 데이터베이스 지정 또는 생성 (use 명령어를 사용 하면 DB 자동 생성)  
-use local > (local 데이터베이스 사용한다는 의미)
+**use local** > (local 데이터베이스 사용한다는 의미)
 - 현재 사용중인 db명 출력  
-db > (local 데이터베이스 사용하고 있다는 의미)  
+**db** > (local 데이터베이스 사용하고 있다는 의미)  
 - db에 users 컬렉션 만들고 데이터 저장 (save({}) 명령어로 자동 생성 및 저장)  
-db.users.save({name:'네주', age:25}) > (결과 : WriteResult({ "nInserted" : 1 }))
+**db.users.save({name:'네주', age:25})** > (결과 : WriteResult({ "nInserted" : 1 }))
 - users컬렉션에 있는 모든 문서 객체들 반환  
-db.users.find() 
+**db.users.find()** 
 - users컬렉션에 있는 모든 문서 객체들 <u>정렬하여</u> 반환  
-db.users.find().pretty() 
+**db.users.find().pretty()**  
+참고) ObjectId는 자동 생성, 유일한 값을 가지므로 같은 값 입력 안됨.
 
 <center>
 <figure>
@@ -100,12 +101,12 @@ db.collection.find(query, projection)
 | projection| 일치하는 필더에서 반환 할 필드 지정 |
 
 - db.car.find({name:'K7'}); (name:'K7' 반환)
-- db.car.find({name:'K7'},{_id:false});  (name:'K7'의 _id필드 제외 반환)
+- db.car.find({name:'K7'},{_id:false}); > (name:'K7'의 _id필드 제외 반환)
 - db.car.find({price:{$gte:2000}}, {_id:false});
 - db.car.find({price:{$gt:2000}},{_id:false});
 - db.car.find({price:{$lte:2000}},{_id:false});
 - db.car.find({price:{$lt:2000}},{_id:false});
-- db.car.find({price:{$gte:2000}}, {_id:false}).count();  (조건의 필더 개수)
+- db.car.find({price:{$gte:2000}}, {_id:false}).count(); > (조건의 필더 개수)
 - db.car.findOne();
 - db.car.find().sort({name:1});
 - db.car.find().sort({name:-1});
@@ -122,14 +123,14 @@ db.car.update({name:'K7'},{$set:{price:1000}},false,false);
 ## MongoDB 사용하기 - 명령어 III
 
 - 도큐먼트(데이터) 제거  
-db.car.remove({price:{$lte:1000}});
+**db.car.remove({price:{$lte:1000}});**
 - 새로운 컬렉션 생성 (use 명령에 포함 되어 있음)  
-db.createCollection('newCar'); 
+**db.createCollection('newCar');** 
 - 모든 컬렉션 목록 보기  
-db.getCollectionNames() 
+**db.getCollectionNames()** 
 - 현재 DB에서 컬렉션 제거  
-db.car.drop() 
+**db.car.drop()** 
 - 현재 접속 DB 제거  
-db.dropDatabase() 
+**db.dropDatabase()** 
 - 빠져나오기  
-exit 
+**exit**
