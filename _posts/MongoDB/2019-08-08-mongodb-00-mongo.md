@@ -23,7 +23,7 @@ comments: false
 
 <center>
 <figure>
-<img src="/assets/post-img/react/mongo-strart.jpg" alt="" width="700">
+<img src="/assets/post-img/mongodb/mongo-strart.jpg" alt="" width="700">
 <figcaption>cmd에 mongo 라고 입력한 후의 결과</figcaption>
 </figure>
 </center>
@@ -38,14 +38,14 @@ comments: false
 
 <center>
 <figure>
-<img src="/assets/post-img/react/how-to-path1.jpg">
+<img src="/assets/post-img/mongodb/how-to-path1.jpg">
 <figcaption>3. 내 pc 아이콘 위에서 마우스 오른쪽 클릭</figcaption>
 </figure>
 </center>
 
 <center>
 <figure>
-<img src="/assets/post-img/react/how-to-path1.jpg" alt="" width="800">
+<img src="/assets/post-img/mongodb/how-to-path1.jpg" alt="" width="800">
 <figcaption>4. 환경변수 - 시스템 변수 - path 클릭</figcaption>
 </figure>
 </center>
@@ -83,7 +83,7 @@ users컬렉션에 있는 모든 문서 객체들 <u>정렬하여</u> 반환
 
 <center>
 <figure>
-<img src="/assets/post-img/react/mongo-use-local.png" alt="">
+<img src="/assets/post-img/mongodb/mongo-use-local.png" alt="">
 <figcaption>명령어 실행 결과</figcaption>
 </figure>
 </center>
