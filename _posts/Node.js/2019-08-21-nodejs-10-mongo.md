@@ -73,7 +73,8 @@ collection.insertMany([{name: 'Togo'}, {name: 'Syd'}], (err, result) => {
 ## 컬렉션 데이터 가져오기
 
 find() 메소드를 사용하여 컬렉션에 추가 된 모든 데이터를 가져옵니다.  
-추출한 데이터를 toArray()를 사용하여 배열 형태로 반환 
+추출한 데이터를 toArray()를 사용하여 배열 형태로 반환  
+**매개변수 items 는 find() 의 실행 결과값이 들어있음**
 
 ```javascript
 collection.find().toArray((err, items) => {
