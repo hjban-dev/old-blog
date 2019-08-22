@@ -2,7 +2,7 @@
 layout: post
 title: scoreboard(클릭으로 점수 +, - 기능) 예제 만들기 3
 category: React
-tags: [React]
+tags: [React, Exercise]
 comments: false
 ---
 > ReactJS 이 정도는 알아야지 - 이효범 교재와 KOSMO React 프로그래밍 수업을 듣고 정리합니다.  
