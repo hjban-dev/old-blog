@@ -39,7 +39,7 @@ nav:
   Home:
     - '/'
   Categories:
-    - '/blog/categories/'
+    - '/categories/'
     # - { Categories All: '/blog/categories/' }
     - { TIL (Today I Learned): '/blog/categories/#til' }
     # - { 컴퓨터공학 : '/blog/categories/#컴퓨터공학' }
