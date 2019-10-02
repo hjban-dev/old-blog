@@ -35,11 +35,12 @@ function solution(participant, completion) {
         answer += part[i];
         break;
       }
-
   }
   return answer; 
 }
 ```
+sort() 메서드로 매개변수로 들어온 배열을 정렬시키고,  
+앞에서부터 차례로 비교해서 값이 다른 배열 값을 리턴한다.
 
 ## 다른사람 풀이
 ```javascript
@@ -52,6 +53,7 @@ function solution(participant, completion) {
   }
 }
 ```
+나와 비슷한 코드이지만 더 간결하게 풀어내었다.
 
 ```javascript
 function solution(participant, completion) {
@@ -64,6 +66,8 @@ function solution(participant, completion) {
   });
 }
 ```
+봐도 잘 모르겠다...  
+es6 문법을 더 공부하자는 의미로 가져왔다.
 
 ## 배운점
 
@@ -76,3 +80,4 @@ function solution(participant, completion) {
 - 다시한번 `javascript 자체 내장 함수에 대해 더 공부하고 또 공부하고 복습하자.`
 - 코드의 효율성을 생각하자.
 - 내 코드도 예쁘지만, 다른 사람의 코드도 심도있게 살펴보자.
+- es6 문법 공부를 하자
