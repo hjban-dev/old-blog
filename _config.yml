@@ -49,7 +49,7 @@ nav:
     - { Nodejs: '/blog/categories/#nodejs' }
     - { MongoDB: '/blog/categories/#mongodb' }
     # - { MySQL: '/blog/categories/#MySQL' }
-    - { 알고리즘 문제풀이: '/blog/categories/#알고리즘-문제풀이' }
+    - { Algorithm: '/blog/categories/#algorithm' }
     - { Git: '/blog/categories/#git' }
     # - { firebase: '/blog/categories/#firebase' }
     - { etc: '/blog/categories/#etc' }
