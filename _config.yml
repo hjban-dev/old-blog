@@ -44,12 +44,12 @@ nav:
     - { TIL (Today I Learned): '/blog/categories/#til' }
     # - { 컴퓨터공학 : '/blog/categories/#컴퓨터공학' }
     # - { Django: '/blog/categories/#django' }
-    - { React: '/blog/categories/#react' }
+    - { Algorithm: '/blog/categories/#algorithm' }
     - { Javascript: '/blog/categories/#javascript' }
+    - { React: '/blog/categories/#react' }
     - { Nodejs: '/blog/categories/#nodejs' }
     - { MongoDB: '/blog/categories/#mongodb' }
     # - { MySQL: '/blog/categories/#MySQL' }
-    - { Algorithm: '/blog/categories/#algorithm' }
     - { Git: '/blog/categories/#git' }
     # - { firebase: '/blog/categories/#firebase' }
     - { etc: '/blog/categories/#etc' }

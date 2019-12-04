@@ -74,16 +74,23 @@ title: Home
   <!-- 카테고리 글 숨김, 표시 전환 코드 -->
   <script type="text/javascript">
 
-    $(".category-title").click(function(){
-
-      if ($(this).next().css('display') === 'block'){
-        $(this).next().slideUp()
-        $(this).children().css("color", "#393939")
-      }else{
-        $(this).next().slideDown('slow')
-        $(this).children().css("color", "#ec4c6a")
-      }
-    })
+  $(".category-title").click(function(){
+    //열렸을때
+    if ($(this).next().css('display') === 'block'){
+      $(this).next().slideUp()
+      $(this).children().css({
+        "color": "#D9A404",
+        "font-weight" : "700"
+      })
+    }else{
+     //닫았을때
+      $(this).next().slideDown()
+      $(this).children().css({
+        "color" : "#8C5946",
+        "font-weight" : "900"
+      })
+    }
+  })
 
 
   </script>
