@@ -6,25 +6,27 @@
   }
 
   @media (min-width: 10px) {
-    font-size: .9rem;
+    font-size: .85rem;
 
     h1 { font-size: 1.5rem; color:#402A22}
     h2 {
       margin: 2em 0 1em 0;
       font-size: 1.3rem;
-      color: #bf6525;
+      color: #8C5C03;
     }
 
 	h3{
 		color: #da8140;
+		font-size: 1.2rem;
+	}
+
+	h4{
+		color: #401910;
 	}
 
     h3, h4, h5, h6 {
       margin: 2em 0 1em 0;
       font-size: 1.0rem;
-    }
-    h3 {
-      font-size: 1.2rem;
     }
   }
 
