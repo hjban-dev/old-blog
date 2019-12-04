@@ -21,8 +21,7 @@
 .container {
   max-width: 28rem;
   a {
-	// @if $theme-color != $default { color: $theme-color; }
-	color: #555;
+	@if $theme-color != $default { color: $theme-color; }
   }
 }
 
