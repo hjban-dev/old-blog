@@ -26,6 +26,8 @@ arr | return
 [1,2,3,4] | 2.5
 [5,5] | 5
 
+***
+
 ## 내가 한 풀이
 ```javascript
 function solution(arr) {
@@ -40,6 +42,8 @@ function solution(arr) {
 매개변수로 들어온 배열을 for in 반복문을 실행하여 요소들의 합을 구하고  
 length로 나눈다.
 
+***
+
 ## 다른사람 풀이
 ```javascript
 function solution(arr){
@@ -48,6 +52,8 @@ function solution(arr){
 ```
 Array 의 메서드 reduce()를 사용했다. ( es6를 사용하여 너무나도 간결하고 예쁘게...)  
 분석하자면 a,b를 더하여 단일 값으로 재배열 후 length로 나눔. (reduce()는 왼쪽에서 오른쪽으로 실행하며 단일 값으로 재배열)  
+
+***
 
 ## 배운점
 
