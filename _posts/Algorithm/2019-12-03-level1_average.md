@@ -6,7 +6,7 @@ tags: [Algorithm, Javascript, Exercise]
 comments: false
 ---
 # level 1. 평균 구하기
-> [출처](https://programmers.co.kr/learn/courses/30/lessons/12944)
+> 출처 : <https://programmers.co.kr/learn/courses/30/lessons/12944>
 
 ## 문제
 
