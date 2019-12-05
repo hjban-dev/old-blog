@@ -24,6 +24,7 @@
   font-family: "PT Sans", Helvetica, Arial, sans-serif;
   font-size: .875rem; /* 15px */
   color: rgba(255,255,255,.6);
+  z-index: 10;
   @include transition(all .3s ease-in-out);
 
   @if $reverse-layout {
@@ -181,7 +182,6 @@ a.sidebar-nav-item:focus {
 }
 
 #sidebar-checkbox:checked + .sidebar {
-  z-index: 10;
   visibility: visible;
 }
 
