@@ -52,7 +52,7 @@ function solution(participant, completion) {
   return answer; 
 }
 ```
-sort() 메서드로 매개변수로 들어온 배열을 정렬시키고,  
+`sort()` 메서드로 매개변수로 들어온 배열을 정렬시키고,  
 앞에서부터 차례로 비교해서 값이 다른 배열 값을 리턴한다.
 
 ***

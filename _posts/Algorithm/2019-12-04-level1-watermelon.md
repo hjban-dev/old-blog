@@ -33,7 +33,7 @@ function solution(n) {
   var answer = '';
   for(var i=1; i<n+1; i++){
     i%2 ? answer += '수' : answer += '박';
-    // result += i % 2 == 0 ? "수" : "박";
+    // result += i % 2 ? "수" : "박";
   }
   return answer;
 }
@@ -47,7 +47,7 @@ function solution(n) {
 ```javascript
 const soulution = n => "수박".repeat(n).slice(0,n);
 ```
-repeat() 메서드를 활용하여 result 값을 반복하였고, 반복된 값에서 slice() 메서드를 활용하여 n번째 문자열까지 골라냄.  
+`repeat()` 메서드를 활용하여 result 값을 반복하였고, 반복된 값에서 slice() 메서드를 활용하여 n번째 문자열까지 골라냄.  
 간결하지만 내장 함수를 몰라서 쓸 수 없었던 코드다.
 
 ```javascript
