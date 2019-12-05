@@ -186,7 +186,7 @@ a.sidebar-nav-item:focus {
 }
 
 #sidebar-checkbox:checked ~ .wrap {
-  @include transform(translateX(if($overlay-sidebar,0,if($reverse-layout, -14rem, 14rem))));
+  //@include transform(translateX(if($overlay-sidebar,0,if($reverse-layout, -14rem, 14rem))));
 }
 
 #sidebar-checkbox:checked ~ .sidebar {
