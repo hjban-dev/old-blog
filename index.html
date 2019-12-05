@@ -30,7 +30,8 @@ title: Home
       {% for tag in site.categories %}
       <a href="#{{ tag[0] | slugify }}" class="post-tag fa-bars">{{ tag[0] }}</a>
       {% endfor %}
-    </div>
+	</div>
+	
     <hr/>
 
     <div class="tags-expo-section">
@@ -45,18 +46,23 @@ title: Home
         </a>
         {% endfor %}
       </ul>
-
-
+	</div>
+	
+    <div class="tags-expo-section">
       {% for tag in site.categories %}
-      <a class="category-title"><h2 id="{{ tag[0] | slugify }}">{{ tag[0] }}</h2></a>
+      <h2 id="{{ tag[0] | slugify }}">
+        <a class="category-title">
+          {{ tag[0] }}
+        </a>
+      </h2>
       <ul class="tags-expo-posts">
         {% for post in tag[1] %}
+        <li>
           <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">
-            <li>
               {{ post.title }}
               <small class="post-date">{{ post.date | date_to_string }}</small>
-            </li>
           </a>
+        </li>
         {% endfor %}
       </ul>
       {% endfor %}
