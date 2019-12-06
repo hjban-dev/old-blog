@@ -19,7 +19,7 @@
  */
 
 .container {
-  max-width: 28rem;
+  max-width: 32rem;
   .recently{
 	  a{
 		@if $theme-color != $default { color: $theme-color; }
@@ -37,7 +37,7 @@
 }
 @media (min-width: 56em) {
   .container {
-    max-width: 840px;
+    max-width: 940px;
   }
 }
 
