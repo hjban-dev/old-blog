@@ -34,3 +34,28 @@ figcaption{
   font-weight: bold !important;
   font-size: 0.7rem;
 }
+
+@font-face{
+	font-family:'NanumSquareL';
+	src:url(/_scss/font/NanumSquareL.ttf) format('woff2'),
+		url(/_scss/font/NanumSquareL.woff) format('woff'),
+		url(/_scss/font/NanumSquareL.ttf) format('truetype');
+}
+@font-face{
+	font-family:'NanumSquareR';
+	src:url(/_scss/font/NanumSquareR.woff2) format('woff2'),
+		url(/_scss/font/NanumSquareR.woff) format('woff'),
+		url(/_scss/font/NanumSquareR.ttf) format('truetype');
+}
+@font-face{
+	font-family:'NanumSquareB';
+	src:url(/_scss/font/NanumSquareB.woff2) format('woff2'),
+		url(/_scss/font/NanumSquareB.woff) format('woff'),
+		url(/_scss/font/NanumSquareB.ttf) format('truetype');
+}
+@font-face{
+	font-family:'NanumSquareEB';
+	src:url(/_scss/font/NanumSquareEB.woff2) format('woff2'),
+		url(/_scss/font/NanumSquareEB.woff) format('woff'),
+		url(/_scss/font/NanumSquareEB.ttf) format('truetype');
+}
