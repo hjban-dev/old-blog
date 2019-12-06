@@ -101,8 +101,15 @@
   font-size: 80%;
   color : rgba(49, 49, 49, 0.82);
   line-height: 50px;
+  @media (max-width: 415px) {
+    width: calc(100% - 108px);
+    display: inline-block;
+    line-height: 22px;
+    vertical-align: text-bottom;
+    word-break: keep-all;
+  }
 }
 
 .nav-up {
-    top: -92px;
+    top: -82px;
 }
