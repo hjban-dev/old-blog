@@ -18,10 +18,11 @@ title: Home
 }
 
 #shortcut-img{
-	width : 30px;
+	width : 34px;
 	display : inline;
 	margin-right : 9px;
 	vertical-align : -webkit-baseline-middle;
+	margin: 0px 0 0.7rem;
 }
 </style>
 <body>
@@ -59,8 +60,8 @@ title: Home
         {% for post in tag[1] %}
         <li>
           <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">
-              {{ post.title }}
-              <small class="post-date">{{ post.date | date_to_string }}</small>
+            {{ post.title }}
+            <small class="post-date">{{ post.date | date_to_string }}</small>
           </a>
         </li>
         {% endfor %}
