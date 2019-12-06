@@ -1,3 +1,28 @@
+@font-face{
+	font-family:'NanumSquareL';
+	src:url(/font/NanumSquareL.ttf) format('woff2'),
+		url(/font/NanumSquareL.woff) format('woff'),
+		url(/font/NanumSquareL.ttf) format('truetype');
+}
+@font-face{
+	font-family:'NanumSquareR';
+	src:url(/font/NanumSquareR.woff2) format('woff2'),
+		url(/font/NanumSquareR.woff) format('woff'),
+		url(/font/NanumSquareR.ttf) format('truetype');
+}
+@font-face{
+	font-family:'NanumSquareB';
+	src:url(/font/NanumSquareB.woff2) format('woff2'),
+		url(/font/NanumSquareB.woff) format('woff'),
+		url(/font/NanumSquareB.ttf) format('truetype');
+}
+@font-face{
+	font-family:'NanumSquareEB';
+	src:url(/font/NanumSquareEB.woff2) format('woff2'),
+		url(/font/NanumSquareEB.woff) format('woff'),
+		url(/font/NanumSquareEB.ttf) format('truetype');
+}
+
 @include selection {
   background: $theme-color;
   color: $white;
@@ -33,29 +58,4 @@ h1, h2, h3, h4, h5, h6 {
 figcaption{
   font-weight: bold !important;
   font-size: 0.7rem;
-}
-
-@font-face{
-	font-family:'NanumSquareL';
-	src:url(/_scss/font/NanumSquareL.ttf) format('woff2'),
-		url(/_scss/font/NanumSquareL.woff) format('woff'),
-		url(/_scss/font/NanumSquareL.ttf) format('truetype');
-}
-@font-face{
-	font-family:'NanumSquareR';
-	src:url(/_scss/font/NanumSquareR.woff2) format('woff2'),
-		url(/_scss/font/NanumSquareR.woff) format('woff'),
-		url(/_scss/font/NanumSquareR.ttf) format('truetype');
-}
-@font-face{
-	font-family:'NanumSquareB';
-	src:url(/_scss/font/NanumSquareB.woff2) format('woff2'),
-		url(/_scss/font/NanumSquareB.woff) format('woff'),
-		url(/_scss/font/NanumSquareB.ttf) format('truetype');
-}
-@font-face{
-	font-family:'NanumSquareEB';
-	src:url(/_scss/font/NanumSquareEB.woff2) format('woff2'),
-		url(/_scss/font/NanumSquareEB.woff) format('woff'),
-		url(/_scss/font/NanumSquareEB.ttf) format('truetype');
 }
