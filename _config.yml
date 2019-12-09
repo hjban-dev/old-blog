@@ -68,8 +68,6 @@ category_page: '/blog/categories/'
 mathjax: true # whether support mathjax
 google_analytics_token: 'UA-154010929-1' # leave blank if you don't want google analytics
 disqus_short_name: 'hjbandev' # leave blank if you don't want disqus
-disqus_domain: 'hjban-dev-github-io'
-disqus_id: hjbandev'
 
 
 # Use the following plug-ins
