@@ -1,28 +1,3 @@
-@font-face{
-	font-family:'NanumSquareL';
-	src:url(/font/NanumSquareL.ttf) format('woff2'),
-		url(/font/NanumSquareL.woff) format('woff'),
-		url(/font/NanumSquareL.ttf) format('truetype');
-}
-@font-face{
-	font-family:'NanumSquareR';
-	src:url(/font/NanumSquareR.woff2) format('woff2'),
-		url(/font/NanumSquareR.woff) format('woff'),
-		url(/font/NanumSquareR.ttf) format('truetype');
-}
-@font-face{
-	font-family:'NanumSquareB';
-	src:url(/font/NanumSquareB.woff2) format('woff2'),
-		url(/font/NanumSquareB.woff) format('woff'),
-		url(/font/NanumSquareB.ttf) format('truetype');
-}
-@font-face{
-	font-family:'NanumSquareEB';
-	src:url(/font/NanumSquareEB.woff2) format('woff2'),
-		url(/font/NanumSquareEB.woff) format('woff'),
-		url(/font/NanumSquareEB.ttf) format('truetype');
-}
-
 @include selection {
   background: $theme-color;
   color: $white;
