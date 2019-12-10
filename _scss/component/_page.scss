@@ -32,3 +32,28 @@
 #results-container > li{
   margin-bottom: 0.5rem;
 }
+
+// main recent
+.category-title{
+  cursor: pointer;
+}
+.category-title:hover > h2{
+  text-decoration: underline;
+}
+.tags-expo-posts{
+  display: block;
+}
+
+/* recent icon */
+#shortcut{
+  font-size: 1.1rem;
+  color: rgba(49, 49, 49, 0.82);
+}
+
+#shortcut-img{
+  width : 34px;
+  float: left;
+  margin-right : 9px;
+  vertical-align : -webkit-baseline-middle;
+  margin:0 0.5rem 0.7rem 0;
+}
