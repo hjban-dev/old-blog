@@ -1,6 +1,6 @@
 ---
 layout: post
-title: level 1. 두 정수 사이의 합 (Javascript)
+title: level 1-8. 두 정수 사이의 합 (Javascript)
 category: Algorithm
 tags: [Algorithm, Javascript, Exercise]
 comments: true

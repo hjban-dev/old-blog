@@ -1,6 +1,6 @@
 ---
 layout: post
-title: level 1. 평균 구하기 (Javascript)
+title: level 1-2. 평균 구하기 (Javascript)
 category: Algorithm
 tags: [Algorithm, Javascript, Exercise]
 comments: false

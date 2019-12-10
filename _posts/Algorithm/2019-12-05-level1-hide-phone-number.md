@@ -1,6 +1,6 @@
 ---
 layout: post
-title: level 1. 핸드폰 번호 가리기 (Javascript)
+title: level 1-5. 핸드폰 번호 가리기 (Javascript)
 category: Algorithm
 tags: [Algorithm, Javascript, Exercise]
 comments: false

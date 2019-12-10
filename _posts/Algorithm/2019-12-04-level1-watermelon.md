@@ -1,6 +1,6 @@
 ---
 layout: post
-title: level 1. 수박수박수박수박수박수? (Javascript)
+title: level 1-4. 수박수박수박수박수박수? (Javascript)
 category: Algorithm
 tags: [Algorithm, Javascript, Exercise]
 comments: false

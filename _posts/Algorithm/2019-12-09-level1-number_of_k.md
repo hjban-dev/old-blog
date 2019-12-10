@@ -1,6 +1,6 @@
 ---
 layout: post
-title: level 1. K번째수 (Javascript)
+title: level 1-10. K번째수 (Javascript)
 category: Algorithm
 tags: [Algorithm, Javascript, Exercise]
 comments: true

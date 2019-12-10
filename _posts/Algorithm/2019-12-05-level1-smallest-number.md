@@ -1,6 +1,6 @@
 ---
 layout: post
-title: level 1. 제일 작은 수 제거하기 (Javascript)
+title: level 1-6. 제일 작은 수 제거하기 (Javascript)
 category: Algorithm
 tags: [Algorithm, Javascript, Exercise]
 comments: false

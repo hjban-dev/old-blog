@@ -1,6 +1,6 @@
 ---
 layout: post
-title: level 1. 완주하지 못한 선수 (Javascript)
+title: level 1-1. 완주하지 못한 선수 (Javascript)
 category: Algorithm
 tags: [Algorithm, Javascript, Exercise]
 comments: false

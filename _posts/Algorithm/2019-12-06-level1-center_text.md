@@ -1,6 +1,6 @@
 ---
 layout: post
-title: level 1. 가운데 글자 가져오기 (Javascript)
+title: level 1-7. 가운데 글자 가져오기 (Javascript)
 category: Algorithm
 tags: [Algorithm, Javascript, Exercise]
 comments: false

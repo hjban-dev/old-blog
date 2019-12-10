@@ -1,6 +1,6 @@
 ---
 layout: post
-title: level 1. 약수의 합 (Javascript)
+title: level 1-3. 약수의 합 (Javascript)
 category: Algorithm
 tags: [Algorithm, Javascript, Exercise]
 comments: false
