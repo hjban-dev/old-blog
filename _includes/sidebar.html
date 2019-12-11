@@ -89,13 +89,14 @@
   <div class="sidebar-item template">
     {% if site.busuanzi.enable %}
     <div>
-      <i class="fa-bars"></i><span id="busuanzi_value_page_pv"></span>
+      <i class="fa fa-bars"></i><span id="busuanzi_value_page_pv"></span>
        / 
-      <i class="fa-bars"></i><span id="busuanzi_value_site_uv"></span>
+      <i class="fa fa-bars"></i><span id="busuanzi_value_site_pv"></span>
+      <i class="fa fa-bars"></i><span id="busuanzi_value_site_uv"></span>
       <script src="{{ site.busuanzi.src }}"></script>
     </div>
-	{% endif %}
-	
+    {% endif %}
+
     <p>
     Powered by <a href="http://jekyllrb.com">jekyll</a> and <a href="http://codinfox.github.io">codinfox-lanyon</a>
     </p>
