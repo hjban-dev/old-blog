@@ -59,21 +59,17 @@ nav:
   Tags:
     - '/blog/tags/'
 
-# busuanzi
-sidebar:
-  busuanzi:
-    enable: true
-    src: //cdn.jsdelivr.net/npm/busuanzi/bsz.pure.mini.min.js
-    page_pv: # 页面访问量
-      alert: <i class="fas fa-eye fa-fw"></i>
-      unit: 次
-    site_pv: # 站点访问量
-      alert: <i class="fas fa-paw fa-fw"></i>
-      unit: 枚
-    site_uv: # 访客量
-      alert: <i class="fas fa-user-friends fa-fw"></i>
-      unit: 人
-      
+# busuanzi - people statistics
+busuanzi:
+  enable: true
+  src: //busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js
+  page_pv: # page view count
+    alert: <i class="fa-eye fa-fw"></i>
+    unit: 뷰
+  site_uv: # user view count
+    alert: <i class="fa-user-friends fa-fw"></i>
+    unit: 명
+
 # Where are tags and categories displayed
 tag_page: '/blog/tags/'
 category_page: '/blog/categories/'
