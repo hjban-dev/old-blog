@@ -62,7 +62,7 @@ title: Home
         "color": "#D9A404",
         "font-weight" : "700"
       });
-	  $(this).children('i').removeClass('.fa-angle-up').addClass('.fa-angle-down');
+	  $(this).children('.fa').css({"transform": "rotate(180deg)"})
     }else{
      //닫았을때
       $(this).next('.tags-expo-posts').slideDown();
@@ -70,10 +70,9 @@ title: Home
         "color" : "#8C5946",
         "font-weight" : "900"
       });
-      $(this).children('i').removeClass('.fa-angle-down').addClass('.fa-angle-up');
+      $(this).children('.fa').css({"transform": "rotate(0deg)"})
     }
-  })
-
+  });
 
   </script>
 </body>
