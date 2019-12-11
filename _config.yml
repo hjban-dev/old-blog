@@ -68,7 +68,7 @@ busuanzi:
     unit: PAGE
   site_pv: # total site page view count
     alert: <i class="fa fa-eye"></i>
-    unit: SITE
+    unit: TOTAL VIEW
   site_uv: # user view count
     alert: <i class="fa fa-user"></i>
     unit: USER
