@@ -64,10 +64,10 @@ busuanzi:
   enable: true
   src: //busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js
   page_pv: # page view count
-    alert: <i class="fa-eye fa-fw"></i>
+    alert: <i class="fa-eye"></i>
     unit: 뷰
   site_uv: # user view count
-    alert: <i class="fa-user-friends fa-fw"></i>
+    alert: <i class="fa-user"></i>
     unit: 명
 
 # Where are tags and categories displayed
