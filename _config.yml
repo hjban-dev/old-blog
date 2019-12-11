@@ -58,18 +58,20 @@ nav:
     - '/about/'
   Tags:
     - '/blog/tags/'
+
+sidebar:
   busuanzi:
-    enable: true
-    src: //cdn.jsdelivr.net/npm/busuanzi/bsz.pure.mini.min.js
-    page_pv: # 页面访问量
-      alert: <i class="fas fa-eye fa-fw"></i>
-      unit: 次
-    site_pv: # 站点访问量
-      alert: <i class="fas fa-paw fa-fw"></i>
-      unit: 枚
-    site_uv: # 访客量
-      alert: <i class="fas fa-user-friends fa-fw"></i>
-      unit: 人
+  enable: true
+  src: //cdn.jsdelivr.net/npm/busuanzi/bsz.pure.mini.min.js
+  page_pv: # 页面访问量
+    alert: <i class="fas fa-eye fa-fw"></i>
+    unit: 次
+  site_pv: # 站点访问量
+    alert: <i class="fas fa-paw fa-fw"></i>
+    unit: 枚
+  site_uv: # 访客量
+    alert: <i class="fas fa-user-friends fa-fw"></i>
+    unit: 人
       
 # Where are tags and categories displayed
 tag_page: '/blog/tags/'
