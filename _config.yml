@@ -59,24 +59,24 @@ nav:
   Tags:
     - '/blog/tags/'
 
-# busuanzi - people statistics
-busuanzi:
-  enable: true
-  src: //busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js
-  page_pv: # page view count
-    alert: <i class="fa fa-file"></i>
-    unit: PAGE
-  site_pv: # total site page view count
-    alert: <i class="fa fa-eye"></i>
-    unit: TOTAL VIEW
-  site_uv: # user view count
-    alert: <i class="fa fa-user"></i>
-    unit: USER
 
 # Where are tags and categories displayed
 tag_page: '/blog/tags/'
 category_page: '/blog/categories/'
 
+# busuanzi - people statistics
+busuanzi:
+  enable: true
+  src: //busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js
+  page_pv: # page view count
+    icon: <i class="fa fa-file"></i>
+    title: PAGE
+  site_pv: # total site page view count
+    icon: <i class="fa fa-eye"></i>
+    title: TOTAL VIEW
+  site_uv: # user view count
+    icon: <i class="fa fa-user"></i>
+    title: USER
 
 # Puglins
 mathjax: true # whether support mathjax
