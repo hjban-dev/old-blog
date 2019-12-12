@@ -1,12 +1,12 @@
 ---
 layout: post
-title: 클래스 소개
+title: Javascript 클래스 소개
 category: Javascript
 tags: [Javascript]
 comments: true
 ---
 
-# 클래스 소개
+# Javascript 클래스 소개
 
 ## 클래스란?
 
