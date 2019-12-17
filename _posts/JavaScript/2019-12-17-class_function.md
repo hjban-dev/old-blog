@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 함수 방식으로 클래스 만들기
+title: 자바스크립트의 함수 방식으로 클래스 만들기
 category: Javascript
 tags: [Javascript]
 comments: true
