@@ -80,7 +80,8 @@ busuanzi:
 
 # Puglins
 mathjax: false # whether support mathjax
-google_analytics_token: 'UA-154010929-1' # leave blank if you don't want google analytics
+google_analytics: true
+# google_analytics_token: 'UA-154010929-1' # leave blank if you don't want google analytics
 disqus_short_name: 'hjbandev' # leave blank if you don't want disqus
 
 
