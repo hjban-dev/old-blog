@@ -57,6 +57,7 @@ function solution(str){
 먼저 문제가 소문자 대문자를 구분하지 않아서 들어오는 s를 toUpperCase() 메서드를 사용하여 대문자로 변환시켜 주었다.
 0을 가지는 pLength와 yLength를 변수를 만들고, for 반복문으로 P, Y의 개수를 각각 세어줌.
 pLength와 yLength의 개수에 따라 answer 를 false 와 true로 return
+
 ***
 
 ## 다른사람 풀이
