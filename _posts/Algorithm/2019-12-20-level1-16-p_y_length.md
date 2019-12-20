@@ -54,22 +54,32 @@ function solution(str){
   return answer;
 }
 ```
-
+먼저 문제가 소문자 대문자를 구분하지 않아서 들어오는 s를 toUpperCase() 메서드를 사용하여 대문자로 변환시켜 주었다.
+0을 가지는 pLength와 yLength를 변수를 만들고, for 반복문으로 P, Y의 개수를 각각 세어줌.
+pLength와 yLength의 개수에 따라 answer 를 false 와 true로 return
 ***
 
 ## 다른사람 풀이
 ```javascript
-function solution(arr, divisor) {
-
+function solution(s) {
+  return s.match(/p/ig).length == s.match(/y/ig).length;
 }
 ```
-
+정규 표현식으로 대문자 소문자 구별 없이 p, y와 맞는 개수를 찾아서 비교.
 ```javascript
-function solution(arr, divisor) {
-
+function solution(s) {
+  var s = str.toUpperCase();
+  return s.split("P").length === s.split("Y").length;
 }
 ```
-
+위 방법과 접근방법은 비슷. split() 메서드로 p, y와 맞는 개수 찾아서 비교 
 
 ## 배운점
 
+반복문 쓰지 말고 내장 메서드 사용해야 하는데 자꾸 반복문 먼저 떠오르고, 반복문이 떠오른 후에는 다른 생각이 나지 않는다...  
+정규 표현식 관련 포스팅 시급. 코드 분석은 하는데 사용이 서툴다ㅠㅠ 예제 문제 반복 필수.
+
+```javascript
+// split() 문자열을 특정 문자를 기준으로 잘라 새 배열 생성
+'ppoooyy'.split('p'); // 	[ '', '', 'ooyy' ]
+```
