@@ -83,8 +83,8 @@ function solution(arr, divisor) {
 
 짧은 조건문
 
-- || : 조건이 거짓일 때 실행
-- && : 조건이 참일 때 실행
+- **||** : 조건이 거짓일 때 실행
+- **&&** : 조건이 참일 때 실행
 
 array.**map**( function ( currentValue [, index] [, arr] ), thisValue )  
 : 배열의 각 요소에 대해 제공된 함수를 순서대로 한 번 호출하여 새 배열을 작성  
