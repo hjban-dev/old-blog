@@ -87,7 +87,11 @@ function solution(arr, divisor) {
 - `&&` : 조건이 참일 때 실행
 
 array.`filter`( function ( currentValue [, index] [, arr] ), thisValue )  
-:테스트를 통과하는 요소를 걸러내어 배열로 true/false 반환, 없으면 빈 배열
+: 배열의 각 요소에 대해 제공된 함수를 순서대로 한 번 호출하여 새 배열을 작성  
+(콜백함수에 들어가는 첫번째 매개변수는 처리하는 배열의 현재 요소)  
+
+array.`map`
+
 
 array.`filter`( function ( currentValue [, index] [, arr] ), thisValue )  
 :테스트를 통과하는 요소를 걸러내어 배열로 true/false 반환, 없으면 빈 배열
