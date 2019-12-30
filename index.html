@@ -13,10 +13,10 @@ title: Home
     <hr/>
 
     <div class="tags-expo-section recently">
-      <a href="/blog/"><h4 id="shortcut">
+      <a href="/blog/" id="shortcut">
         <img id="shortcut-img" src="/assets/images/shortcut.png">
         <span>최근 글 바로가기</span>
-      </h4></a>
+      </a>
       <ul class="tags-expo-posts">
         {% for post in site.posts offset: 0 limit: 10  %}
         <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">
