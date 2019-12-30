@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Javascript 헷갈리는 개념과 예제 정리
+title: Javascript 헷갈리는 개념과 예제 정리 기초
 category: Javascript
 tags: [Javascript, Exercise]
 comments: true
 ---
 
-# Javascript 헷갈리는 개념 예제 정리
+# Javascript 헷갈리는 개념 예제 정리 기초
 > [출처] (https://helloworldjavascript.net/)
 
 #### 변수
