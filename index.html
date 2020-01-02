@@ -32,10 +32,7 @@ title: Home
     <div class="tags-expo-section">
       {% for tag in site.categories %}
       <h2 id="{{ tag[0] | slugify }}">
-        <a class="category-title" data-test="{{ tag[0] }}, {{ sub_nav[0] }} {{sub_nav[1]}}" onclick="gtag('event', '동영상', {
-			'event_category': '재생',
-			'event_label': '사용법.mp4',
-		  });">
+        <a class="category-title" data-test="{{ tag[0] }}, {{ sub_nav[0] }} {{sub_nav[1]}}" >
           {{ tag[0] }}
           <i class="fa fa-angle-up fa-lg"></i>
         </a>
