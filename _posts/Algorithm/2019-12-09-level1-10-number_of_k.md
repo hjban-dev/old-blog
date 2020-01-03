@@ -78,4 +78,5 @@ function solution(seoul) {
 
 생각보다 어려웠다. 써야하는 메서드도 많았고 복잡했다. 만명 이상이 문제를 풀은걸 보면 다들 열심히 하나보다. 가만히 있을 순 없음.
 
-- array.map(function(currentValue, index, arr), thisValue) : 함수를 호출 한 결과로 새 배열을 작성, 배열의 각 요소에 대해 제공된 함수를 순서대로 한 번 호출 
+**array.map(function(currentValue, index, arr), thisValue)**  
+함수를 호출 한 결과로 새 배열을 작성, 배열의 각 요소에 대해 제공된 함수를 순서대로 한 번 호출 

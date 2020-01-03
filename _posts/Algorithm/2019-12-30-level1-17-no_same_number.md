@@ -64,9 +64,9 @@ function solution(input){
 반복문 쓰지 말고 내장 메서드 사용해야 하는데 자꾸 반복문 먼저 떠오르고, 반복문이 떠오른 후에는 다른 생각이 나지 않는다...  
 정규 표현식 관련 포스팅 시급. 코드 분석은 하는데 사용이 서툴다ㅠㅠ 예제 문제 반복 필수.
 
-array.`map`( function ( currentValue [, index] [, arr] ), thisValue )  
+**array.`map`( function ( currentValue [, index] [, arr] ), thisValue )**  
 :배열의 각 요소에 대해 제공된 함수를 순서대로 한 번 호출하여 새 배열을 작성  
 (콜백함수에 들어가는 첫번째 매개변수는 처리하는 배열의 현재 요소)  
 
-array.`filter`( function ( currentValue [, index] [, arr] ), thisValue )  
+**array.`filter`( function ( currentValue [, index] [, arr] ), thisValue )**  
 :테스트를 통과하는 요소를 걸러내어 배열로 true/false 반환, 없으면 빈 배열

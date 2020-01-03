@@ -49,5 +49,5 @@ sort((a,b) => a < b ? 1 : -1) 로 정렬하면서 뒤집음.
 
 ## 배운점
 
-Array.from ( arrayLike [, mapFn [, thisArg ]]) - 반복하여 얕은 복사로 새로운 배열 생성  
-Array.join([ separator ]) - separator에 따라 배열을 문자열로 지정( 매개변수 생략하면 ','로 구분됨)
+**arr.from ( arrayLike [, mapFn [, thisArg ]])** - 반복하여 얕은 복사로 새로운 배열 생성  
+**arr.join([ separator ])** - separator에 따라 배열을 문자열로 지정( 매개변수 생략하면 ','로 구분됨)
