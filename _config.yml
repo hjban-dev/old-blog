@@ -52,7 +52,7 @@ nav:
     # - { MySQL: '/blog/categories/#MySQL' }
     - { Git: '/blog/categories/#git' }
     # - { firebase: '/blog/categories/#firebase' }
-    - { etc: '/blog/categories/#etc' }
+    - { Etc: '/blog/categories/#etc' }
     # - { Tags: '/blog/tags/' }
   About:
     - '/about/'
