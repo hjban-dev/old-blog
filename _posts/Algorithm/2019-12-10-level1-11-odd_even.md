@@ -36,6 +36,7 @@ function solution(num) {
 }
 ```
 삼항연산자로 조건에 따른 answer 를 return
+
 ***
 
 ## 다른사람 풀이

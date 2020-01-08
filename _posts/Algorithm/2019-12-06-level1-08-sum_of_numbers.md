@@ -55,6 +55,7 @@ function solution(a, b) {
   
 do while 반복문 사용으로 i는 0부터 gap의 값까지 반복을 돈다.
 반복을 돌 때 마다 number[0] 즉, 첫번째 배열의 값과 1씩 늘어난 i의 값을 더하여 answer의 안에 넣어준다.
+
 ***
 
 ## 다른사람 풀이

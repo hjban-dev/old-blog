@@ -62,6 +62,8 @@ function solution(array, commands) {
 2. `sort()` 메서드로 오름차순으로 정렬
 3. `splice()` 메서드로 commands 의 세번째 요소를 잘라냄
 4. 결과로 나온 배열 slice_sort를 숫자열로 바꾸고 answer 변수에 `push()` 로 채워넣고, return
+
+
 ***
 
 ## 다른사람 풀이

@@ -43,6 +43,7 @@ function solution(phone_number) {
 들어온 매개변수 phone_number의 글자 수를 체크하여 글자수에서 4를 뺀 수까지는 answer에 "*"를 삽입  
 그렇지 않으면 매개변수의 i번째 수 삽입
 지난 문제들을 참고하여 삼항 연산자를 짧게 사용
+
 ***
 
 ## 다른사람 풀이

@@ -43,6 +43,7 @@ function solution(str) {
 }
 ```
 Number() 메서드로 자료형 변형
+
 ***
 
 ## 다른사람 풀이
