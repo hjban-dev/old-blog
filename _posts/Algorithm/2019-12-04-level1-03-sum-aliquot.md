@@ -63,7 +63,7 @@ let solution = n => {
 
 ```javascript
 function solution(n, a=0, b=0) {
-  return n<=a/2?b:solution(n,a+1,b+=n%a?0:a);
+  return n <= a/2 ? b : solution(n, a+1, b+=n%a ? 0 : a);
 }
 ```
 이건 봐도 모르겠따... 재귀함수 라는데.. 아직 갈길이 멀었다;ㅎㅎ
@@ -76,3 +76,4 @@ function solution(n, a=0, b=0) {
 
 - 코드를 간결하게 쓰는 습관을 들이자.
 - es6 문법 공부를 하자
+ 

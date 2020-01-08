@@ -57,6 +57,7 @@ function solution(arr, divisor) {
 ```
 반복문으로 arr의 요소 각각을 divisor로 나누어 나머지가 0 이라면 answer에 push() 메서드로 넣는다.  
 나온 결과 answer의 요소가 있다면 오름차순으로 정렬, 없으면 -1을 추가 
+
 ***
 
 ## 다른사람 풀이
