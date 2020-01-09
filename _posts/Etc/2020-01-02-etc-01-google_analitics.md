@@ -6,7 +6,7 @@ tags: [Etc, Google]
 comments: false
 ---
 > <https://analyticsmarketing.co.kr/> 참고  
-> 간단하고 불친절하게 설명합니다. (기본적인 부분 설명 생략)
+> 간단하고 불친절하게 개념만 설명합니다. (기본적인 부분 설명 생략)
 
 # 구글 애널리틱스 [Google Analytics]
 
@@ -36,7 +36,16 @@ Analytics를 한글로 해석하면 `분석; 분석 정보` 의 의미를 갖고
 
 ## GA 추적코드 설치
 
-가입 후엔 아래와 같은 GA 추적코드를 볼 수 있는 페이지가 나온다.  
+<center>
+<figure>
+<img src="/assets/post-img/etc/google-analitics-prev-code.jpg" alt="">
+<figcaption>google analitics 데이터 스트림 설정</figcaption>
+</figure>
+</center>
+
+가입 후엔 위 사진과 같이 데이터 스트림(속성) 설정을 할 수 있는 페이지가 나오고 본인에게 필요한 기능으로 가입. 위 사진으로 하는 작업이 내 사이트를 등록하는 과정이다.
+
+완료하면 아래와 같은 GA 추적코드를 볼 수 있는 페이지가 나온다.  
 혹시 보이지 않는다면 왼쪽 메뉴의 관리 > 속성 > 추적 정보 > 추적 코드에서 확인 가능하다.
 
 <center>

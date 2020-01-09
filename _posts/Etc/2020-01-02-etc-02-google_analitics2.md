@@ -6,7 +6,7 @@ tags: [Etc, Google]
 comments: false
 ---
 > <https://analyticsmarketing.co.kr/> 참고  
-> 간단하고 불친절하게 설명합니다. (기본적인 부분 설명 생략)
+> 간단하고 불친절하게 개념만 설명합니다. (기본적인 부분 설명 생략)
 
 # 구글 애널리틱스 [Google Analytics]
 
