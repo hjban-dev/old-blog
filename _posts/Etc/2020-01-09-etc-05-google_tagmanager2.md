@@ -73,7 +73,7 @@ comments: false
 
 <center>
 <figure>
-<img src="/assets/images/stop2.jpg" alt="">
+<img src="/assets/images/stop2.JPG" alt="">
 <figcaption>살려주쇼...</figcaption>
 </figure>
 </center>
