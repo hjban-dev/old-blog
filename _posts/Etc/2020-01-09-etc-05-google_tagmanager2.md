@@ -70,3 +70,10 @@ comments: false
 
 확인해보니 동일 아이피 재접속은 카운팅 되지 않는 것 같고, 크롬 시크릿 모드로 들어갈땐 카운팅이 된다.
 너무 어려워...!!
+
+<center>
+<figure>
+<img src="/assets/images/stop2.jpg" alt="">
+<figcaption>살려주쇼...</figcaption>
+</figure>
+</center>
