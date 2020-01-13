@@ -57,9 +57,18 @@ Movie_App 폴더에 필요하지 않은 파일은 전부 지우고, app.js의 ap
 
 <center>
 <figure>
+<img src="/assets/post-img/react/nomad_react_3_1.jpg" alt="">
+<figcaption>페이지 소스보기 했을 때 결과. 빈 #root만 보인다.</figcaption>
+</figure>
+</center>
+
+페이지 소스에서는 보이지 않는 이유는 hello가 없는 빈 index.html 파일을 보고 있기 때문이다. 
+
+<center>
+<figure>
 <img src="/assets/post-img/react/nomad_react_3.jpg" alt="">
 <figcaption>react가 app.js의 컴포넌트를 #root 안에 넣어서 보여준다.</figcaption>
 </figure>
 </center>
 
-페이지 소스에서는 보이지 않는 이유는 hello가 없는 빈 index.html 파일을 보고 있기 때문이다. React는 load 할 때, html을 `Virtual Dom React`을 사용하여 보여준다. 가상 돔은 React가 빠른 이유이기도 하다.
+React는 load 할 때, html을 `Virtual Dom React`을 사용하여 보여준다. 가상 돔은 React가 빠른 이유이기도 하다.
