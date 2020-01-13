@@ -51,6 +51,7 @@ nav:
     - { MongoDB: '/blog/categories/#mongodb' }
     # - { MySQL: '/blog/categories/#MySQL' }
     - { Git: '/blog/categories/#git' }
+    - { Google: '/blog/categories/#google' }
     # - { firebase: '/blog/categories/#firebase' }
     - { Etc: '/blog/categories/#etc' }
     # - { Tags: '/blog/tags/' }
