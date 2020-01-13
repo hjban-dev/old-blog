@@ -13,12 +13,20 @@ comments: false
 ## 1.0 Creating your first React App
 
 create-react-app 설치  
-(https://hjban-dev.github.io/react/2019/08/19/react-10-create-react-app/) 설치는 이전 포스팅 참고
+<https://hjban-dev.github.io/react/2019/08/19/react-10-create-react-app/> c-r-a 설치는 이전 포스팅 참고
 
 ## 1.1 Creating a Github Repository
 
-github에서 새 Repisitory 생성 후 movie_app 폴더 내부 업로드
-작업하던 터미널 창에서
+github에서 새 Repisitory를 생성
+
+<center>
+<figure>
+<img src="/assets/post-img/react/nomad_react_1-1.jpg" alt="">
+<figcaption>github에서 새 repisitory 생성</figcaption>
+</figure>
+</center>
+
+생성 후 movie_app 작업하던 터미널 창에서
 
 1. git init
 2. git remote add origin 새 Repisitory url (ex) git remote add origin https://github.com/hjban-dev/nomad_movie_app
