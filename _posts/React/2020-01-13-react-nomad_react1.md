@@ -20,6 +20,13 @@ comments: false
 node js, npm, npx, git 필요  
 설치되어 있는지는 cmd 창에서 확인 가능 ex) node -v, git -v 등
 
+<center>
+<figure>
+<img src="/assets/post-img/react/nomad_react_1.jpg" alt="">
+<figcaption>설치가 되어 있다면 결과 값으로 버전이 나옴</figcaption>
+</figure>
+</center>
+
 ## 0.2 Theory Requirements
 
 React를 시작하기 전에 html, css와 기본적인 js 지식을 알아야 합니다.
@@ -27,6 +34,7 @@ React를 시작하기 전에 html, css와 기본적인 js 지식을 알아야 �
 ## 0.3 Why React
 
 왜 React 인가?
+
 1. React는 페이스북이 만들었다. 그리고 회사들이 점점 React를 활용하여 사이트를 운영하고 있다.(페이스북, 에어비앤비, 넷플릭스, 슬랙... 등)
 2. 2020년 1월 기준 react의 주간 다운로드 수는 약 600만명 : 페이스북은 React에 많은 시간, 돈, 자원을 지원 하고 있고, React는 점점 더 많은 자원, 커뮤니티, 서포트를 얻을 수 있음.
 3. React는 현재 프론트엔드 사용 언어 중 압도적으로 많은 사용자
