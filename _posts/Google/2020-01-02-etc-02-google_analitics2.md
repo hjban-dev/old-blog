@@ -1,8 +1,8 @@
 ---
 layout: post
 title: 개발자를 위한 구글 애널리틱스[Google Analytics] 활용
-category: Etc
-tags: [Etc, Google]
+category: Google
+tags: [Google]
 comments: false
 ---
 > <https://analyticsmarketing.co.kr/> 참고  

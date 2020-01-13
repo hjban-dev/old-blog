@@ -1,8 +1,8 @@
 ---
 layout: post
 title: 개발자를 위한 구글 태그매니저[Google Tag Manager]의 설치
-category: Etc
-tags: [Etc, Google]
+category: Google
+tags: [Google]
 comments: false
 ---
 > <https://analyticsmarketing.co.kr/> 참고  
