@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 노마드코더의 ReactJS 소개
+title: Nomadcoder's ReactJS Introduction
 category: React
 tags: [React]
 comments: false
