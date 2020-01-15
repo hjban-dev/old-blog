@@ -3,7 +3,7 @@ layout: post
 title: Nomadcoder's ReactJS JSX & Props 1
 category: React
 tags: [React, git]
-comments: false
+comments: true
 ---
 
 > 노마드코더의 ReactJS로 웹 서비스 만들기 수업을 듣고 정리합니다. <https://academy.nomadcoders.co/>
