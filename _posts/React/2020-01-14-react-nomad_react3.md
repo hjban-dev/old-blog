@@ -127,11 +127,11 @@ index.js 에서 확인했듯이 `import`로 Potato Component 불러오고, `JSX`
 
 페이지 이동을 줄이기 위해 Potato.js 는 지우고 App.js에 Potato Component를 생성했다. 결과도 그대로 문제없음. 
 
-'JSX'에 대해 두번째로 이해해야 하는 것은 Component에 정보를 보낼 수 있음. React가 멋진 이유는 재사용 가능한 Component를 만들 수 있다는 점이다. 
+'JSX'에 대해 두번째로 이해해야 하는 것은 `Component에 정보`를 보낼 수 있다는 것이다.  
 
 자, 우리는 Potato Component를 Food Component로 변경하고 필자가 좋아하는 음식 여러가지를 노출하려고 한다. 그럴때 Food Component를 여러번 반복해서 노출시켜야 한다고 생각하면 React를 사용하는 의미가 없다.
 
-Component에서 Component, Component에서 Component children으로 정보를 보내는 법을 배워보자
+props를 통해서 Component에서 Component children으로 정보를 보내는 법을 배워보자! (•̀ᴗ•́) و ̑̑
 
 <center>
 <figure>
@@ -141,9 +141,12 @@ Component에서 Component, Component에서 Component children으로 정보를 �
 </center>
 
 html을 이미 알고있다면 속성을 `""` 를 사용하여 보내는 것은 매우 익숙할 것이다.  
-Food Component에 **favorite**라는 이름의 `props`를 **potato**라는 `value`로 주었다. value값으로 넘길 수 있는 자료형은 string 뿐만 아니라 boolean, array, number 등으로 보낼 수 있습니다.
+Food Component에 **favorite**라는 이름의 `props`를 **potato**라는 `value`로 준 것이다. 또한 value값으로 넘길 수 있는 자료형은 string 뿐만 아니라 boolean, array, number 등으로 보낼 수 있다.
 
-food function Component는 arguemnt(인자)로 props를 가져온다.
+food function Component는 arguemnt(인자)로 props를 가져온다. 확인해보자.  
+console.log(props)의 결과는 {favirite : "potato"} 나오고 여기서 알 수 있는 점은 argument는 객체로 반환한다는 것이다.
+
+---
 
 <center>
 <figure>
@@ -152,12 +155,20 @@ food function Component는 arguemnt(인자)로 props를 가져온다.
 </figure>
 </center>
 
+object를 열어서 favorite을 꺼내려면 원래 props 였던 부분을 `{} 대괄호`로 감싸주고, props값으로 넘겨주던 favorite 값으로 바꿔준다. 위의 상황에선 {favorite}으로 변경하면 됨.
 
-console.log(props)의 결과는 {favirite : "potato"}으로 객체로 반환하고, object를 열어서 favorite을 꺼내려면 원래 props 였던 부분을 `{} 대괄호`로 감싸주고, props값으로 넘겨주던 favorite 값으로 바꿔준다. 위의 상황에선 {favorite}으로 변경하면 됨.
+<center>
+<figure>
+<img src="/assets/post-img/react/nomad_react_3-12jpg" alt="">
+<figcaption>위 코드의 결과</figcaption>
+</figure>
+</center>
 
 props에 대해 이해했다면, props는 반드시 father -> children Component로만 전달 가능하다는 특징도 알아야 한다.
 
-- jsx + props 로 모두 재사용가능
-- jsx -> HTML + Javascript
-- Component -> 대문자로 시작 
-- children으로 props통해서 argument로 정보 전달가능
+꼭 알아야 할 부분!
+
+1. jsx + props 로 모두 재사용가능
+2. jsx -> HTML + Javascript
+3. Component -> 대문자로 시작 
+4. children으로 props통해서 argument로 정보 전달가능
