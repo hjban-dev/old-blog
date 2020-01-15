@@ -13,7 +13,8 @@ comments: false
 ## 1.0 Creating your first React App
 
 create-react-app 설치  
-<https://hjban-dev.github.io/react/2019/08/19/react-10-create-react-app/> c-r-a 설치는 이전 포스팅 참고
+c-r-a 설치는 이전 포스팅 참고  
+<https://hjban-dev.github.io/react/2019/08/19/react-10-create-react-app/> 
 
 ## 1.1 Creating a Github Repository
 
