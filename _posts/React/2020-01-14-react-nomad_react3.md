@@ -140,17 +140,24 @@ Component에서 Component, Component에서 Component children으로 정보를 �
 </figure>
 </center>
 
-html을 이미 알고있다면 속성을 "" 를 사용하여 보내는 것은 매우 익숙할 것이다.  
+html을 이미 알고있다면 속성을 `""` 를 사용하여 보내는 것은 매우 익숙할 것이다.  
 Food Component에 **favorite**라는 이름의 `props`를 **potato**라는 `value`로 주었다. value값으로 넘길 수 있는 자료형은 string 뿐만 아니라 boolean, array, number 등으로 보낼 수 있습니다.
 
-father -> children
+food function Component는 arguemnt(인자)로 props를 가져온다.
 
-food function Component의 arguemnt(인자)로 가져온다.
+<center>
+<figure>
+<img src="/assets/post-img/react/nomad_react_3-11.jpg" alt="">
+<figcaption>Component를 통해서 정보 전달</figcaption>
+</figure>
+</center>
 
-console.log(props) -> {favirite : "potato"}
 
-object를 열어서 favorite을 꺼내보자 props == {favorite} 
+console.log(props)의 결과는 {favirite : "potato"}으로 객체로 반환하고, object를 열어서 favorite을 꺼내려면 원래 props 였던 부분을 `{} 대괄호`로 감싸주고, props값으로 넘겨주던 favorite 값으로 바꿔준다. 위의 상황에선 {favorite}으로 변경하면 됨.
 
-jsx + props 로 모두 재사용가능
+props에 대해 이해했다면, props는 반드시 father -> children Component로만 전달 가능하다는 특징도 알아야 한다.
 
-jsx -> HTML + Javascript, Component -> 대문자로 시작, children으로 props통해서 argument로 정보 전달가능
+- jsx + props 로 모두 재사용가능
+- jsx -> HTML + Javascript
+- Component -> 대문자로 시작 
+- children으로 props통해서 argument로 정보 전달가능
