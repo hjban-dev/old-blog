@@ -12,13 +12,14 @@ comments: false
 
 ## 1.0 Creating your first React App
 
-create-react-app 설치  
-c-r-a 설치는 이전 포스팅 참고  
-<https://hjban-dev.github.io/react/2019/08/19/react-10-create-react-app/> 
+create-react-app 설치를 했다는 가정하에 시작합니다.  
+* c-r-a 설치는 이전 포스팅 참고  
+  <https://hjban-dev.github.io/react/2019/08/19/react-10-create-react-app/> 
 
 ## 1.1 Creating a Github Repository
 
-github에서 새 Repisitory를 생성
+github에서 새 Repisitory를 생성  
+(React 코드를 git에 업로드 하기 위해 생성하는 과정이고, React와 git은 사실상 무관하니 생략해도 됩니다.)
 
 <center>
 <figure>
