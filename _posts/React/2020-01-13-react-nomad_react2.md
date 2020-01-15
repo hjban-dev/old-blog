@@ -6,7 +6,7 @@ tags: [React, git]
 comments: false
 ---
 
-> 노마드코더의 ReactJS로 웹 서비스 만들기 수업을 듣고 정리합니다. (https://academy.nomadcoders.co/)
+> 노마드코더의 ReactJS로 웹 서비스 만들기 수업을 듣고 정리합니다. <https://academy.nomadcoders.co/>
 
 # 1 Setup
 
