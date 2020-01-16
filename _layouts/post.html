@@ -58,22 +58,21 @@ s.setAttribute('data-timestamp', +new Date());
   </ul>
 </div>
 
-<!-- <div class="same-category">
-  {% for tag in site.categories %}
-      <div class="related">
-        <h2 id="{{ tag[0] | slugify }}">{{ tag[0] }}의 다른 글</h2>
-        <ul class="related-posts">
-          {% for post in tag[1] limit:3%}
-            <li>
-              <h3>
-                <a href="{{ site.baseurl }}{{ post.url }}">
-                  {{ post.title }}
-                  <small>{{ post.date | date_to_string }}</small>
-                </a>
-              </h3>
-            </li>
-          {% endfor %}
-        </ul>
-	  </div>
-  {% endfor %}
+<!-- <div id="post-nav">
+  {% if page.previous.url %}
+  <div id="previous-post" class="post-nav-post">
+      <p>{{ site.theme_settings.str_previous_post }}</p>
+      <a href="{{ site.baseurl }}{{ page.previous.url }}">
+        {{ page.previous.title }}
+      </a>
+  </div>
+  {% endif %}
+  {% if page.next.url %}
+  <div id="next-post" class="post-nav-post">
+      <p>{{ site.theme_settings.str_next_post }}</p>
+      <a href="{{ site.baseurl }}{{ page.next.url }}">
+        {{ page.next.title }}
+      </a>
+  </div>
+  {% endif %}
 </div> -->
