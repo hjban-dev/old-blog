@@ -37,12 +37,12 @@ comments: true
 
 필자가 가정하여 생성한 **food**를 foodILike에 넣은 코드입니다.  
 
-React는 Javascript기반으로 만들어진 프레임워크이다. 그 말은 Javascript를 사용할 수 있다는 점! 우리는 Array 메소드인 `map()`을 활용하여 foodILike라는 긴 코드의 리스트를 뽑아 볼 겁니다!
+React는 Javascript기반으로 만들어진 프레임워크입니다. 그 말은 Javascript를 사용할 수 있다는 점!   
+우리는 Array 메소드인 `map()`을 활용하여 foodILike라는 긴 코드의 리스트를 뽑아 볼 겁니다!
 
-* array.map( function ( **currentValue** [, index] [, arr] ), thisValue )  
-  : map 내부의 콜백함수의 결과로 array를 만들어 반환
+* array.map( function ( **currentValue** [, index] [, arr] ), thisValue ) : map 내부의 콜백함수의 결과로 array를 만들어 반환
 
-Component 내부에서 `{}` 중괄호를 사용하면 Javascript코드를 사용할 수 있습니다.
+----
 
 <center>
 <figure>
@@ -51,7 +51,9 @@ Component 내부에서 `{}` 중괄호를 사용하면 Javascript코드를 사용
 </figure>
 </center>
 
-위 이미지를 보면 foodILike의 name으로 들어가있던 chiken, kimbap, pizza가 잘 들어가있다. 이번엔 imgae 리스트도 나올수 있게 만들어봅시다.
+Component 내부에서 `{}` 중괄호를 사용하면 Javascript코드를 사용할 수 있습니다.
+
+위 이미지의 결과를 보면 foodILike의 name으로 들어가있던 chiken, kimbap, pizza가 잘 들어가 있습니다. 이번엔 imgae 리스트도 나올수 있게 만들어봅시다.
 
 <center>
 <figure>
@@ -60,25 +62,11 @@ Component 내부에서 `{}` 중괄호를 사용하면 Javascript코드를 사용
 </figure>
 </center>
 
-Food Component는 name, picture 두 개의 props를 가지고 있는 것을 볼 수 있고, 노출도 잘 되고 있다.
-
 <center>
 <figure>
-<img src="/assets/post-img/react/nomad_react_3-14.jpg" alt="">
+<img src="/assets/post-img/react/nomad_react_3-13.jpg" alt="">
 <figcaption>결과</figcaption>
 </figure>
 </center>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+Food Component는 name, picture 두 개의 props를 가지고 있는 것을 볼 수 있고, 이미지 노출도 잘 되고 있다.
