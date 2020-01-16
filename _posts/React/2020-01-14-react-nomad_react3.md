@@ -90,7 +90,7 @@ App Component를 불러온 방식 그대로 Potato를 불러옵니다.
 </figure>
 </center>
 
-흠...ʕ •̀ o •́ ʔ 작동하지 않네요? 같은 명령어로 같은 위치에 삽입했는데...  
+흠...ʕ • o • ʔ 작동하지 않네요? 같은 명령어로 같은 위치에 삽입했는데...  
   
 여기서 알 수 있는 것은 **React application**은 **하나의 Component**만 **rendering가능**하다는 것 입니다. 지금은 그 유일한 Component가 <u>App Component</u> 입니다.  
   
@@ -159,7 +159,7 @@ object를 열어서 favorite을 꺼내려면 원래 props 였던 부분을 `{} �
 
 <center>
 <figure>
-<img src="/assets/post-img/react/nomad_react_3-12jpg" alt="">
+<img src="/assets/post-img/react/nomad_react_3-12.jpg" alt="">
 <figcaption>위 코드의 결과</figcaption>
 </figure>
 </center>
