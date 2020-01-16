@@ -71,9 +71,11 @@ Component 내부에서 `{}` 중괄호를 사용하면 Javascript코드를 사용
 
 Food Component는 name, picture 두 개의 props를 가지고 있는 것을 볼 수 있고, 이미지 노출도 잘 되고 있습니다.
 
+----
+
 ## 2.3 .map Recap
 
-이번엔 위의 코드의 App 컴포넌트에서 arrow function으로 return하는 부분을 renderFood라는 function을 따로 만들어서 진행해보자. 어려워 할 것 없이, 방식은 같습니다.
+이번엔 위의 코드의 App 컴포넌트에서 arrow function으로 return하는 부분을 renderFood라는 **function**을 따로 만들어서 진행해보자. 어려워 할 것 없이, 방식은 같습니다.
 
 <center>
 <figure>
@@ -89,7 +91,7 @@ Food Component는 name, picture 두 개의 props를 가지고 있는 것을 볼 
 </figure>
 </center>
 
-텍스트와 이미지가 나오는 결과는 같고 rendering 하는 방식을 function 호출로 변경했을 뿐이다. console창에서 나오는 array가 우리의 눈엔 좀 낯설지만 기본적인 react Component이다
+텍스트와 이미지가 나오는 결과는 같고 <u>rendering 하는 방식을 function 호출로 변경했을 뿐이다</u>. console창에서 나오는 array가 우리의 눈엔 좀 낯설지만 기본적인 react Component이다
 
 위와 같이 함수를 호출하는 방식도 있다는 예시였고 다시 내부 arrow funciton으로 호출하는 방식으로 돌아가서, 아까부터 계속 console창에서 거슬리는 Warning을 살펴보자.
 
@@ -100,12 +102,12 @@ Food Component는 name, picture 두 개의 props를 가지고 있는 것을 볼 
 </figure>
 </center>
 
-Warning 메세지가 각각의 list안의 child가 unique한 key prop을 가져야 한다고 말하고 있습니다.
+**Warning 메세지가 각각의 list안의 child가 unique한 key prop을 가져야 한다고 말하고 있습니다.**  
 그 말의 의미는 React의 element들은 유일해야하고 우리가 이것들을 list안으로 집어 넣으면 그것들이 각각 유일성이 사라진다는 것 입니다.  
   
-옹?? 우리는 foodILike의 element들이 서로 다른 name과 다른 image를 가지고 있는 것을 알수 있지만, React는 그것을 인식하지 못합니다. 흐음...뭔가 이상하지만 이제 우리가 할 일은 foodILike의 element에 각각의 ID를 추가해야 한다는 것 입니다.
+옹?-? 우리는 foodILike의 element들이 서로 다른 name과 다른 image를 가지고 있는 것을 알수 있지만, React는 그것을 인식하지 못합니다. 흐음... =ටᆼට= 뭔가 이상하지만 이제 우리가 할 일은 foodILike의 element에 각각의 ID를 추가해야 한다는 것 입니다.
 
-그래서 우리는 foodILike에 id라는 값을 넣어줄거고, 그 id를 활용하여 Food Component에 새 prop을 넣어 주겠습니다. 그리고 그 prop은 React가 요청하던 바로 key입니다. 
+그래서 우리는 foodILike에 **id**라는 값을 넣어줄거고, 그 id를 활용하여 Food Component에 새 **prop**을 넣어 주겠습니다. 그리고 그 prop은 React가 요청하던 바로 `key`입니다. 
 
 <center>
 <figure>
@@ -114,8 +116,8 @@ Warning 메세지가 각각의 list안의 child가 unique한 key prop을 가져�
 </figure>
 </center>
 
-보다시피 key prop은 Food Component로 전달되지 않는다. 사용되고 있지도 않고.  
-key prop을 생성하는 이유는 단지 react내부에서 사용하기 위한 것이고, 어렵게 생각하지 말고 이건 react를 활용하는 방법인 것 뿐이다.
+보다시피 key prop은 Food Component로 전달되지 않습니다. 사용되고 있지도 않고.  
+key prop을 생성하는 이유는 단지 react내부에서 사용하기 위한 것이고, 어렵게 생각하지 말고 이건 react를 활용하는 방법인 것 뿐입니다.
 
 
 
