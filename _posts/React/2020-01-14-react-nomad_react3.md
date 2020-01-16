@@ -2,7 +2,7 @@
 layout: post
 title: Nomadcoder's ReactJS JSX & Props 1
 category: React
-tags: [React, git]
+tags: [React, Git]
 comments: true
 ---
 
