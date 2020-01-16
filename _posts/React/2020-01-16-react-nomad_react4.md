@@ -109,7 +109,6 @@ Warning 메세지가 각각의 list안의 child가 unique한 key prop을 가져�
 
 <center>
 <figure>
-<img src="/assets/post-img/react/nomad_react_3-21.jpg" alt="">
 <img src="/assets/post-img/react/nomad_react_3-20.jpg" alt="">
 <figcaption>id 값과 prop key 추가</figcaption>
 </figure>
