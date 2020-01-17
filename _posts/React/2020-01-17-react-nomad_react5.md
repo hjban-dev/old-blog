@@ -33,7 +33,7 @@ npm 공식 홈페이지의 prop-types : <https://www.npmjs.com/package/prop-type
 </figure>
 </center>
 
-설치 확인을 한 후 <u>prop-types</u>을 사용하기 위해선 해당페이지에 import해야합니다. 상단에 React를 import한 부분 밑줄에 `import propTypes from 'prop-types'`를 추가하고, propTypes를 사용해봅시다.
+설치 확인을 한 후 <u>prop-types</u>을 사용하기 위해선 해당페이지에 **import**해야합니다. 상단에 React를 import한 부분 밑줄에 `import propTypes from 'prop-types'`를 추가하고, propTypes를 사용해봅시다.
 
 이제 우리는 Food Component의 props가 의도대로 전달되고 있는지 확인할 것 입니다. <u>prop-types</u>의 사용법은 아래 이미지와 같습니다.
 
@@ -53,7 +53,7 @@ npm 공식 홈페이지의 prop-types : <https://www.npmjs.com/package/prop-type
 </figure>
 </center>
 
-Waring을 해석하자면 rating의 type이 number로 제공됐지만, 우리는 string을 예상한다고 합니다. 우리가 예상한 자료형과 다르다는 결과를 말해준다. rating의 type확인을 string에서 number로 수정해보자.
+Waring을 해석하자면 rating의 type이 **number**로 제공됐지만, 우리는 **string**을 예상한다고 합니다. 우리가 예상한 자료형과 다르다는 결과를 말해준다. rating의 type확인을 string에서 number로 수정해봅시다.
 
 <center>
 <figure>
