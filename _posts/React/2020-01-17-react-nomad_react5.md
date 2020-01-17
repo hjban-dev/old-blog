@@ -12,7 +12,8 @@ comments: true
 
 ## 2.4 Protection with PropTypes
 
-이번 장에서는 <u>prop-types</u>를 배워봅시다. <u>prop-types</u>는 Father Component가 Children Component사이에서 알맞은 정보전달이 되었는지 확인하는 라이브러리입니다. 다시 말해서 **전달 받은 props가 내가 요청한 props가 맞는지 확인**할 수 있습니다. 
+이번 장에서는 <u>prop-types</u>를 배워봅시다. <u>prop-types</u>는 Father Component가 Children Component사이에서 알맞은 정보전달이 되었는지 확인하는 라이브러리입니다. 다시 말해서 **전달 받은 props가 내가 요청한 props가 맞는지 확인**할 수 있습니다.  
+npm 공식 홈페이지의 prop-types : <https://www.npmjs.com/package/prop-types>
 
 예시로 foodILike에 rating정보를 추가 해보겠습니다. rating의 의미는 없고, 많은 정보 전달을 위해 예시의 값 추가하였습니다.
 
