@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Nomadcoder's ReactJS State
+title: Nomadcoder's ReactJS State 1
 category: React
 tags: [React]
 comments: true
@@ -17,10 +17,10 @@ state가 중요한 이유는 보통 **동적 데이터**와 함께 작업할 때
 전에 만들었던 Food Component는 지우고, function Component 만들어져 있던 App Component를 class Component로 변경해봅시다.
 
 class Component의 선언은 `class App extends React.Component` 입니다.  
-React.Component를 기반으로 class 형태인 App Component를 만들겠다는 의미입니다.
+**React.Component를 기반으로 class 형태인 App Component를 만들겠다는 의미**입니다.
 위 선언 작업은 class Component의 필수 단계이고, 선언 후엔 React.Component의 많은 부분들을 class Component를 구현할 때 사용할 수 있습니다.  
 
-우리는 React.Component를 사용하여 App Component를 생성한다고 했고, 똑똑한 React의 특징 중 하나는 React가 class component를 만나면 자동으로 render method 실시한다는 것 입니다.
+우리는 React.Component를 사용하여 App Component를 생성한다고 했고, 똑똑한 React의 특징 중 하나는 **React가 class component를 만나면 자동으로 render method 실시**한다는 것 입니다.
 
 그래서 class로 구성된 App Component는 render method를 실행할 것 입니다.
 
@@ -30,9 +30,6 @@ React.Component를 기반으로 class 형태인 App Component를 만들겠다는
 <figcaption>App Component가 render method 실행</figcaption>
 </figure>
 </center>
-
-
-
 
 ## 3.1 All you need to know about State
 
@@ -48,15 +45,15 @@ button은 내부에서 onClick으로 {this.add}으로 add() 호출했습니다. 
 </figure>
 </center>
 
-휴...일단 위 이미지에서 Warning 텍스트를 해석해봅시다.  
+엥... •́︿•̀ ...일단 위 이미지의 Warning 텍스트를 해석하자면.  
 state를 직접적으로 바꾸지 말고, setState()를 사용하세요  
 
-먼저 우리에게 무슨 문제가 있는지 확인해봅시다.   
+먼저...우리에게 무슨 문제가 있는지 확인해봅시다..!   
 add 함수 내부에서 this.state.count를 변경한다. 맞게 쓴 것 같은데 실행이 안되는 이유는 무엇일까요?  
 
 흠...state는 변경 되고 있는데 render fucntion은 실행되지 않는것 같네요. 우리는 state가 변경 될 때마다 React가 render fucntion을 실행해야 된다고 생각하는데요??
 
-React는 setState function을 호출해야 state가 변경됐다는 것을 감지합니다. 또한 변경 된 state를 보여줘야 한다고 생각하고 rerender를 실행합니다.
+여기서 우리가 알아야 할 것은 React는 setState function을 호출해야 state가 변경됐다는 것을 감지합니다. 또한 변경 된 state를 보여줘야 한다고 생각하고 rerender를 실행합니다.
 
 <center>
 <figure>
