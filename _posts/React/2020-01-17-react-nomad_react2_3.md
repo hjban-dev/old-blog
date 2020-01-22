@@ -13,7 +13,7 @@ comments: true
 ## 2.4 Protection with PropTypes
 
 이번 장에서는 <u>prop-types</u>를 배워봅시다. <u>prop-types</u>는 Father Component가 Children Component사이에서 알맞은 정보전달이 되었는지 확인하는 라이브러리입니다. 다시 말해서 **전달 받은 props가 내가 요청한 props가 맞는지 확인**할 수 있습니다.  
-npm 공식 홈페이지의 prop-types : <https://www.npmjs.com/package/prop-types>
+> npm 공식 홈페이지의 prop-types : <https://www.npmjs.com/package/prop-types>
 
 예시로 foodILike에 rating정보를 추가 해보겠습니다. rating의 의미는 없고, 많은 정보 전달을 위해 예시의 값 추가하였습니다.
 
@@ -66,7 +66,7 @@ Waring을 해석하자면 rating의 type이 **number**로 제공됐지만, 우�
 
 자료형 확인 외에도 여러 다른 방법들과 옵션들을 확인 할 수 있습니다.  
 React 공식 홈페이지에서 <u>prop-types</u> 사용법 확인 가능  
-<https://reactjs-kr.firebaseapp.com/docs/typechecking-with-proptypes.html>
+> <https://reactjs-kr.firebaseapp.com/docs/typechecking-with-proptypes.html>
 
 <u>prop-types</u> 사용하면 만약 여러분이 props중 하나를 실수 했을 때 페이지는 망가지겠지만 여러분은 console을 보고 무엇이 실행되지 않는지 알 수 있습니다.
 
