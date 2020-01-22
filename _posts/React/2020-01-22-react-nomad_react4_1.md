@@ -134,3 +134,11 @@ movies.map() 안의 코드를 살펴보면 들어오는 movie의 id, year, title
 가져온 list_movies.json의 type을 확인해야하니 2장에서 배웠던 propTypes를 검사하도록 하겠습니다. 우리는 id, year, title, summary, poster로 구성을 할 것이고, 지금은 title만 return 하도록 하겠습니다.
 Component 구성 후 export로 App.js에서 사용할 수 있게 했습니다.
 
+<center>
+<figure>
+<img src="/assets/post-img/react/nomad_react_5-10.gif" alt="">
+<figcaption>Movie Component가 정상적으로 노출되는 모습</figcaption>
+</figure>
+</center>
+
+저장하면 처음엔 Loading 텍스트가 뜨고 잠시 후에 movie list의 title이 노출된다.
