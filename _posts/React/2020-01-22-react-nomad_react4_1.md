@@ -105,8 +105,30 @@ Javascript에서 data를 fetch하는 방법 중 하나는 fetch 입니다. 짧�
 </figure>
 </center>
 
+이제 우리는 list_movies.json의 movie list를 가져왔습니다. 이제 가져온 리스트로 무엇을 할 수 있을까요? 우리는 이 리스트를 state에 넣어서, isLoading이 false라면 이 리스트들을 페이지에 뿌려주겠습니다...!
+어려워 할 필요 없습니다!  
+우리는 API로 movie list를 가져왔고, React가 그 리스트를 가져오면 setState()로 isLoading을 변경하면서 페이지에 리스트를 뿌려준다는 말입니다 :)
 
+기존의 render 함수에서 isLoading이 false일 때, "We are ready!"를 반환 시켰었죠? 그 부분에 movies.map() 을 활용하여 리스트 각각에 Movie Component를 반환 시켜봅시다.
 
+<center>
+<figure>
+<img src="/assets/post-img/react/nomad_react_5-8.jpg" alt="">
+<figcaption>배열 movies 각각에서 반환하는 Movie Component</figcaption>
+</figure>
+</center>
+
+Movie Component는 App.js와 같은 폴더인 src에 만들어줍니다.  
+먼저 React를 import해주고, Movie Component에는 state가 필요하지 않기 때문에 function Component로 만들어 주겠습니다.
+가져온 list_movies.json의 type을 확인해야하니 2장에서 배웠던 propTypes를 검사하도록 하겠습니다. 우리는 id, year, title, summary, poster로 구성을 할 것이고, 지금은 title만 return 하도록 하겠습니다.
+Component 구성 후 export로 App.js에서 사용할 수 있게 해줘야 합니다.
+
+<center>
+<figure>
+<img src="/assets/post-img/react/nomad_react_5-9.jpg" alt="">
+<figcaption>src폴더의 Movie Component 코드 구성</figcaption>
+</figure>
+</center>
 
 
 
