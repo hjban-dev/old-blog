@@ -17,8 +17,7 @@ comments: true
 Javascript에서 data를 fetch하는 방법 중 하나는 fetch 입니다. 짧게 알아보고 가겠습니다.
 
 **fetch**  
-  : Fetch API로 부르고 javascript의 서버와의 **비동기 요청 방식**입니다. Ajax의 방식 중 하나이고, promise 방식의 기반으로 구성되어 있습니다.   
-  <https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch>
+  : Fetch API로 부르고 javascript의 서버와의 **비동기 요청 방식**입니다. Ajax의 방식 중 하나이고, promise 방식의 기반으로 구성되어 있습니다. [공식 사이트](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
 
 대충 무슨 개념인지만 이해하고 넘어갑시다. 우리는 이번에 fetch가 아닌 axios를 사용할겁니다. fetch의 의미 자체와 Fetch API는 다르다는 것을 알려주려고 설명한 부분입니다.
 
