@@ -25,7 +25,7 @@ style을 적용하기 전에 각각의 태그에 클래스를 넣어주겠습니
 
 <center>
 <figure>
-<img src="/assets/post-img/react/nomad_react_5-10.jpg" alt="">
+<img src="/assets/post-img/react/nomad_react_5-11.jpg" alt="">
 <figcaption>태그와 클래스로 정리한 Movie.js</figcaption>
 </figure>
 </center>
@@ -36,7 +36,7 @@ React의 Component안에 class속성을 줄 땐 `className`이라고 지정해�
 
 <center>
 <figure>
-<img src="/assets/post-img/react/nomad_react_5-11.jpg" alt="">
+<img src="/assets/post-img/react/nomad_react_5-12.jpg" alt="">
 <figcaption>실행되는 화면</figcaption>
 </figure>
 </center>
@@ -57,7 +57,7 @@ scss파일도 import는 동일합니다. 확장자만 scss로 선택해주면 �
 
 <center>
 <figure>
-<img src="/assets/post-img/react/nomad_react_5-13.jpg" alt="">
+<img src="/assets/post-img/react/nomad_react_5-14.jpg" alt="">
 <figcaption>React에서 인라인으로 스타일 지정</figcaption>
 </figure>
 </center>
