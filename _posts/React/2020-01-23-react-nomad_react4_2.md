@@ -48,7 +48,7 @@ scss파일도 import는 동일합니다. 확장자만 scss로 선택해주면 �
 
 <center>
 <figure>
-<img src="/assets/post-img/react/nomad_react_5-12.jpg" alt="">
+<img src="/assets/post-img/react/nomad_react_5-13.jpg" alt="">
 <figcaption>실행되는 화면</figcaption>
 </figure>
 </center>
