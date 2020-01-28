@@ -41,7 +41,24 @@ React의 Component안에 class속성을 줄 땐 `className`이라고 지정해�
 </figure>
 </center>
 
-아름다운 구조와 멋진 클래스로 구성이 되었다면 이번엔 SCSS를 사용해서 style속성을 지정해봅시다. SCSS를 사용하기 위해선 윈도우에 SCSS가 설치되어 있어야 하고, 설치가 되어 있다면 터미널 창에서 npm install node-sass로 node-sass까지 설치해주어야 합니다.
+아름다운 구조와 멋진 클래스로 구성이 되었다면 이번엔 SCSS를 사용해서 style속성을 지정하겠습니다.
+
+React에서도 html처럼 내부에 인라인으로 스타일을 지정해줄수도 있습니다. 그럴땐 중괄호를 두번 묶어주고, 속성을 Camelcase로 사용해주면 됩니다. 하지만 이 방법은 안쓰는게 좋습니다.
+
+<center>
+<figure>
+<img src="/assets/post-img/react/nomad_react_5-14.jpg" alt="">
+<figcaption>React에서 인라인으로 스타일 지정</figcaption>
+</figure>
+</center>
+
+## 4.3 Adding Genres
+
+
+
+## 4.4 Styles Timelapse
+
+SCSS를 사용하기 위해선 윈도우에 SCSS가 설치되어 있어야 하고, 설치가 되어 있다면 터미널 창에서 npm install node-sass로 node-sass까지 설치해주어야 합니다.
 
 js파일이 있는 동일 경로 src에 Movie.scss를 생성하고 내부 스타일을 지정해주겠습니다.
 scss파일도 import는 동일합니다. 확장자만 scss로 선택해주면 됩니다.
@@ -52,19 +69,6 @@ scss파일도 import는 동일합니다. 확장자만 scss로 선택해주면 �
 <figcaption>실행되는 화면</figcaption>
 </figure>
 </center>
-
-또한 html처럼 React도 내부에서 인라인으로 스타일을 지정해줄수도 있습니다. 그럴땐 중괄호를 두번 묶어주고, 속성을 Camelcase로 사용해주면 됩니다. 하지만 이 방법은 안쓰는게 좋습니다.
-
-<center>
-<figure>
-<img src="/assets/post-img/react/nomad_react_5-14.jpg" alt="">
-<figcaption>React에서 인라인으로 스타일 지정</figcaption>
-</figure>
-</center>
-
-
-
-
 
 
 
