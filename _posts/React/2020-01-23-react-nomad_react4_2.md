@@ -54,7 +54,24 @@ React에서도 html처럼 내부에 인라인으로 스타일을 지정해줄수
 
 ## 4.3 Adding Genres
 
+<center>
+<figure>
+<img src="/assets/post-img/react/nomad_react_5-15.jpg" alt="">
+<figcaption>list_movies.json파일을 확인</figcaption>
+</figure>
+</center>
 
+가져온 list_movies.json파일을 확인해보았더니 genres의 부분이 배열로 되어 있습니다. Movie Component에 prop로 genres를 전달하고, 전에 배웠던 map() 메소드로 genres를 활용하여 movie안에 list로 넣어봅시다.
+
+<center>
+<figure>
+<img src="/assets/post-img/react/nomad_react_5-16.jpg" alt="">
+<figcaption>genre를 추가한 코드 구성</figcaption>
+</figure>
+</center>
+
+먼저 App.js의 Movie Component에 prop로 genres를 추가하였고,  
+Movie.js에서 ul안의 li에 넘어온 genre 각각의 요소를 넣어주었습니다. 그리고 propTypes 검사를 통해서 genre가 string 형태인지 확인도 하였습니다.
 
 ## 4.4 Styles Timelapse
 
@@ -70,8 +87,16 @@ scss파일도 import는 동일합니다. 확장자만 scss로 선택해주면 �
 </figure>
 </center>
 
+## 4.5 Cutting the summary
 
+위의 실행되는 화면 이미지를 보면 summary 부분이 영화에 따라 텍스트의 길이가 각각 다른게 보이시죠?  
+텍스트에 따라 movie 영역도 들쑥날쑥하니 우리는 summary의 텍스트를 최대 180글자로 잘라주겠습니다.
 
+<center>
+<figure>
+<img src="/assets/post-img/react/nomad_react_5-17.jpg" alt="">
+<figcaption>변경한 코드와 실행되는 화면</figcaption>
+</figure>
+</center>
 
-
-
+slice() 메소드로 인덱스 0번째부터 180번째 까지 잘라주었고, 실행 창도 같은 높이 값으로 나옵니다!
