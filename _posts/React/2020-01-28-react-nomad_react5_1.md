@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Nomadcoder's ReactJS Conclusions 1
+title: Nomadcoder's ReactJS Conclusions
 category: React
 tags: [React]
 comments: true
@@ -100,3 +100,13 @@ predeloy은 'deploy 실행 전' 이라는 의미입니다. 우리가 deploy를 �
 
 이제 위 링크에서 Movie App이 잘 실행되는 것을 확인할 수 있습니다!  
 너무나도 싱기방기...
+
+----
+
+## 5.1 Are we done?
+
+이제 Movie App은 끝났습니다! 알아야 할 것은 여러분은 더 이상 state를 갖기 위해 class component를 가질 필요는 없다는 것 입니다! 왜냐하면 React hook이라는 것이 있기 때문입니다.  
+
+하지만 그렇다고 지금 배운 것들이 오래된 것은 아닙니다. React hook은 대체물이 아니라 새로운 것 입니다. 일을 하는 다른 방식인것 입니다!  
+
+필자는 Movie App 강의가 끝나면 React hook 강의도...들..어봐야..겠슴미다..ㅎㅎ
