@@ -26,7 +26,7 @@ routes폴더에 Navigation.js를 만들고 Home과 About 두 개의 메뉴를 �
 
 <center>
 <figure>
-<img src="/assets/post-img/react/nomad_react_6-9.gif" alt="">
+<img src="/assets/post-img/react/nomad_react_6-19.gif" alt="">
 <figcaption>페이지가 새로고침되어 이동되는 모습</figcaption>
 </figure>
 </center>
@@ -53,14 +53,14 @@ routes폴더에 Navigation.js를 만들고 Home과 About 두 개의 메뉴를 �
 
 <center>
 <figure>
-<img src="/assets/post-img/react/nomad_react_6-10.gif" alt="">
+<img src="/assets/post-img/react/nomad_react_6-16.gif" alt="">
 <figcaption>a태그를 Link로 변경한 Navigation.js</figcaption>
 </figure>
 </center>
 
 이번에도 상단 파비콘과 url쪽을 살펴보면 페이지는 새로고침되지 않고 url과 뷰 페이지만 변경되는게 보입니다. 속도도 매우 빠르고, 새로고침 없이 React를 다운시키지도 않았습니다.  
 
-참고로 여러분은 Router밖에선 Link를 사용할 수 없습니다.  
+참고로 여러분은 **Router밖에선 Link를 사용할 수 없습니다**.  
 만약 여러분이 바뀌지 않을 부분, 예를 들면 footer Component 같은 부분은 Router 밖에 넣어도 되지만, Link를 사용하기 위해선 Router내부에서 실행되야 합니다.
 
 ------
@@ -69,9 +69,9 @@ routes폴더에 Navigation.js를 만들고 Home과 About 두 개의 메뉴를 �
 
 네비게이션은 만들었고, 이제 movie를 클릭하면 movie에 대한 정보가 나오는 detail 페이지를 만들어봅시다.  
 
-그러면 우리는 클릭 했을때 그 movie에 대한 정보를 받아와야겠죠?
+그러면 우리는 <u>카드를 클릭 했을때 그 movie에 대한 정보</u>를 받아와야겠죠?
 
-아시다 시피 모든 Component에는 props를 넣을 수 있습니다. 우리는 이전에 만들었던 단순 태그들을 return하는 movie-detail Component에 props를 넣고 console로 props를 확인해봅시다.
+아시다 시피 모든 Component에는 props를 넣을 수 있습니다. 우리는 이전에 만들었던 단순 태그들을 return하는 Detail Component에 <u>props를 넣고 console로 props를 확인</u>해봅시다.
 
 <center>
 <figure>
@@ -98,8 +98,8 @@ history, location, match, staticContext 4가지의 props가 react-router에 의�
 </figure>
 </center>
 
-Home에서 Navigation을 통해 movie-detail 페이지로 들어올 때, state를 전달하고 있는 것을 확인 할 수 있습니다.  
-위의 확인으로 우리는 props를 전달하고 전달 받을 수 있다는 것을 알았습니다!  
+Home에서 Navigation을 통해 movie-detail 페이지로 들어올 때, **state를 전달하고 있는 것을 확인** 할 수 있습니다.  
+위의 확인으로 `우리는 props를 전달하고 전달 받을 수 있다는 것`을 알았습니다!  
 props를 movie-detail화면으로 가져올 수도 있다는 말입니다!  
 
 이제 우리는 movie를 클릭하면 movie-detail 페이지로 이동하게 하고, 그 movie의 데이터를 movie-detail 페이지로 보낼 수 있겠죠?
@@ -115,7 +115,7 @@ props를 movie-detail화면으로 가져올 수도 있다는 말입니다!
 
 'react-router-dom'의 Link를 사용하여 movie태그를 감싸주었고, state로 Movie Component의 props들을 전송하였습니다.  
 
-이제 movie 카드를 클릭하면 React router가 /movie-detail로 데려가고 Detail Component를 보여주면서 전달받은 props를 확인시켜줍니다. Movie Component가 Detail Component로 정보를 보내고 있는 것 입니다. 
+이제 movie 카드를 클릭하면 React router는 User를 /movie-detail로 데려가고 Detail Component를 보여주면서 전달받은 props를 확인시켜줍니다. Movie Component가 Detail Component로 정보를 보내고 있는 것 입니다. 
 
 <center>
 <figure>
