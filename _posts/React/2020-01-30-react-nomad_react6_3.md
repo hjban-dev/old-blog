@@ -21,13 +21,14 @@ comments: true
 </figure>
 </center>
 
-페이지에서 movie card를 누르면 이전 장에서 확인했던 것처럼 props 정보를 받을 수 있었지만, 그냥 직접적으로 /movie-detail로 들어오면 여전히 undefined로 뜹니다. 그것을 막기 위해 우리는 직접적으로 링크를 들어온다면 home으로 redirect되게 만들겠습니다.
+페이지에서 movie card를 누르면 이전 장에서 확인했던 것처럼 props 정보를 받을 수 있었지만,  
+그냥 <u>직접적으로 /movie-detail로 들어오면 여전히 undefined로 뜹니다</u>. 그것을 막기 위해 우리는 직접적으로 링크를 들어온다면 home으로 redirect되게 만들겠습니다.
 
-먼저 기존의 function Component를 class Component로 변경하고, 전 장에서 /movie-detail 링크를 직접적으로 들어오면 location.state이 undefined 인 것을 확인했습니다. 그래서 location.state이 undefined라면 유저를 인덱스 페이지로 redirect 시키겠습니다.
+먼저 기존의 function Component를 class Component로 변경하고, 전 장에서 /movie-detail 링크를 직접적으로 들어오면 location.state이 undefined 인 것을 확인했으니, location.state이 undefined라면 유저를 인덱스 페이지로 redirect 시키겠습니다.
 
 <center>
 <figure>
-<img src="/assets/post-img/react/nomad_react_6-15.jpg" alt="">
+<img src="/assets/post-img/react/nomad_react_6-16.jpg" alt="">
 <figcaption>props를 console창에서 확인</figcaption>
 </figure>
 </center>
@@ -52,7 +53,7 @@ this.props에서 history도 가져와서 history.push('/')로 인덱스 페이�
 
 직접적으로 movie-detail 페이지에 갈 수 없는게 확인됩니다. 그러면 이제 카드를 클릭해서 이동 했을 때, 해당 카드의 정보를 가져와 페이지에 보이게 해봅시다.
 
-movie 카드 구조와 style을 가져와서 사용하겠습니다. 
+detail 내부는 movie 카드 구조와 style을 가져와서 사용하겠습니다. 
 
 <center>
 <figure>
@@ -76,12 +77,12 @@ render() 함수가 실행됐을때 넘어오는 location이 없기 때문에 com
 
 <center>
 <figure>
-<img src="/assets/post-img/react/nomad_react_6-19.gif" alt="">
-<figcaption>movie-detail 페이지에서 새로고침 했을 때 결과</figcaption>
+<img src="/assets/post-img/react/nomad_react_6-20.gif" alt="">
+<figcaption>movie-detail 페이지로 페이지 이동했을 때 결과</figcaption>
 </figure>
 </center>
 
-위 영상을 확인해보면 새로 고침을 하니 인덱스 페이지로 이동하는 것을 확인할 수 있습니다.  
+위 영상을 확인해보면 직접적으로 페이지 이동을 했더니 인덱스 페이지로 이동하는 것을 확인할 수 있습니다.  
 우리는 Link와 Router를 통해 주어진 props를 이용하여 정보를 공유하는 방식을 알아보았습니다. 
 
 ---
@@ -100,3 +101,10 @@ Movie App에서 우리가 about페이지를 갔다가 home으로 이동하면 �
 말 그대로 여러분이 about페이지를 갔다가 home으로 돌아온다면 state는 다시 비어있을것 입니다. 그럼 데이터를 다시 불러와야 합니다.  
 이런 현상을 고치고 싶다면 여러분은 Redux를 사용해야 합니다. Redux는 state를 스크린 밖에 있도록 도와줍니다. Redux는 무비리스트를 다른 곳에 저장했다가 여러분이 home으로 돌아와도 좀 더 빠르게 노출시켜 줄 수 있습니다. 다시 로딩창을 볼 필요가 없죠.
 
+---
+
+## Done!! Movie App Completion! 
+
+React의 개념을 다시 한번 다져보는 시간이였다! 위 코드들 활용하면 더 재밌는거 많이 만들수 있을 듯! 노마드 강의 ㅅㅅㅅㅅㅅㅅㅌㅊ!!
+
+> [필자의 Movie App 링크](https://hjban-dev.github.io/nomad_movie_app/#/)
