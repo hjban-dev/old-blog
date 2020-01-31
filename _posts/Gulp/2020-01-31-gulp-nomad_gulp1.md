@@ -31,7 +31,7 @@ supergulp안에 폴더 구성은 아래 이미지처럼 해주겠습니다.
 
 <center>
 <figure>
-<img src="/assets/post-img/gulp/nomad_gulp_0-1.jpg" alt="">
+<img src="/assets/post-img/gulp/nomad_gulp_0-1.jpg" alt="" style="width: 320px;">
 <figcaption>supergulp 폴더 구조(동영상캡쳐)</figcaption>
 </figure>
 </center>
@@ -72,7 +72,7 @@ scss폴더 내부의 scss파일들도 세팅해주겠습니다.
 
 reset.scss 파일의 내부는 구글에서 reset.css를 검색하여 복사해왔습니다.
 
-이제 파일 구조 생성은 끝났고, webpack을 실행할 때 webpack.config로 초기 세팅을 합니다. 비슷하게 Gulp에서도 gulpfile.js를 만들어야 합니다. src에 파일 생성만 하고 gulp 설치를 마저 해봅시다.
+이제 파일 구조 생성은 끝났고, webpack의 경우 실행할 때 webpack.config로 초기 세팅을 합니다. 비슷하게 Gulp에서도 gulpfile.js를 만들어야 합니다. src에 파일 생성만 하고 gulp 세팅을 마저 진행하겠습니다.
 
 우리는 아까 gulp-cli를 설치했었습니다. 말했듯이 gulp-cli는 console창에서 쓴다고 말했지만 만약 여러분이 터미널에서 gulp-cli를 사용하고 싶다면 package.json에 명령어를 추가해야 합니다.
 
@@ -83,9 +83,9 @@ reset.scss 파일의 내부는 구글에서 reset.css를 검색하여 복사해�
 </figure>
 </center>
 
-명령어를 보니 뭔지는 모르겠지만 gulp를 사용하겠다는 뜻 같죠? 이번엔 gulp를 설치해줍시다.
+명령어를 보니 뭔지는 모르겠지만 gulp를 사용하겠다는 뜻 같으니, 이번엔 gulp를 설치해줍시다.
 
-터미널에 yarn add gulp -D 으로 gulp 명령으로 설치하고, yarn dev 실행하겠습니다.
+터미널에 yarn add gulp -D 으로 gulp 명령으로 설치하고, yarn dev를 실행하겠습니다.
 
 <center>
 <figure>
@@ -94,8 +94,7 @@ reset.scss 파일의 내부는 구글에서 reset.css를 검색하여 복사해�
 </figure>
 </center>
 
-에러부분은 무시하고 gulp가 제대로 작동하고 있고, gulpfile.js를 활용하고 있는게 확인됩니다.  
-gulpfile.js에 코드를 추가해보겠습니다.
+에러부분은 무시하고, gulp가 제대로 작동하고 있고, gulpfile.js를 활용하고 있는게 확인되니, 이번엔 gulpfile.js에 코드를 추가합시다.
 
 <center>
 <figure>
@@ -105,7 +104,7 @@ gulpfile.js에 코드를 추가해보겠습니다.
 </center>
 
 첫번째 줄에 있는 import 키워드를 사용해서 gulp를 불러오려고 했는데 문법 오류라는 오류를 반환합니다. 세번째 줄에 있는 코드처럼 require를 사용해서 불러오라고 합니다.  
-gulp가 최신 문법을 이해하지 못하고 있습니다!
+**gulp가 최신 문법을 이해하지 못하고 있습니다!**
 
 하지만 저희는 최신 자바스크립트 문법을 사용하고 싶으니, babel을 사용하겠습니다.
 
@@ -116,7 +115,7 @@ gulp가 최신 문법을 이해하지 못하고 있습니다!
 우리는 저번 시간에 gulp를 설치했고 dev와 build 명령어도 추가하여 터미널에서도 테스트할 수 있게 만들었습니다. 하지만 gulp가 최신 문법을 이해하지 못하는게 문제였습니다.
 
 자 이제 babel을 사용해보겠습니다.  
-gulpfile.js의 파일명을 gulpfile.babel.js로 변경하고, 같은 위치에 .babelrc파일을 생성하겠습니다.  
+gulpfile.js의 파일명을 **gulpfile.babel.js**로 변경하고, 같은 위치에 **.babelrc**파일을 생성하겠습니다.  
 
 .babelrc파일 내부엔 "@babel/preset-env"이라는 이름은 presets을 생성하겠습니다.
 
@@ -124,7 +123,7 @@ gulpfile.js의 파일명을 gulpfile.babel.js로 변경하고, 같은 위치에 
 
 <center>
 <figure>
-<img src="/assets/post-img/gulp/nomad_gulp_0-8.jpg" alt="">
+<img src="/assets/post-img/gulp/nomad_gulp_0-2.jpg" alt="">
 <figcaption>터미널에서 gulp dev 실행(동영상캡쳐)</figcaption>
 </figure>
 </center>
@@ -133,7 +132,7 @@ gulpfile.js의 파일명을 gulpfile.babel.js로 변경하고, 같은 위치에 
 그랬더니 외부모듈을 찾을 수 없다는 에러가 여러개 뜰겁니다. 
 우리가 아직 babel을 설치하지 않았기 때문입니다.  
 
-강의에서는 yarn add @babel/{register, core} 를 실행하라고 했는데 필자는 자꾸 오류떠서
+강의에서는 yarn add @babel/{register, core} 를 실행하라고 했는데 필자는 자꾸 오류가 떠서
 아래 링크 확인하고 **npm install @babel/register @babel/core @babel/preset-env -D** 로 실행했더니 실행 되었습니다.
 
 > [구글링해서 Stackoverflow 참고](https://stackoverflow.com/questions/29207878/requirebabel-register-doesnt-work)
@@ -159,4 +158,4 @@ gulpfile.js의 파일명을 gulpfile.babel.js로 변경하고, 같은 위치에 
 
 결과는 babel을 사용하고 있다고 나오고, 중간의 빨간 글씨는 현재 작업이 없다는 의미이고 오류는 아닙니다. 
 이로써 우리가 gulp프로젝트를 시작하는 방법을 알게 되었습니다.
-파일 구조를 만들었던 단계가 아니라, .packages.json, bulpfile.babel.js, .babelrc 파일 등이 gulp를 구성하는 단계입니다.
+파일 구조를 만들었던 단계가 아니라, <u>.packages.json, bulpfile.babel.js, .babelrc 파일</u> 등이 gulp를 구성하는 단계입니다.
