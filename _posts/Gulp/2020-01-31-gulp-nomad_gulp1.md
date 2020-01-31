@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Nomadcoder's Gulp Introduction
+title: Gulp Introduction
 category: Gulp
 tags: [Gulp]
 comments: true
