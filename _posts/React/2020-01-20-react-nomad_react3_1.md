@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Nomadcoder's ReactJS State 1
+title: Movie App ReactJS State 1
 category: React
 tags: [React]
 comments: true

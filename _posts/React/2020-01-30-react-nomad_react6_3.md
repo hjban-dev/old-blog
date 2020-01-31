@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Nomadcoder's ReactJS Routing Bonus 3
+title: Movie App ReactJS Routing Bonus 3
 category: React
 tags: [React]
 comments: true

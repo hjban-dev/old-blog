@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Nomadcoder's ReactJS JSX & Props 3
+title: Movie App ReactJS JSX & Props 3
 category: React
 tags: [React]
 comments: true

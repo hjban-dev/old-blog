@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Nomadcoder's ReactJS Introduction, Setup
+title: Movie App ReactJS Introduction, Setup
 category: React
 tags: [React]
 comments: false

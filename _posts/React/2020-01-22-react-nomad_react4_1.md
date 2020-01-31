@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Nomadcoder's ReactJS Making the Movie App 1
+title: Movie App ReactJS Making the Movie App 1
 category: React
 tags: [React]
 comments: true

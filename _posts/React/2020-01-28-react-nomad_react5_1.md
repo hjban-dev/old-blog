@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Nomadcoder's ReactJS Conclusions
+title: Movie App ReactJS Conclusions
 category: React
 tags: [React]
 comments: true
