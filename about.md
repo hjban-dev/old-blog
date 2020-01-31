@@ -11,3 +11,11 @@ title: About
 	서투르고 모자라지만 꾸준히 하나씩 올라가보자는 마음으로 천천히 정리하는 중입니다.<br>
 	<span style="font-size: 0.7rem;">* 이미 쓴 포스트도 새로 알게 된 내용이나 추가하고 싶은 내용을 자주 수정합니다.</span>
 </p>
+
+- HTML, CSS, JAVASCRIPT
+- EJS, JADE, PUG
+- SASS, SCSS
+- REACT
+- NODE
+- MARIA DB, MONGO DB
+- GULP
