@@ -29,19 +29,24 @@ gulp는 최신 파일들을 구형 브라우저도 작동하도록 compile하는
 
 > [Gulp 공식사이트 링크](https://gulpjs.com/)
 
-위 링크를 확인하면 Gulp는 수 많은 플러그인을 가지고 있습니다. 20년 2월 기준으로 4105개가 있네요. 우리는 그 중 gulp pug라는 플러그인을 사용하겠습니다.
+위 링크를 확인하면 Gulp는 수 많은 플러그인을 가지고 있습니다. 20년 2월 기준으로 4105개가 있네요. 우리는 그 중 <u>gulp pug</u>라는 플러그인을 사용하겠습니다.
 
 > [Npm gulp-pug 링크](https://www.npmjs.com/package/gulp-pug)
 
-만약 여러분이 webpack을 안다면 loaders 플러그인을 생각하면 됩니다. (필자는 webpack을 모르지만 뭐 파일들을 build하는 그런 것으로 보인다.)  
+만약 여러분이 webpack을 안다면 loaders 플러그인을 생각하면 됩니다. (필자는 webpack을 모르지만 뭐 파일들을 build하는 그런 것으로 보입니다.)  
 
-설치는 터미널 창에 yarn add gulp-pug -D 입력으로 설치한다. 설치가 완료되면 gulpfile.babel.js로 돌아와서 import 해줍시다.  
+설치는 터미널 창에 <u>yarn add gulp-pug -D</u> 입력으로 설치합니다. 설치가 완료되면 gulpfile.babel.js로 돌아와서 import 해줍시다.  
+
+```javascript
+import gulpPug from "gulp-pug";
+```
 
 우리는 Gulp를 import했으니까 이제 Gulp를 사용가능 합니다.  
 다행히 Gulp는 많지 않은 API를 가지는데([Gulp 공식사이트 링크](https://gulpjs.com/docs/en/api/concepts)에서 확인 가능) 그 중 src()와 dest()는 사용하기 위해 꼭 알아야 합니다.  
 src()를 먼저 알아봅시다.
 
-gulpfile.babel.js로 돌아가서 우리는 상수 2개를 만들겠습니다. 하나는 routes라는 이름의 상수이고, 그 안에는 compile 할 파일들의 정보를 넣겠습니다.  
+gulpfile.babel.js로 돌아가서 우리는 상수 2개를 만들겠습니다.  
+하나는 routes라는 이름의 상수이고, 그 안에는 compile 할 파일들의 정보를 넣겠습니다.  
 다른 하나는 pug라는 이름의 상수이고, 그 안에는 gulp의 src()를 사용할거고 그 안의 매개변수로 routes의 일부를 넣어주겠습니다.
 
 <center>
@@ -55,7 +60,7 @@ gulpPug의 src()를 사용했고 그 안의 매개변수로는 routes.put.src �
 
 gulp는 pipe()랑 같이 쓰입니다. gulp는 src()를 통해서 파일의 흐름을 만들고 여러분은 pipe()로 그 흐름이 어디로 나오게 할 지 만드는 것 입니다. 어떤 pipe는 코드를 컴파일하고, 어떤 pipe는 코드를 복사하게 하고, 어떤 pipe는 코드를 최소화하고 등등..  
 
-이제 pipe()를 사용해봅시다. 우리는 이전 코드에 pipe()를 연결하면서 pug를 부르고, 다시 pipe()를 연결하여 gulpPug.dest()를 실행하겠습니다.  
+이번엔 pipe()를 사용해봅시다. 우리는 이전 코드에 pipe()를 연결하면서 pug를 부르고, 다시 pipe()를 연결하여 gulpPug.dest()를 실행하겠습니다.  
 dest()는 destination으로 컴파일한 파일을 어느곳에 저장할지 정해주는 것입니다.
 
 <center>
@@ -85,7 +90,7 @@ dest()는 destination으로 컴파일한 파일을 어느곳에 저장할지 정
 
 이번에는 build폴더 내부의 파일을 제거하는 법을 알아봅시다. 만약 여러분이 파일을 컴파일 했는데 수정을 했을 경우에 기존 파일을 지우고 새로 작성해야 하죠? 그럴 때 사용하게 될 부분입니다.  
 
-먼저 터미널에 yarn add del -D로 설치하고, gulpfile.babel.js파일에 import 하겠습니다.  
+먼저 터미널에 <u>yarn add del -D</u>로 설치하고, gulpfile.babel.js파일에 import 하겠습니다.  
 그리고 claen이라는 함수를 생성하고 그 함수는 del()을 사용하겠습니다. del() 함수 내부에는 우리가 삭제하려는 폴더인 "build/"를 넣어주겠습니다.
 
 <center>
