@@ -60,7 +60,7 @@ watch라는 함수를 만들고 내부엔 gulp의 watch를 실행하게 하겠�
 <center>
 <figure>
 <img src="/assets/post-img/gulp/nomad_gulp_1-9.jpg" alt="">
-<figcaption>상수 postDev의 생성과 사용</figcaption>
+<figcaption>watch할 파일들 지정, watch 함수 코드 구성</figcaption>
 </figure>
 </center>
 
