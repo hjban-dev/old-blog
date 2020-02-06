@@ -130,5 +130,12 @@ const styles = () =>
 		.pipe(gulp.dest(routes.scss.dest))
 ```
 
+<center>
+<figure>
+<img src="/assets/post-img/gulp/nomad_gulp_5-6.jpg" alt="">
+<figcaption>gulp-csso로 압축된 style.css</figcaption>
+</figure>
+</center>
+
 이렇게 여러분이 원하는 모든것을 설치할 수 있습니다.  
 다음 장에서는 js를 배워봅시다!
