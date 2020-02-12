@@ -42,26 +42,24 @@ import babelify from "babelify";
 ```javascript
 // ---js routes---
 const routes = {
-	.
-	.
-	.
-	js:{
-		watch :"src/js/**/*.js",
-		src: "src/js/main.js",
-		dest: "build/js"
-	}
+  (...)
+  js:{
+    watch :"src/js/**/*.js",
+    src: "src/js/main.js",
+    dest: "build/js"
+  }
 };
 
 // ---js task---
 const js = () => 
-	gulp
-		.src(routes.js.src)
-		.pipe(bro({
-			transform:[
-				babelify.configure({ presets: ['@babel/preset-env'] }),
-				[ 'uglifyify', { global: true } ]
-			]
-		})).pipe(gulp.dest(routes.js.dest));
+  gulp
+    .src(routes.js.src)
+    .pipe(bro({
+      transform:[
+        babelify.configure({ presets: ['@babel/preset-env'] }),
+        [ 'uglifyify', { global: true } ]
+      ]
+    })).pipe(gulp.dest(routes.js.dest));
 ```
 
 위의 js task에 보면 uglifyify가 사용되었는데 저것도 모듈이라 따로 설치 필요합니다.
@@ -69,10 +67,10 @@ const js = () =>
 ```javascript
 // ---watch에 js추가---
 const watch = () => {
-	gulp.watch(routes.pug.watch, pug);
-	gulp.watch(routes.img.src, img);
-	gulp.watch(routes.scss.watch, styles);
-	gulp.watch(routes.js.watch, js);
+  gulp.watch(routes.pug.watch, pug);
+  gulp.watch(routes.img.src, img);
+  gulp.watch(routes.scss.watch, styles);
+  gulp.watch(routes.js.watch, js);
 };
 
 // ---assets 부분에 js 추가---

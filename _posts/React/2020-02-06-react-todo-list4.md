@@ -26,25 +26,25 @@ import React from "react";
 import "./css/Palette.css";
 
 const Color = ({ color, active, onClick }) => {
-	return (
-		<div
-			className={`color ${active && active}`}
-			style={{ background: color }}
-			onClick={onClick}
-		></div>
-	);
+  return (
+    <div
+      className={`color ${active && active}`}
+      style={{ background: color }}
+      onClick={onClick}
+    ></div>
+  );
 };
 
 const Palette = ({ colors, selected, onSelect }) => {
-	const colorList = colors.map(color => (
-		<Color
-			color={color}
-			active={selected === color}
-			onClick={() => onSelect(color)}
-			key={color}
-		/>
-	));
-	return <div className="palette">{colorList}</div>;
+  const colorList = colors.map(color => (
+    <Color
+      color={color}
+      active={selected === color}
+      onClick={() => onSelect(color)}
+      key={color}
+    />
+  ));
+  return <div className="palette">{colorList}</div>;
 };
 
 export default Palette;
@@ -118,12 +118,3 @@ export default Form;
 TodoListTemplate.js, TodoItemList.js, TodoItem.js는 생략하겠습니다.  
 
 > [Todo-List 결과물 확인](https://github.com/hjban-dev/todo-react)
-
-
-
-
-
-
-
-
-

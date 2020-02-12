@@ -115,19 +115,19 @@ npm i gulp-csso -D로 설치하고, import하겠습니다. gulp-csso도 사용�
 
 ```javascript
 const styles = () => 
-	gulp
-		.src(routes.scss.src)
-		.pipe(sass().on('error', sass.logError))
-		.pipe(autoprefixer({
-			"development": [
-				"last 2 chrome version",
-				"last 2 firefox version",
-				"last 2 safari version",
-				"last 2 ie version"
-			]
-		}))
-		.pipe(miniCSS())
-		.pipe(gulp.dest(routes.scss.dest))
+  gulp
+    .src(routes.scss.src)
+    .pipe(sass().on('error', sass.logError))
+    .pipe(autoprefixer({
+      "development": [
+        "last 2 chrome version",
+        "last 2 firefox version",
+        "last 2 safari version",
+        "last 2 ie version"
+      ]
+    }))
+    .pipe(miniCSS())
+    .pipe(gulp.dest(routes.scss.dest))
 ```
 
 <center>
