@@ -26,8 +26,8 @@ const client = new ApolloClient({
 
 export default client;
 ```
-GraphQl의 경우 우리는 URL을 갖지 않습니다. 그래서 apollo client에 하나의 URL만 넣어도 됩니다. 들어가는 URL은 GraphQL로 만들었던 로컬호스트를 연결해주었습니다..
-이제 index.js에 가서 방금 만든 client를 연결시킵니다. 
+GraphQl의 경우 URL을 갖지 않습니다. 그래서 apollo client에 하나의 URL만 넣어도 됩니다. 들어가는 URL은 GraphQL로 만들었던 로컬호스트를 연결해주었습니다. 
+그리고 index.js에 가서 방금 만든 client를 연결시킵니다. 
 
 ```javascript
 import React from "react";
@@ -44,11 +44,11 @@ ReactDOM.render(
 );
 ```
 ApolloProvider는 client가 필수입니다.  
-그리고 yarn start를 실행했을때 localhost의 개발자 도구에서 아무 문제 없다면 apollo가 잘 작동하고 있는 것입니다.
+코드 작성 후 yarn start를 실행했을때 localhost의 개발자 도구에서 아무 문제 없다면 apollo가 잘 작동하고 있는 것입니다.
 
 ## 1.1 GET_MOVIES Query
 
-Javascript는 GraphQL의 query를 이해하지 못합니다. 그러니 GraphQL을 import하여 query를 작성해주겠습니다.  
+Javascript는 GraphQL의 query를 이해하지 못합니다. 그래서 GraphQL을 import하여 query를 작성해주겠습니다.  
 Home.js에 아래 코드를 작성하겠습니다.
 
 ```javascript
@@ -72,7 +72,7 @@ export default () => {
 };
 ```
 
-GET_MOVIES로 query를 작성하였고, useQuery로 query를 사용하였습니다. useQuery는 react hook입니다. apollo는 hook과 사용하기 좋습니다. 
+GET_MOVIES라는 query를 작성하였고, useQuery로 query를 사용하였습니다. useQuery는 react hook입니다. 
 
 <center>
 <figure>
@@ -82,14 +82,14 @@ GET_MOVIES로 query를 작성하였고, useQuery로 query를 사용하였습니�
 </center>
 
 fetch나 POST같은 건 하지 않았지만 data를 얻을 수 있습니다.  
-우리는 GET_MOVIES를 만들어서 data를 불러왔고, 다음 강의에선 불러온 data를 링크를 통해 View 페이지에 뿌리고, 링크를 연결하겠습니다.
+우리는 GET_MOVIES를 만들어서 data를 불러왔고, 다음 강의에선 불러온 data를 링크를 걸어 View 페이지에 뿌리고, 링크를 통해 각각의 movie의 세부페이지로 연결하겠습니다.
 
 ---
 
 ## 1.2 GET_MOVIE Query
 
-우리는 가져온 data를 링크 형태로 페이지에 노출시키고, 링크를 연결하면 각각 영화의 세부 내용이 노출되게 만들겠습니다.  
-먼저 components폴더에 Movie.js를 생성한 후 Movie Component를 만들겠니다. 링크를 연결해야 하니 Link를 사용하여 작성하겠습니다.
+우리는 가져온 data를 링크 형태로 페이지에 노출시키고, 각각의 영화 링크로 연결하겠습니다.  
+먼저 components폴더에 Movie.js를 생성한 후 Movie Component를 만들겠습니다. React에서 <a href>는 사용할 수 없습니다. 링크 연결을 위해 Link를 사용하여 작성하겠습니다.
 
 ```javascript
 import React from "react";
@@ -102,7 +102,7 @@ export default ({ id }) => (
 );
 ```
 
-그리고 Home.js에서 가져온 data를 map()메소드를 사용하여 각각 Movie Compoenent로 생성하겠습니다. 
+그리고 Home.js에 가져온 data를 map()메소드를 사용하여 각각 Movie Compoenent로 생성하겠습니다. 
 div로 구성된 간단한 Component와 style부분은 생략하겠습니다. 
 
 ```javascript
@@ -129,8 +129,8 @@ export default () => {
 loading 상태이면 <Loading>Loading...</Loading>을 return.  
 loading 상태이지 않고, data에 movies정보가 있으면 data.movies.map()을 실행합니다.  
 
-이전 장의 App.js에서 경로가 /:id 이라면 Detail Component를 보여주게 했었습니다. 이제 Detail.js를 수정하겠습니다.  
- 링크를 클릭 했을 때 정보를 잘 가져오는지 확인해봅시다.
+이전 장의 App.js에서 경로가 /:id 이라면 Detail Component를 보여주게 했었습니다.   
+Detail.js에서 링크를 클릭 했을 때 정보를 잘 가져오는지 확인해봅시다.
 
 ```javascript
 import React from "react";
@@ -151,7 +151,7 @@ export default () => {
 </center>
 
 이동된 링크에서 현재의 id값을 확인 할 수 있습니다.  
-data가 연동된 것을 확인했으니 GET_MOVIE라는 이름의 변수 query를 작성하겠습니다. 이번에 필요한 query는 argument가 필요한 query입니다. 그럴 땐 작성할 때 query의 이름을 적어야 합니다.
+data가 연동된 것을 확인했으니 GET_MOVIE라는 이름의 query를 작성하겠습니다. 이번에 필요한 query는 argument가 필요한 query입니다. 그럴 땐 작성할 때 query의 이름을 적어야 합니다.
 
 ```javascript
 (...)
