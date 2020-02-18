@@ -59,8 +59,16 @@ function solution(strings, n) {
 ## 다른사람 풀이
 
 ```javascript
-
+function solution(strings, n) {
+  return strings.sort((s1, s2) => s1[n] === s2[n] ? s1.localeCompare(s2) : s1[n].localeCompare(s2[n]));
+}
 ```
+ㅎ..너무 간결해서 할 말이 없다.  
+위 코드...짧지만 분석이 은근히 안되서 보니까 localeCompare() 내장 메소드를 몰랐다. 문자열을 구분해주는 메소드이다.  
+짧게 쓴 풀이들이 다 localeCompare() 메소드를 사용해서 굳이 다른 풀이 안가져오고, localeCompare()만 정리하자..
+
+* localeCompare() : 주어진 문자열의 앞 또는 뒤에 오거나 같은지 여부를 나타내는 숫자를 정렬 순서로 리턴합니다.  
+  두 문자열을 비교하여 일치하면 0, 다르면 -1, 인자값이 원본문자열의 일부분이면 1을 리턴
 
 ## 배운점
 
