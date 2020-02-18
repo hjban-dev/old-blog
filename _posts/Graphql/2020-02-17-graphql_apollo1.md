@@ -58,5 +58,6 @@ function App() {
 
 export default App;
 ```
-yarn start로 http://localhost:3000/를 확인해보고 정상 작동한다면 router가 잘 생성된 것이다.
 
+경로에 따라 보여주는 Component를 다르게 해주었습니다. / 경로에선 Home Compoenent, /:id 이면 Detail Component가 노출되게 해주었습니다.  
+yarn start 실행 후 http://localhost:3000/를 확인해보고 정상 작동한다면 router가 잘 생성된 것입니다.
