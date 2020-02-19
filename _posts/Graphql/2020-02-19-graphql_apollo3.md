@@ -39,50 +39,26 @@ data.movie.title으로 작성하고 view 페이지를 확인해보겠습니다.
 undefined error가 발생합니다.  
 그래서 우리는 data.movie.title의 형식으로 작성하지만 반드시 삼항연산자를 사용하여 작성해주어야 합니다. 
 
-```javascript
-export default () => {
-  let { id } = useParams();
-  id = parseInt(id);
+<center>
+<figure>
+<img src="/assets/post-img/graphql/movie_graphql_apollo_1-7.jpg" alt="">
+<figcaption>loading 일때 return할 코드 삼항연산자로 작성</figcaption>
+</figure>
+</center>
 
-  const { loading, data } = useQuery(GET_MOVIE, {
-    variables: { id }
-  });
-
-  return (
-    <Container>
-      <Column>
-        <Title>{loading ? "Loading..." : data.movie.title}</Title>
-        <Subtitle>English · 4.5</Subtitle>
-        <Description>lorem ipsum lalalla </Description>
-      </Column>
-      <Poster
-        bg={data && data.movie ? data.movie.medium_cover_image : ""}
-      ></Poster>
-    </Container>
-  );
-};
-```
-
-loading 중이라면 Loading... 텍스트를 return, loading이 끝나면 data도 확인할 수 있기 때문에 data.movie.title을 return해도 오류가 발생하지 않습니다.  
+loading 중이라면 Loading... 텍스트를 return,  
+loading이 끝나면 data도 확인할 수 있기 때문에 data.movie.title을 return해도 오류가 발생하지 않습니다.  
 
 Subtitle과 Description부분은 loading중 일땐 보이지 않고 loading이 끝난 후 노출시켜주겠습니다.
 
-```javascript
-    (...)
-        {!loading && data.movie && (
-          <>
-            <Subtitle>
-              {data.movie.language} · {data.movie.rating}
-            </Subtitle>
-            <Description>
-              {data.movie.description_intro}
-            </Description>
-          </>
-        )}
-    (...)
-```
+<center>
+<figure>
+<img src="/assets/post-img/graphql/movie_graphql_apollo_1-8.jpg" alt="">
+<figcaption>loading이 끝나고 data.movie가 있다면 Subtitle과 Description 노출</figcaption>
+</figure>
+</center>
 
-loading이 끝나고, data.movie에 정보가 있다면 Subtitle과 Description을 반환시켰습니다.  
+loading이 끝나고, data.movie에 정보가 있다면 Subtitle과 Description을 return 시켰습니다.  
 
 ---
 
@@ -117,24 +93,14 @@ const GET_MOVIE = gql`
 `;
 ```
 
-2019.12.28일에 Js에 새로 추가된 기능인 Optional Chaining의 사용으로 반복하여 사용하던 data.movie를 `?`를 사용함으로써 생략가능합니다.
+2019.12.28일에 Js에 새로 추가된 기능인 Optional Chaining의 사용으로 삼항연산자로 반복하여 사용하던 data.movie를 `?`를 사용함으로써 생략가능합니다.
 
-```javascript
-(...)
-  return (
-    <Container>
-      <Column>
-        <Title>{loading ? "Loading..." : data.movie.title}</Title>
-        <Subtitle>
-         {data?.movie?.language} · {data?.movie?.rating}
-        </Subtitle>
-        <Description>{data?.movie?.description_intro}</Description>
-      </Column>
-      <Poster bg={data?.movie?.medium_cover_image}></Poster>
-    </Container>
-  );
-(...)
-```
+<center>
+<figure>
+<img src="/assets/post-img/graphql/movie_graphql_apollo_1-9.jpg" alt="">
+<figcaption>Optional Chaining의 사용으로 간결해진 코드</figcaption>
+</figure>
+</center>
 
 Home.js의 return 부분도 변경해주겠습니다.
 
