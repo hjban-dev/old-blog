@@ -89,7 +89,7 @@ fetch나 POST같은 건 하지 않았지만 data를 얻을 수 있습니다.
 ## 1.2 GET_MOVIE Query
 
 우리는 가져온 data를 링크 형태로 페이지에 노출시키고, 각각의 영화 링크로 연결하겠습니다.  
-먼저 components폴더에 Movie.js를 생성한 후 Movie Component를 만들겠습니다. React에서 <a href>는 사용할 수 없습니다. 링크 연결을 위해 Link를 사용하여 작성하겠습니다.
+먼저 components폴더에 Movie.js를 생성한 후 Movie Component를 만들겠습니다. React에서 `<a href>`는 사용할 수 없습니다. 링크 연결을 위해 Link를 사용하여 작성하겠습니다.
 
 ```javascript
 import React from "react";
@@ -105,26 +105,12 @@ export default ({ id }) => (
 그리고 Home.js에 가져온 data를 map()메소드를 사용하여 각각 Movie Compoenent로 생성하겠습니다. 
 div로 구성된 간단한 Component와 style부분은 생략하겠습니다. 
 
-```javascript
-(...)
-import Movie from "../components/Movie";
-(...)
-export default () => {
-  const { loading, data } = useQuery(GET_MOVIES);
-  return (
-    <Container>
-      <Header>
-        <Title>apollo_movie</Title>
-        <Subtitle>with GrpahQL!</Subtitle>
-      </Header>
-      {loading && <Loading>Loading...</Loading>}
-      {!loading &&
-        data.movies &&
-        data.movies.map(m => <Movie key={m.id} id={m.id} />)}
-    </Container>
-  );
-};
-```
+<center>
+<figure>
+<img src="/assets/post-img/graphql/movie_graphql_apollo_1-4.jpg" alt="">
+<figcaption>Home.js의 return코드</figcaption>
+</figure>
+</center>
 
 loading 상태이면 <Loading>Loading...</Loading>을 return.  
 loading 상태이지 않고, data에 movies정보가 있으면 data.movies.map()을 실행합니다.  
@@ -155,7 +141,6 @@ data가 연동된 것을 확인했으니 GET_MOVIE라는 이름의 query를 작�
 
 ```javascript
 (...)
-
 import { gql } from "apollo-boost";
 
 const GET_MOVIE = gql`
