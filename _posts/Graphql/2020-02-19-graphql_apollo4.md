@@ -14,7 +14,7 @@ comments: false
 
 Apollo의 큰 장점 하나는 cache를 갖는다고 했습니다. 그래서 이번에는 각각의 Movie에 cache를 활용하여 기능하는 좋아요 버튼을 만들겠습니다.  
 
-apollo.js파일에 가서 isLiked 라는 data를 만들고 isLiked는 true와 false를 값으로 갖는 boolean형태로 만들겠습니다. 
+apollo.js파일에 isLiked 라는 data를 만들고, isLiked는 true와 false를 값으로 갖는 boolean형태로 만들겠습니다. 
 
 apollo client는 많은 설정들을 갖는데 그 중 하나는 resolvers 입니다. resolvers는 기본적으로 백엔드 부분의 resolver와 비슷합니다. Resolver는 함수 형태로 작성해줍니다.  
 
@@ -80,7 +80,7 @@ isLiked라는 data는 프론트에서 만든 data입니다. 아주 쉽고 놀랍
 </figure>
 </center>
 
-Movie.js파일에서 넘어오는 isLiked를 추가하여 button부분을 수정해주겠습니다.
+Movie.js파일에 넘어오는 isLiked를 추가하여 button부분을 수정해주겠습니다.
 
 <center>
 <figure>
@@ -103,9 +103,10 @@ isLiked가 true이면 "Unlike", false이면 "Like"를 return 하게 하였습니
 
 ## 2.1 Local State part Two
 
-> [Apollo Docs](https://www.apollographql.com/docs/react/data/local-state/#managing-the-cache)
+> [Apollo 공식 Documnets 사이트 링크](https://www.apollographql.com/docs/react/data/local-state/#managing-the-cache)
 
-위 링크의 Apollo Documents에서 여러분이 로컬 상태 관리에 대한 정보도 얻을 수 있는데 그 중 캐시를 손쉽게 업데이트하는 writeData를 사용하겠습니다.  
+위 링크의 Apollo Docs에서 로컬 상태 관리에 대한 정보도 얻을 수 있는데 그 중 캐시를 손쉽게 업데이트하는 writeData를 사용하겠습니다.  
+
 현재 경우의 apollo의 mutation은 백엔드의 mutation과 완벽히 작동이 같습니다. arguments를 가져오는 것도, 내용을 가져오는 것도 같습니다.  
 apollo.js파일에 mutation을 만들겠습니다.
 
@@ -116,7 +117,7 @@ apollo.js파일에 mutation을 만들겠습니다.
 </figure>
 </center>
 
-boolean 함수인 Movie라고 부르는 type을 만들었고, 지금은 여러분이 이미 백엔드를 통해 알고있는 mutation을 만들었습니다. 그리고 likeMovie라고 부르는 새 함수를 만들었습니다. likeMovie는 완전히 graphQL server와 완전히 같습니다.  
+boolean 함수인 Movie라고 부르는 type을 만들었고, 지금은 전 강의에서 이미 백엔드를 통해 활용했던 mutation을 만들었습니다. 그리고 likeMovie라고 부르는 새 함수를 만들었습니다. mutation은 완전히 graphQL server와 완전히 같습니다.  
 
 이제 Movie로 가서 likeMovie라는 이름을 가진 mutation query를 작성해봅시다. 
 
@@ -132,9 +133,9 @@ const LIKE_MOVIE = gql`
 `;
 ```
 
-Mutation은 apollo.js에 client부분에서 삽입한 것이기 때문에 위 코드에서 likeMovie에 반드시 @client를 작성해주어야 합니다. 우리는 mutation을 굳이 백엔드로 보내는 것을 원하지 않습니다.  
+Mutation은 apollo.js에 client부분에서 삽입한 것이기 때문에 위 코드에서 likeMovie에 반드시 **@client**를 작성해주어야 합니다. 또한 우리가 하는 작업이 mutation을 굳이 백엔드로 보내지 않아도 됩니다.  
 
-이제 react hooks중 useMutation을 사용하면서 mutation을 활용하겠습니다. 중요한건 변수 likeMovie가 mutation의 likeMovie를 칭하는 것입니다.
+이제 react hooks중 useMutation을 사용하면서 mutation을 활용하겠습니다. 중요한건 변수 likeMovie는 mutation의 likeMovie를 칭하는 것입니다.
 
 <center>
 <figure>
@@ -152,7 +153,7 @@ Mutation은 apollo.js에 client부분에서 삽입한 것이기 때문에 위 �
 </figure>
 </center>
 
-Like버튼을 클릭하면 각각의 movie에 대한 id가 console창에 찍히는 것을 확인할 수 있습니다. 우리는 백엔드 정보를 수정하지 않아도 손쉽게 data를 가져올 수 있다는 것입니다!  
+Like버튼을 클릭하면 각각의 movie에 대한 id가 console창에 찍히는 것을 확인할 수 있습니다. 이것은 백엔드 정보를 수정하지 않아도 손쉽게 data를 가져올 수 있다는 것입니다!  
 
 정보를 가져오는 것을 확인했으니, 가져온 id의 isLiked의 값을 수정해주겠습니다. 아까 말했던 writeData를 사용하겠습니다.
 
