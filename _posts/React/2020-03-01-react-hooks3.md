@@ -39,7 +39,7 @@ useInput함수에서 사람들이 변화를 주기 전에 value를 return하여 
 
 <center>
 <figure>
-<img src="/assets/post-img/react/hooks/nomad_react_hooks_1.jpg" alt="">
+<img src="/assets/post-img/react/hooks/nomad_react_hooks_1.JPG" alt="">
 <figcaption>코드 실행 결과</figcaption>
 </figure>
 </center>
