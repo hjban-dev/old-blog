@@ -34,7 +34,7 @@ const App = () => {
   );
 };
 ```
-useInput함수에서 사람들이 변화를 주기 전에 value를 return하여 args를 초기값으로 갖게 합니다.  
+useInput함수에서 사용자가 변화를 주기 전에 value를 return하여 args를 초기값으로 갖게 합니다.  
 {...name}은 value={name.value}로도 작성할 수 있습니다.
 
 <center>
@@ -50,15 +50,46 @@ useInput함수에서 사람들이 변화를 주기 전에 value를 return하여 
 const useInput = initialValue => {
   const [value, setValue] = useState(initialValue);
   const onChange = event => {
-    console.log(event.target);
+    console.log(event.target); // <input placeholder="name" value="Mr."></input>
   };
-  return { value, onChange };
+  return { value, onChange }; 
 };
 ```
 App 컴포넌트는 따로 수정할 필요가 없습니다. {...name}형태인 전개구문 문법으로 입력해주었기 때문입니다.
 
-<!-- ## 1.2 useInput part Two
+## 1.2 useInput part Two
 
+useInput에 validator args를 추가하겠습니다. useInput은 validator가 있는지 확인하고 실행하게 합니다.
 
+```javascript
+const useInput = (initialValue, validator) => { // validator 추가
+  const [value, setValue] = useState(initialValue);
+  const onChange = event => {
+    const {
+      target: { value }
+    } = event;
+    let willUpdate = true;
+    if (typeof validator === "function") {
+      willUpdate = validator(value); // validator 실행
+    }
+    if (willUpdate) {
+      setValue(value);
+    }
+  };
 
-다른 fucntion에서 event를 처리할 수 있음 -->
+  return { value, onChange };
+};
+
+const App = () => {
+  const maxLen = value => value.length < 10; // maxLen 함수 선언
+  const name = useInput("hj", maxLen); // maxLen을 args로 전달
+  return (
+    <div className="App">
+      <h1>Hello</h1>
+      <input placeholder="name" {...name} />
+    </div>
+  );
+};
+```
+
+useInput을 활용하면 여러 조건들을 제어할 수 있습니다.
