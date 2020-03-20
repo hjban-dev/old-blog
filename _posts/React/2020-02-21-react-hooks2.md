@@ -12,9 +12,9 @@ comments: true
 
 ## 1.0 Introduction to useState
 
-hooks는 react의 state machine에 연결하는 기본적인 방법입니다. hooks를 사용하면 class를 사용하지 않고 함수만 사용하여 프로그래밍이 가능합니다. 알다시피 hooks가 생기기전엔 function Component엔 state를 작성할 수 없었습니다.
+hooks는 react의 state machine에 연결하는 기본적인 방법입니다. hooks를 사용하면 class를 사용하지 않고 함수만 사용하여 프로그래밍이 가능합니다. 알다시피 hooks가 생기기전엔 function Component엔 state를 작성할 수 없었습니다.  
 
-useState는 항상 2개의 value로 이루어져있는 배열을 반환합니다. 첫번째는 변경할 만큼의 값, 두번째는 변경되는 값.  
+useState는 **항상 2개의 value로 이루어져있는 배열을 반환**합니다. 첫번째는 변경할 만큼의 값, 두번째는 변경되는 값.  
 useState는 말 그대로 상태를 변경하는 것 입니다. useState는 state를 초기 값을 세팅할 수 있는 옵션을 제공하고, 우리는 그 값을 1으로 주겠습니다. 
 
 ```javascript
