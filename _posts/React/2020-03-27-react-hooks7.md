@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 실전형 리액트 Hooks 10가지 - useEffect_useClick
+title: 실전형 리액트 Hooks 10가지 - useEffect_useClick & useHover
 category: React
 tags: [React]
 comments: true
@@ -128,6 +128,30 @@ const useClick = onClick => {
     return () => { // componentWillUnmount 일 때 실행하는 부분
       if (element.current) {
         element.current.removeEventListener("click", onClick);
+      }
+    };
+  }, []);
+  return element;
+};
+```
+
+### useHover
+
+앞서 만든 useClick 을 활용하여 useHover를 만들어 보겠습니다. useEffect를 사용할 때 사용한 event만 변경해주면 됩니다!
+
+```javascript
+const useHover = onHover => {
+  if (typeof onHover !== "function") {
+    return;
+  }
+  const element = useRef();
+  useEffect(() => {
+    if (element.current) {
+      element.current.addEventListener("mouseenter", onHover); 
+    }
+    return () => {
+      if (element.current) {
+        element.current.removeEventListener("mouseenter", onHover);
       }
     };
   }, []);
