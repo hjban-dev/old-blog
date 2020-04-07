@@ -1,0 +1,21 @@
+---
+layout: page
+title: About
+---
+
+<p class="message">
+	문과생 반혜주<br>
+	퍼블리싱을 시작으로 개발에 발을 들였고 프론트엔드 개발을 공부중이며 백엔드 영역도 조금씩 공부 중입니다.<br>
+	주로 책 + 인터넷 강의 + 학원 + 공식 사이트 + W3School + Stack Overflow 의 내용들을 짜집어 포스트 합니다.<br>
+	지식 공유 목적 보다는 혼자 하는 정리 및 내용 습득 목적의 포스트 목적입니다.<br>
+	서투르고 모자라지만 꾸준히 하나씩 올라가보자는 마음으로 천천히 정리하는 중입니다.<br>
+	<span style="font-size: 0.7rem;">* 이미 쓴 포스트도 새로 알게 된 내용이나 추가하고 싶은 내용을 자주 수정합니다.</span>
+</p>
+
+- HTML, CSS, JAVASCRIPT
+- EJS, JADE, PUG
+- SASS, SCSS
+- REACT
+- NODE
+- MARIA DB, MONGO DB
+- GULP
