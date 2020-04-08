@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 실전형 리액트 Hooks 10가지 - useEffect_useClick & useHover
+title: 실전형 리액트 Hooks 10가지 - useRef, useClick(useRef, useEffect) & useHover(useRef, useEffect)
 category: React
 tags: [React]
 comments: true

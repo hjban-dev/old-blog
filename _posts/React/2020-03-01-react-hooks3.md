@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 실전형 리액트 Hooks 10가지 - useState_useInput
+title: 실전형 리액트 Hooks 10가지 - useInput(useState)
 category: React
 tags: [React]
 comments: true

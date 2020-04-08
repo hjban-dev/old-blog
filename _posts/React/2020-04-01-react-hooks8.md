@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 실전형 리액트 Hooks 10가지 - useEffect_useConfirm & usePreventLeave
+title: 실전형 리액트 Hooks 10가지 - useConfirm & usePreventLeave
 category: React
 tags: [React]
 comments: true
