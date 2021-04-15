@@ -1,0 +1,90 @@
+.tag_wrap {
+	font-size: 0.9rem;
+	padding-bottom: 1.4rem;
+	border-bottom: 1px solid #eee;
+}
+
+.category_box {
+	.category_tit {
+		font-size: 1.3rem;
+		margin: 2rem 0 1rem;
+		font-weight: 600;
+		color: #8c6751;
+	}
+
+	.post_list {
+		.post_tit {
+			margin: 0 0.5rem;
+			transition: all 0.1s ease-in-out;
+			list-style-type: circle;
+			font-size: 0.95rem;
+			line-height: 1.2rem;
+
+			@media (min-width: 38rem) {
+				line-height: 1.4rem;
+			}
+
+			a {
+				padding: 0 0.5rem;
+
+				.tit {
+					display: inline-block;
+					max-width: calc(100% - 95px);
+					overflow: hidden;
+					text-overflow: ellipsis;
+					white-space: nowrap;
+					vertical-align: middle;
+
+					@media (min-width: 38rem) {
+						max-width: calc(100% - 115px);
+					}
+				}
+
+				.date {
+					display: inline-block;
+					font-size: 80%;
+					color: #9a9a9a;
+					padding-left: 8px;
+				}
+
+				.disc {
+					display: inline-block;
+					line-height: 1rem;
+					font-size: 80%;
+					padding: 0.5rem 8px 1.5rem;
+					max-width: 800px;
+				}
+			}
+
+			&:hover {
+				list-style-type: disc;
+				margin: 0;
+			}
+		}
+	}
+}
+
+.category {
+	.category_box {
+		.category_tit{
+			margin: 0 0 2rem;
+		}
+	}
+	.post_tit {
+		a {
+			color: #222;
+
+			.disc {
+				color: #666;
+			}
+		}
+
+		:hover {
+
+			span,
+			.disc {
+				font-weight: bold;
+			}
+		}
+	}
+}

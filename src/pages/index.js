@@ -1,25 +1,19 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
+// import Image from "../components/image"
 import SEO from "../components/seo"
+import Tags from "../components/Tags"
+import CategoryList from "../components/CategoryList"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <div style={{ color: "purple" }}>
-      <h1 style={{ fontSize: "72px" }}>Hi HyeJU2</h1>
-      <p>Welcome to your new Gatsby site.</p>
-      <p>Now go build something great.</p>
-    </div>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 3</Link>
-    <br />
-    <Link to="/about/">Go to about</Link>
-  </Layout>
-)
+const IndexPage = () => {
+  return (
+    <Layout>
+      <SEO title="네주머니의 나만보는 개발로그" />
+      <Tags />
+      <CategoryList />
+    </Layout>
+  )
+}
 
 export default IndexPage

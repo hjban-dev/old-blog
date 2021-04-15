@@ -1,0 +1,321 @@
+.sidebar_wrap {
+	position: relative;
+	z-index: 10;
+
+	input {
+		opacity: 0;
+		position: absolute;
+	}
+
+	label {
+		background-color: #fff;
+		display: inline-block;
+		padding: 0.35rem 0.65rem 0.2rem;
+		border-radius: 0.25rem;
+		cursor: pointer;
+		@include transition(transform 0.3s ease-in-out);
+		position: fixed;
+		top: 0.9rem;
+		right: 0.7rem;
+
+		&:before {
+			display: inline-block;
+			width: 1rem;
+			height: 0.75rem;
+			content: "";
+			@include background-image(linear-gradient(to bottom,
+					$theme-color-dark,
+					$theme-color-dark 20%,
+					$white 20%,
+					$white 40%,
+					$theme-color-dark 40%,
+					$theme-color-dark 60%,
+					$white 60%,
+					$white 80%,
+					$theme-color-dark 80%,
+					$theme-color-dark 100%));
+		}
+	}
+
+	input:checked~label {
+		color: $white;
+		background-color: $theme-color;
+		@include transform(translateX(if($reverse-layout, -14rem, 14rem)));
+
+		&:before {
+			@include background-image(linear-gradient(to bottom,
+					$white,
+					$white 20%,
+					$theme-color-dark 20%,
+					$theme-color-dark 40%,
+					$white 40%,
+					$white 60%,
+					$theme-color-dark 60%,
+					$theme-color-dark 80%,
+					$white 80%,
+					$white 100%));
+		}
+	}
+}
+
+.sidebar {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	width: 14rem;
+	overflow-y: auto;
+	font-size: 0.875rem;
+	/* 15px */
+	color: rgba(255, 255, 255, 0.6);
+	z-index: 10;
+	@include transition(all 0.3s ease-in-out);
+
+	@if $reverse-layout {
+		left: auto;
+		right: -14rem;
+	}
+
+	@else {
+		left: -14rem;
+		right: auto;
+	}
+
+	@if $theme-color !=$default {
+		background-color: $theme-color;
+	}
+
+	@else {
+		background-color: darken($theme-color-dark, 10%);
+	}
+
+	.sidebar-personal-info {
+		padding: 1rem;
+		padding-bottom: 0;
+	}
+}
+
+@media (min-width: 30em) {
+	.sidebar {
+		font-size: 0.8rem;
+		/* 14px */
+	}
+}
+
+/* Sidebar nav */
+.sidebar-nav {
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-nav ul {
+	background: #77442a;
+	margin-bottom: 0;
+}
+
+.sidebar-nav-item {
+	display: block;
+	padding: 0.5rem 1rem;
+	border-top: 1px solid rgba(255, 255, 255, 0.1);
+	font-weight: normal;
+	color: $white;
+}
+
+.sidebar-nav-item-sub {
+	&:before {
+		content: "";
+		padding-left: 1em;
+	}
+
+	font-size: 85%;
+	line-height: 85%;
+}
+
+.sidebar-nav-item.active,
+a.sidebar-nav-item:hover,
+a.sidebar-nav-item:focus {
+	text-decoration: none;
+	background-color: rgba(255, 255, 255, 0.1);
+	border-color: transparent;
+}
+
+.sidebar-nav-item-list,
+.sidebar-nav-item-list a {
+	list-style: none;
+	color: $white;
+	padding: 0.5rem 0rem;
+}
+
+@media (min-width: 48em) {
+	.sidebar {
+		//padding: 1.5rem;
+	}
+
+	.sidebar-nav-item {
+		padding-left: 1.5rem;
+		padding-right: 1.5rem;
+	}
+}
+
+/* Hide the sidebar checkbox that we toggle with `.sidebar-toggle` */
+.menu_toggle {
+	position: absolute;
+	opacity: 0;
+	@include prefixer(user-select, none, webkit moz spec);
+}
+
+/* Style the `label` that we use to target the `.menu_toggle` */
+.sidebar-toggle {
+	position: absolute;
+	top: 1.1rem;
+	z-index: 10;
+
+	@if $reverse-layout {
+		left: auto;
+		right: 1rem;
+	}
+
+	@else {
+		left: 1rem;
+		right: auto;
+	}
+
+	display: block;
+	padding: 0.25rem 0.75rem 0.2rem;
+	color: $theme-color;
+	background-color: $white;
+	border-radius: 0.25rem;
+	cursor: pointer;
+	font-size: 20px;
+}
+
+.sidebar-toggle:before {
+	display: inline-block;
+	width: 1rem;
+	height: 0.75rem;
+	content: "";
+	@include background-image(linear-gradient(to bottom,
+			$theme-color-dark,
+			$theme-color-dark 20%,
+			$white 20%,
+			$white 40%,
+			$theme-color-dark 40%,
+			$theme-color-dark 60%,
+			$white 60%,
+			$white 80%,
+			$theme-color-dark 80%,
+			$theme-color-dark 100%));
+}
+
+.sidebar-toggle:active,
+#menu_toggle:focus~.sidebar-toggle,
+#menu_toggle:checked~.sidebar-toggle {
+	color: $white;
+	background-color: $theme-color;
+}
+
+.sidebar-toggle:active:before,
+#menu_toggle:focus~.sidebar-toggle:before,
+#menu_toggle:checked~.sidebar-toggle:before {
+	@include background-image(linear-gradient(to bottom,
+			$white,
+			$white 20%,
+			$theme-color-dark 20%,
+			$theme-color-dark 40%,
+			$white 40%,
+			$white 60%,
+			$theme-color-dark 60%,
+			$theme-color-dark 80%,
+			$white 80%,
+			$white 100%));
+}
+
+@media (min-width: 30.1em) {
+
+	.sidebar-toggle,
+	.search {
+		position: fixed;
+	}
+}
+
+@media print {
+	.sidebar-toggle {
+		display: none;
+	}
+}
+
+.wrap,
+.sidebar,
+.sidebar-toggle {
+	@include prefixer(backface-visibility, hidden, webkit ms spec);
+}
+
+.wrap,
+.sidebar-toggle {
+	@include transition(transform 0.3s ease-in-out);
+}
+
+#menu_toggle:checked+.sidebar {
+	visibility: visible;
+}
+
+#menu_toggle:checked~.wrap {
+	//@include transform(translateX(if($overlay-sidebar,0,if($reverse-layout, -14rem, 14rem))));
+}
+
+#menu_toggle:checked~.sidebar {
+	@include transform(translateX(if($reverse-layout, -14rem, 14rem)));
+
+	@if $overlay-sidebar {
+		box-shadow: 0.25rem 0 0.5rem rgba(0, 0, 0, 0.1);
+
+		@if $reverse-layout {
+			box-shadow: -0.25rem 0 0.5rem rgba(0, 0, 0, 0.2);
+		}
+	}
+}
+
+#menu_toggle:checked~.sidebar-toggle {
+	@include transform(translateX(if($reverse-layout, -14rem, 14rem)));
+
+	@if $overlay-sidebar {
+		box-shadow: 0 0 0 0.25rem $white;
+	}
+}
+
+.sidebar-personal-info {
+	.sidebar-personal-info-section {
+		&:not(:first-of-type) {
+			margin-top: 0.75rem;
+		}
+
+		line-height: 1rem;
+
+		a,
+		strong {
+			color: $white;
+			text-decoration: none;
+		}
+
+		.author {
+			margin-bottom: 0.7rem;
+		}
+
+		.contact {
+			font-size: 0.7rem !important;
+
+			.link_wrap {
+				display: inline-block;
+				padding-left: 4px;
+				margin-bottom: 0.3rem;
+
+				a {
+					padding: 0 5px;
+					font-size: 0.8rem !important;
+				}
+			}
+		}
+
+		.notice {
+			font-size: 0.6rem !important;
+		}
+	}
+}

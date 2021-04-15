@@ -1,0 +1,93 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0-modified | 20110126
+   License: none (public domain)
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+html {
+  height: 100%;
+}
+body {
+  font: normal 18px/1 "NanumSquare", "Source Sans Pro", Apple SD Gothic Neo,
+    Nanum Barun Gothic, Nanum Gothic, Verdana, Arial, Dotum, sans-serif;
+  color: #313131;
+  position: relative;
+  min-height: 100%;
+  letter-spacing: -0.25px;
+  line-height: 1.4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font: normal 18px/1 "NanumSquare", "Source Sans Pro", Apple SD Gothic Neo,
+    Nanum Barun Gothic, Nanum Gothic, Verdana, Arial, Dotum, sans-serif;
+  letter-spacing: 0;
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: #313131;
+  outline: none;
+}
+button {
+  cursor: pointer;
+  border: 0;
+  background: none;
+  font-family: "NanumSquare", "Source Sans Pro", Apple SD Gothic Neo,
+    Nanum Barun Gothic, Nanum Gothic, Verdana, Arial, Dotum, sans-serif;
+  outline: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+caption,
+legend {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+video,
+img {
+  vertical-align: top;
+}
+fieldset {
+  border: 0;
+}
+// select {
+//   font: normal 14px/1 "NotoSans-Light", sans-serif;
+//   -webkit-border-radius: 0;
+//   -moz-border-radius: 0;
+//   -o-border-radius: 0;
+//   border-radius: 0;
+// }
+// input {
+//   font: normal 14px/1 "NotoSans-Light", sans-serif;
+//   border: 0;
+//   background: none;
+//   vertical-align: top;
+// }
